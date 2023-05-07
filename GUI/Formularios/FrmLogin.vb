@@ -17,9 +17,15 @@ Public Class FrmLogin
 
         If lector.HasRows Then
             Form1.ShowDialog()
+            Me.Hide()
         Else
-            MsgBox("sadasd")
+            MsgBox("Usuario o contraseña incorrecta")
         End If
         conexion.Close()
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Close()
     End Sub
 End Class

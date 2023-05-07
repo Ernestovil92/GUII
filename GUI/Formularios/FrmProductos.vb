@@ -32,29 +32,6 @@ Public Class FrmProductos
         conexion.Close()
     End Sub
 
-
-    ''    Private Sub Modificar()
-    ''      conexion.Open()
-    ''Dim consulta As String = "UPDATE Productos SET nombre_producto='" & txtProducto.Text & "',codigo_barra='" & txtCodigo.Text & "',U_cliente='" & txtCliente.Text & "' where id = '" & txtId.Text & "'"
-    '' Dim comando As New SqlCommand(consulta, conexion)
-    '' Dim lector As SqlDataReader
-    ''    lector = comando.ExecuteReader
-    ''   conexion.Close()
-    ''End Sub
-
-    '' Private Sub Eliminar()
-    ''   conexion.Open()
-    '' Dim consulta As String = "DELETE acceso where id = '" & txtId.Text & "'"
-    ''Dim comando As New SqlCommand(consulta, conexion)
-    ''Dim lector As SqlDataReader
-    ''   lector = comando.ExecuteReader
-    ''  conexion.Close()
-    ''End Sub
-
-
-    ''Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-    ''   Modificar()
-    ''End Sub
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
         MostrarNombreUsuario()
     End Sub
@@ -76,5 +53,17 @@ Public Class FrmProductos
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         FrmEliminarProductos.ShowDialog()
+    End Sub
+
+    Private Sub btnBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBuscar.KeyPress
+
+        Dim ad = New SqlDataAdapter("SELECT * FROM Productos where nombre_producto like '" + txtBuscar.Text + "%'", conexion)
+        Dim dt = New DataTable
+        ad.Fill(dt)
+        Me.dgProductos.DataSource = dt
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class

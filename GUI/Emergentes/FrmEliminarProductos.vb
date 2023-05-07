@@ -9,18 +9,20 @@ Public Class FrmEliminarProductos
 
     Private Sub Eliminar()
         conexion.Open()
-        If conexion.State = 1 Then
+        If txtId.Text = " " Then
+            MsgBox("Error 2333: no se pudo eliminar registro")
+        Else
             Dim consulta As String = "DELETE Productos where id = '" & txtId.Text & "'"
             Dim comando As New SqlCommand(consulta, conexion)
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
             MsgBox("Se ha eliminado el registro Nro.: " + txtId.Text)
-        Else
-            MsgBox("Error no se puedo eliminar registro")
+
         End If
 
         conexion.Close()
     End Sub
+
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Eliminar()

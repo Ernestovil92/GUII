@@ -22,7 +22,6 @@ Partial Class FrmLogin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        PictureBox1 = New PictureBox()
         PictureBox2 = New PictureBox()
         Button1 = New Button()
         txtUsuario = New TextBox()
@@ -30,20 +29,9 @@ Partial Class FrmLogin
         Label3 = New Label()
         Label2 = New Label()
         Label1 = New Label()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Button2 = New Button()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.BackColor = Color.Sienna
-        PictureBox1.Image = My.Resources.Resources.Icono_cerrar_FN2
-        PictureBox1.Location = New Point(202, 4)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(36, 32)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 1
-        PictureBox1.TabStop = False
         ' 
         ' PictureBox2
         ' 
@@ -121,13 +109,24 @@ Partial Class FrmLogin
         Label1.TabIndex = 5
         Label1.Text = "Usuario"
         ' 
+        ' Button2
+        ' 
+        Button2.BackgroundImage = My.Resources.Resources.Icono_cerrar_FN
+        Button2.FlatAppearance.BorderColor = Color.Sienna
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.Location = New Point(207, -2)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(40, 38)
+        Button2.TabIndex = 8
+        Button2.UseVisualStyleBackColor = True
+        ' 
         ' FrmLogin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Sienna
         ClientSize = New Size(241, 402)
-        Controls.Add(PictureBox1)
+        Controls.Add(Button2)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -138,12 +137,10 @@ Partial Class FrmLogin
         FormBorderStyle = FormBorderStyle.None
         Name = "FrmLogin"
         StartPosition = FormStartPosition.CenterScreen
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents txtUsuario As TextBox
@@ -151,4 +148,5 @@ Partial Class FrmLogin
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button2 As Button
 End Class

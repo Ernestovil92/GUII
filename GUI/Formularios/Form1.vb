@@ -1,7 +1,7 @@
 ﻿
 Imports System.Runtime.InteropServices
 Imports System.Data.SqlClient
-Imports System.Web.UI.WebControls
+
 Public Class Form1
     Dim conexion As New SqlConnection()
     Dim comando As New SqlCommand()
@@ -70,20 +70,18 @@ Public Class Form1
     End Sub
 
     Private Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click
-        AbrirFormEnPanel(New FrmProductos)
+        AbrirFormEnPanel(New FrmClientes)
     End Sub
 
     Private Sub btnCompras_Click(sender As Object, e As EventArgs) Handles btnCompras.Click
-        AbrirFormEnPanel(New FrmCompras)
+
     End Sub
 
     Private Sub btnDelivery_Click(sender As Object, e As EventArgs) Handles btnDelivery.Click
         AbrirFormEnPanel(New FrmDelivery)
     End Sub
 
-    Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
-        AbrirFormEnPanel(New FrmClientes)
-    End Sub
+
 
     Private Sub btnReportes_Click(sender As Object, e As EventArgs) Handles btnReportes.Click
         AbrirFormEnPanel(New FrmReportes)
@@ -96,69 +94,13 @@ Public Class Form1
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
+    Private Sub btnProducto_Click(sender As Object, e As EventArgs) Handles btnProducto.Click
+        AbrirFormEnPanel(New FrmProductos)
+    End Sub
 
-
-    ''   Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    ''     conexion = New SqlConnection("server=DESKTOP-54PHT7T\SQLEXPRESS;DATABASE=GUI;INTEGRATED SECURITY=TRUE")
-    ''
-    '' End Sub
-
-    ''    Private Sub MostrarNombreUsuario()
-    ''      conexion.Open()
-    ''Dim consulta As String = "select * from acceso"
-    ''Dim adapter As New SqlDataAdapter(consulta, conexion)
-    ''Dim dt As New DataTable
-    ''  adapter.Fill(dt)
-    ''DataGridView1.DataSource = dt
-    ''conexion.Close()
-    ''   End Sub
-
-    ''   Private Sub CargarRegistros()
-    ''     conexion.Open()
-    ''Dim consulta As String = "INSERT INTO acceso(usuarios,pass,Nombre_usuario)VALUES('" & txtUsuario.Text & "','" & txtPass.Text & "','" & txtNombre.Text & "')"
-    '' Dim comando As New SqlCommand(consulta, conexion)
-    ''Dim lector As SqlDataReader
-    ''   lector = comando.ExecuteReader
-    ''  conexion.Close()
-    ''End Sub
-
-
-    ''Private Sub Modificar()
-    ''  conexion.Open()
-    '' Dim consulta As String = "UPDATE acceso SET usuarios='" & txtUsuario.Text & "',pass='" & txtPass.Text & "',Nombre_usuario='" & txtNombre.Text & "' where id = '" & txtId.Text & "'"
-    '' Dim comando As New SqlCommand(consulta, conexion)
-    '' Dim lector As SqlDataReader
-    ''    lector = comando.ExecuteReader
-    ''   conexion.Close()
-    '' End Sub
-
-    ''    Private Sub Eliminar()
-    ''      conexion.Open()
-    ''Dim consulta As String = "DELETE acceso where id = '" & txtId.Text & "'"
-    ''Dim comando As New SqlCommand(consulta, conexion)
-    ''Dim lector As SqlDataReader
-    ''  lector = comando.ExecuteReader
-    '' conexion.Close()
-    '' End Sub
-    ''Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-    ''   CargarRegistros()
-    ''End Sub
-
-    '' Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-    ''    Modificar()
-    ''End Sub
-
-    ''  Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-    ''    MostrarNombreUsuario()
-    '' End Sub
-    '
-    '' Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-    ''    DataGridView1.DataSource = " "
-    ''End Sub
-
-
-
-    ''Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-    ''   Eliminar()
-    ''End Sub
+    Private Sub btnCerrarSesion_Click(sender As Object, e As EventArgs) Handles btnCerrarSesion.Click
+        conexion.Close()
+        FrmLogin.Show()
+        Me.Hide()
+    End Sub
 End Class

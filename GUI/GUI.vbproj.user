@@ -19,9 +19,6 @@
     <Compile Update="Formularios\FrmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FrmCompras.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Formularios\FrmDelivery.vb">
       <SubType>Form</SubType>
     </Compile>
