@@ -1,0 +1,6 @@
+C:\Users\Giovani Villalba\source\repos\GUI\GUI\bin\Release\net6.0-windows\publish\GUI.exe
+C:\Users\Giovani Villalba\source\repos\GUI\GUI\bin\Release\net6.0-windows\publish\GUI.dll
+C:\Users\Giovani Villalba\source\repos\GUI\GUI\bin\Release\net6.0-windows\publish\GUI.deps.json
+C:\Users\Giovani Villalba\source\repos\GUI\GUI\bin\Release\net6.0-windows\publish\GUI.runtimeconfig.json
+C:\Users\Giovani Villalba\source\repos\GUI\GUI\bin\Release\net6.0-windows\publish\GUI.dll.config
+C:\Users\Giovani Villalba\source\repos\GUI\GUI\bin\Release\net6.0-windows\publish\GUI.pdb

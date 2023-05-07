@@ -1,0 +1,6 @@
+C:\Users\Programas\GUI.exe
+C:\Users\Programas\GUI.dll
+C:\Users\Programas\GUI.deps.json
+C:\Users\Programas\GUI.runtimeconfig.json
+C:\Users\Programas\GUI.dll.config
+C:\Users\Programas\GUI.pdb
