@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Giovani Villalba\\source\\repos\\GUI\\GUI\\GUI.vbproj": {}
+    "C:\\Users\\Giovani Villalba\\source\\repos\\GUI\\GUII\\GUI\\GUI.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Giovani Villalba\\source\\repos\\GUI\\GUI\\GUI.vbproj": {
+    "C:\\Users\\Giovani Villalba\\source\\repos\\GUI\\GUII\\GUI\\GUI.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Giovani Villalba\\source\\repos\\GUI\\GUI\\GUI.vbproj",
+        "projectUniqueName": "C:\\Users\\Giovani Villalba\\source\\repos\\GUI\\GUII\\GUI\\GUI.vbproj",
         "projectName": "GUI",
-        "projectPath": "C:\\Users\\Giovani Villalba\\source\\repos\\GUI\\GUI\\GUI.vbproj",
+        "projectPath": "C:\\Users\\Giovani Villalba\\source\\repos\\GUI\\GUII\\GUI\\GUI.vbproj",
         "packagesPath": "C:\\Users\\Giovani Villalba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Giovani Villalba\\source\\repos\\GUI\\GUI\\obj\\",
+        "outputPath": "C:\\Users\\Giovani Villalba\\source\\repos\\GUI\\GUII\\GUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Giovani Villalba\\AppData\\Roaming\\NuGet\\NuGet.Config",
