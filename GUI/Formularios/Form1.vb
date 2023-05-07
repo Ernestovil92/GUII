@@ -69,16 +69,10 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click
-        AbrirFormEnPanel(New FrmClientes)
-    End Sub
 
-    Private Sub btnCompras_Click(sender As Object, e As EventArgs) Handles btnCompras.Click
-
-    End Sub
 
     Private Sub btnDelivery_Click(sender As Object, e As EventArgs) Handles btnDelivery.Click
-        AbrirFormEnPanel(New FrmDelivery)
+        AbrirFormEnPanel(New FrmProductos)
     End Sub
 
 
@@ -95,12 +89,18 @@ Public Class Form1
     End Sub
 
     Private Sub btnProducto_Click(sender As Object, e As EventArgs) Handles btnProducto.Click
-        AbrirFormEnPanel(New FrmProductos)
+        AbrirFormEnPanel(New FrmClientes)
     End Sub
 
     Private Sub btnCerrarSesion_Click(sender As Object, e As EventArgs) Handles btnCerrarSesion.Click
-        conexion.Close()
-        FrmLogin.Show()
-        Me.Hide()
+        Close()
+    End Sub
+
+    Private Sub btnPendientes_Click(sender As Object, e As EventArgs) Handles btnPendientes.Click
+        AbrirFormEnPanel(New FrmPendientes)
+    End Sub
+
+    Private Sub btnAyuda_Click(sender As Object, e As EventArgs) Handles btnAyuda.Click
+        AbrirFormEnPanel(New FrmAyuda)
     End Sub
 End Class

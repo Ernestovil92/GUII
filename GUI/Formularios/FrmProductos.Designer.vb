@@ -38,13 +38,13 @@ Partial Class FrmProductos
         txtBuscar = New TextBox()
         Label5 = New Label()
         Panel1 = New Panel()
+        dgProductos = New DataGridView()
         Panel2 = New Panel()
         Label6 = New Label()
-        dgProductos = New DataGridView()
         PanelTitulo.SuspendLayout()
         Panel1.SuspendLayout()
-        Panel2.SuspendLayout()
         CType(dgProductos, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' PanelTitulo
@@ -61,11 +61,11 @@ Partial Class FrmProductos
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Bell MT", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Font = New Font("Bell MT", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Label1.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        Label1.Location = New Point(419, 9)
+        Label1.Location = New Point(382, 19)
         Label1.Name = "Label1"
-        Label1.Size = New Size(94, 24)
+        Label1.Size = New Size(75, 18)
         Label1.TabIndex = 0
         Label1.Text = "Productos"
         Label1.TextAlign = ContentAlignment.MiddleCenter
@@ -73,59 +73,75 @@ Partial Class FrmProductos
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(10, 54)
+        Label2.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        Label2.Location = New Point(10, 81)
         Label2.Name = "Label2"
-        Label2.Size = New Size(56, 15)
+        Label2.Size = New Size(75, 18)
         Label2.TabIndex = 0
         Label2.Text = "Producto"
         ' 
         ' txtProducto
         ' 
-        txtProducto.Location = New Point(10, 72)
+        txtProducto.BackColor = Color.WhiteSmoke
+        txtProducto.BorderStyle = BorderStyle.FixedSingle
+        txtProducto.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        txtProducto.Location = New Point(38, 102)
         txtProducto.Name = "txtProducto"
-        txtProducto.Size = New Size(237, 23)
+        txtProducto.Size = New Size(187, 27)
         txtProducto.TabIndex = 1
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(8, 113)
+        Label3.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        Label3.Location = New Point(10, 150)
         Label3.Name = "Label3"
-        Label3.Size = New Size(46, 15)
+        Label3.Size = New Size(60, 18)
         Label3.TabIndex = 2
         Label3.Text = "Codigo"
         ' 
         ' txtCodigo
         ' 
-        txtCodigo.Location = New Point(8, 131)
+        txtCodigo.BackColor = Color.WhiteSmoke
+        txtCodigo.BorderStyle = BorderStyle.FixedSingle
+        txtCodigo.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        txtCodigo.Location = New Point(40, 171)
         txtCodigo.Name = "txtCodigo"
-        txtCodigo.Size = New Size(237, 23)
+        txtCodigo.Size = New Size(189, 27)
         txtCodigo.TabIndex = 3
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(8, 174)
+        Label4.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label4.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        Label4.Location = New Point(13, 221)
         Label4.Name = "Label4"
-        Label4.Size = New Size(44, 15)
+        Label4.Size = New Size(58, 18)
         Label4.TabIndex = 4
         Label4.Text = "Cliente"
         ' 
         ' txtCliente
         ' 
-        txtCliente.Location = New Point(8, 193)
+        txtCliente.BackColor = Color.WhiteSmoke
+        txtCliente.BorderStyle = BorderStyle.FixedSingle
+        txtCliente.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        txtCliente.Location = New Point(41, 242)
         txtCliente.Name = "txtCliente"
-        txtCliente.Size = New Size(237, 23)
+        txtCliente.Size = New Size(189, 27)
         txtCliente.TabIndex = 5
         ' 
         ' btnGuardar
         ' 
         btnGuardar.FlatAppearance.BorderColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnGuardar.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
-        btnGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        btnGuardar.FlatAppearance.MouseDownBackColor = Color.Chocolate
+        btnGuardar.FlatAppearance.MouseOverBackColor = Color.Chocolate
         btnGuardar.FlatStyle = FlatStyle.Flat
-        btnGuardar.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnGuardar.Location = New Point(170, 390)
+        btnGuardar.Font = New Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnGuardar.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        btnGuardar.Location = New Point(175, 388)
         btnGuardar.Name = "btnGuardar"
         btnGuardar.Size = New Size(75, 36)
         btnGuardar.TabIndex = 6
@@ -135,13 +151,14 @@ Partial Class FrmProductos
         ' btnModificar
         ' 
         btnModificar.FlatAppearance.BorderColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnModificar.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
-        btnModificar.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        btnModificar.FlatAppearance.MouseDownBackColor = Color.Chocolate
+        btnModificar.FlatAppearance.MouseOverBackColor = Color.Chocolate
         btnModificar.FlatStyle = FlatStyle.Flat
-        btnModificar.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnModificar.Location = New Point(91, 390)
+        btnModificar.Font = New Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnModificar.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        btnModificar.Location = New Point(94, 388)
         btnModificar.Name = "btnModificar"
-        btnModificar.Size = New Size(75, 36)
+        btnModificar.Size = New Size(75, 37)
         btnModificar.TabIndex = 7
         btnModificar.Text = "Modificar"
         btnModificar.UseVisualStyleBackColor = True
@@ -178,12 +195,12 @@ Partial Class FrmProductos
         ' btnEliminar
         ' 
         btnEliminar.FlatAppearance.BorderColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnEliminar.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
-        btnEliminar.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        btnEliminar.FlatAppearance.MouseDownBackColor = Color.Chocolate
+        btnEliminar.FlatAppearance.MouseOverBackColor = Color.Chocolate
         btnEliminar.FlatStyle = FlatStyle.Flat
-        btnEliminar.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        btnEliminar.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnEliminar.Location = New Point(10, 389)
+        btnEliminar.Font = New Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnEliminar.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        btnEliminar.Location = New Point(13, 389)
         btnEliminar.Name = "btnEliminar"
         btnEliminar.Size = New Size(75, 36)
         btnEliminar.TabIndex = 11
@@ -219,9 +236,20 @@ Partial Class FrmProductos
         Panel1.Size = New Size(657, 457)
         Panel1.TabIndex = 2
         ' 
+        ' dgProductos
+        ' 
+        dgProductos.BackgroundColor = Color.Chocolate
+        dgProductos.BorderStyle = BorderStyle.None
+        dgProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgProductos.Location = New Point(48, 90)
+        dgProductos.Name = "dgProductos"
+        dgProductos.RowTemplate.Height = 25
+        dgProductos.Size = New Size(442, 241)
+        dgProductos.TabIndex = 9
+        ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.Silver
+        Panel2.BackColor = Color.Sienna
         Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(txtProducto)
@@ -233,6 +261,7 @@ Partial Class FrmProductos
         Panel2.Controls.Add(btnGuardar)
         Panel2.Controls.Add(btnModificar)
         Panel2.Dock = DockStyle.Right
+        Panel2.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
         Panel2.Location = New Point(653, 52)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(261, 455)
@@ -241,22 +270,13 @@ Partial Class FrmProductos
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(49, 17)
+        Label6.Font = New Font("Bell MT", 14.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label6.ForeColor = Color.White
+        Label6.Location = New Point(20, 25)
         Label6.Name = "Label6"
-        Label6.Size = New Size(151, 15)
+        Label6.Size = New Size(229, 22)
         Label6.TabIndex = 14
         Label6.Text = "Registrar productos nuevos"
-        ' 
-        ' dgProductos
-        ' 
-        dgProductos.BackgroundColor = Color.Chocolate
-        dgProductos.BorderStyle = BorderStyle.None
-        dgProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgProductos.Location = New Point(48, 90)
-        dgProductos.Name = "dgProductos"
-        dgProductos.RowTemplate.Height = 25
-        dgProductos.Size = New Size(442, 241)
-        dgProductos.TabIndex = 9
         ' 
         ' FrmProductos
         ' 
@@ -272,9 +292,9 @@ Partial Class FrmProductos
         PanelTitulo.PerformLayout()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        CType(dgProductos, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        CType(dgProductos, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 

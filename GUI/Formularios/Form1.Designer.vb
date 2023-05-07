@@ -39,8 +39,8 @@ Partial Class Form1
         btnReportes = New Button()
         btnProducto = New Button()
         btnDelivery = New Button()
-        btnCompras = New Button()
-        btnProductos = New Button()
+        btnPendientes = New Button()
+        btnAyuda = New Button()
         btnMenu = New PictureBox()
         PanelContenedor = New Panel()
         PictureBox3 = New PictureBox()
@@ -163,8 +163,8 @@ Partial Class Form1
         PanelMenu.Controls.Add(btnReportes)
         PanelMenu.Controls.Add(btnProducto)
         PanelMenu.Controls.Add(btnDelivery)
-        PanelMenu.Controls.Add(btnCompras)
-        PanelMenu.Controls.Add(btnProductos)
+        PanelMenu.Controls.Add(btnPendientes)
+        PanelMenu.Controls.Add(btnAyuda)
         PanelMenu.Controls.Add(btnMenu)
         PanelMenu.Dock = DockStyle.Left
         PanelMenu.Location = New Point(0, 54)
@@ -179,13 +179,13 @@ Partial Class Form1
         btnCerrarSesion.FlatAppearance.MouseOverBackColor = Color.Goldenrod
         btnCerrarSesion.FlatStyle = FlatStyle.Flat
         btnCerrarSesion.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        btnCerrarSesion.ForeColor = SystemColors.Control
+        btnCerrarSesion.ForeColor = SystemColors.ActiveCaptionText
         btnCerrarSesion.Image = CType(resources.GetObject("btnCerrarSesion.Image"), Image)
         btnCerrarSesion.ImageAlign = ContentAlignment.MiddleLeft
-        btnCerrarSesion.Location = New Point(6, 458)
+        btnCerrarSesion.Location = New Point(0, 444)
         btnCerrarSesion.Name = "btnCerrarSesion"
         btnCerrarSesion.RightToLeft = RightToLeft.No
-        btnCerrarSesion.Size = New Size(208, 50)
+        btnCerrarSesion.Size = New Size(220, 61)
         btnCerrarSesion.TabIndex = 9
         btnCerrarSesion.Text = "Cerrar Sesion"
         btnCerrarSesion.UseVisualStyleBackColor = True
@@ -220,9 +220,9 @@ Partial Class Form1
         btnReportes.ForeColor = SystemColors.Control
         btnReportes.Image = CType(resources.GetObject("btnReportes.Image"), Image)
         btnReportes.ImageAlign = ContentAlignment.MiddleLeft
-        btnReportes.Location = New Point(3, 270)
+        btnReportes.Location = New Point(0, 224)
         btnReportes.Name = "btnReportes"
-        btnReportes.Size = New Size(217, 50)
+        btnReportes.Size = New Size(220, 50)
         btnReportes.TabIndex = 4
         btnReportes.Text = "Reportes"
         btnReportes.UseVisualStyleBackColor = True
@@ -237,11 +237,11 @@ Partial Class Form1
         btnProducto.ForeColor = SystemColors.Control
         btnProducto.Image = CType(resources.GetObject("btnProducto.Image"), Image)
         btnProducto.ImageAlign = ContentAlignment.MiddleLeft
-        btnProducto.Location = New Point(3, 109)
+        btnProducto.Location = New Point(3, 168)
         btnProducto.Name = "btnProducto"
         btnProducto.Size = New Size(217, 50)
         btnProducto.TabIndex = 3
-        btnProducto.Text = "Productos"
+        btnProducto.Text = "Clientes"
         btnProducto.UseVisualStyleBackColor = True
         ' 
         ' btnDelivery
@@ -254,47 +254,47 @@ Partial Class Form1
         btnDelivery.ForeColor = SystemColors.Control
         btnDelivery.Image = CType(resources.GetObject("btnDelivery.Image"), Image)
         btnDelivery.ImageAlign = ContentAlignment.MiddleLeft
-        btnDelivery.Location = New Point(3, 214)
+        btnDelivery.Location = New Point(0, 112)
         btnDelivery.Name = "btnDelivery"
         btnDelivery.Size = New Size(217, 50)
         btnDelivery.TabIndex = 2
-        btnDelivery.Text = "Envios"
+        btnDelivery.Text = "Producto"
         btnDelivery.UseVisualStyleBackColor = True
         ' 
-        ' btnCompras
+        ' btnPendientes
         ' 
-        btnCompras.FlatAppearance.BorderSize = 0
-        btnCompras.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(145), CByte(110), CByte(21))
-        btnCompras.FlatAppearance.MouseOverBackColor = Color.Goldenrod
-        btnCompras.FlatStyle = FlatStyle.Flat
-        btnCompras.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        btnCompras.ForeColor = SystemColors.Control
-        btnCompras.Image = CType(resources.GetObject("btnCompras.Image"), Image)
-        btnCompras.ImageAlign = ContentAlignment.MiddleLeft
-        btnCompras.Location = New Point(3, 165)
-        btnCompras.Name = "btnCompras"
-        btnCompras.Size = New Size(217, 43)
-        btnCompras.TabIndex = 1
-        btnCompras.Text = "  Pendiente"
-        btnCompras.UseVisualStyleBackColor = True
+        btnPendientes.FlatAppearance.BorderSize = 0
+        btnPendientes.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(145), CByte(110), CByte(21))
+        btnPendientes.FlatAppearance.MouseOverBackColor = Color.Goldenrod
+        btnPendientes.FlatStyle = FlatStyle.Flat
+        btnPendientes.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        btnPendientes.ForeColor = SystemColors.Control
+        btnPendientes.Image = CType(resources.GetObject("btnPendientes.Image"), Image)
+        btnPendientes.ImageAlign = ContentAlignment.MiddleLeft
+        btnPendientes.Location = New Point(0, 280)
+        btnPendientes.Name = "btnPendientes"
+        btnPendientes.Size = New Size(220, 43)
+        btnPendientes.TabIndex = 1
+        btnPendientes.Text = "  Pendiente"
+        btnPendientes.UseVisualStyleBackColor = True
         ' 
-        ' btnProductos
+        ' btnAyuda
         ' 
-        btnProductos.FlatAppearance.BorderSize = 0
-        btnProductos.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(145), CByte(110), CByte(21))
-        btnProductos.FlatAppearance.MouseOverBackColor = Color.Goldenrod
-        btnProductos.FlatStyle = FlatStyle.Flat
-        btnProductos.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        btnProductos.ForeColor = SystemColors.Control
-        btnProductos.Image = CType(resources.GetObject("btnProductos.Image"), Image)
-        btnProductos.ImageAlign = ContentAlignment.MiddleLeft
-        btnProductos.Location = New Point(6, 326)
-        btnProductos.Name = "btnProductos"
-        btnProductos.RightToLeft = RightToLeft.No
-        btnProductos.Size = New Size(208, 50)
-        btnProductos.TabIndex = 0
-        btnProductos.Text = "Ayuda"
-        btnProductos.UseVisualStyleBackColor = True
+        btnAyuda.FlatAppearance.BorderSize = 0
+        btnAyuda.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(145), CByte(110), CByte(21))
+        btnAyuda.FlatAppearance.MouseOverBackColor = Color.Goldenrod
+        btnAyuda.FlatStyle = FlatStyle.Flat
+        btnAyuda.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        btnAyuda.ForeColor = SystemColors.Control
+        btnAyuda.Image = CType(resources.GetObject("btnAyuda.Image"), Image)
+        btnAyuda.ImageAlign = ContentAlignment.MiddleLeft
+        btnAyuda.Location = New Point(0, 329)
+        btnAyuda.Name = "btnAyuda"
+        btnAyuda.RightToLeft = RightToLeft.No
+        btnAyuda.Size = New Size(220, 50)
+        btnAyuda.TabIndex = 0
+        btnAyuda.Text = "Ayuda"
+        btnAyuda.UseVisualStyleBackColor = True
         ' 
         ' btnMenu
         ' 
@@ -310,7 +310,7 @@ Partial Class Form1
         ' 
         ' PanelContenedor
         ' 
-        PanelContenedor.BackColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        PanelContenedor.BackColor = Color.White
         PanelContenedor.Controls.Add(PictureBox3)
         PanelContenedor.Dock = DockStyle.Fill
         PanelContenedor.Location = New Point(220, 54)
@@ -366,7 +366,7 @@ Partial Class Form1
     Friend WithEvents btnMaximizar As PictureBox
     Friend WithEvents btnCerrar As PictureBox
     Friend WithEvents PanelMenu As Panel
-    Friend WithEvents btnProductos As Button
+    Friend WithEvents btnAyuda As Button
     Friend WithEvents btnMenu As PictureBox
     Friend WithEvents PanelContenedor As Panel
     Friend WithEvents btnRestaurar As PictureBox
@@ -375,7 +375,7 @@ Partial Class Form1
     Friend WithEvents btnReportes As Button
     Friend WithEvents btnProducto As Button
     Friend WithEvents btnDelivery As Button
-    Friend WithEvents btnCompras As Button
+    Friend WithEvents btnPendientes As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label2 As Label

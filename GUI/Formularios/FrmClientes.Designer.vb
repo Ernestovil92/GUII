@@ -29,31 +29,33 @@ Partial Class FrmClientes
         ' 
         ' PanelTitulo
         ' 
-        PanelTitulo.BackColor = Color.FromArgb(CByte(0), CByte(0), CByte(64))
+        PanelTitulo.BackColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
         PanelTitulo.Controls.Add(Label1)
         PanelTitulo.Dock = DockStyle.Top
         PanelTitulo.Location = New Point(0, 0)
         PanelTitulo.Name = "PanelTitulo"
-        PanelTitulo.Size = New Size(800, 52)
+        PanelTitulo.Size = New Size(808, 52)
         PanelTitulo.TabIndex = 0
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(356, 20)
+        Label1.Font = New Font("Bell MT", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
+        Label1.Location = New Point(382, 19)
         Label1.Name = "Label1"
-        Label1.Size = New Size(103, 15)
+        Label1.Size = New Size(61, 18)
         Label1.TabIndex = 0
-        Label1.Text = "Modulo de cliente"
+        Label1.Text = "Clientes"
         Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' FrmClientes
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        BackColor = Color.Chocolate
+        ClientSize = New Size(808, 468)
         Controls.Add(PanelTitulo)
         Name = "FrmClientes"
         PanelTitulo.ResumeLayout(False)

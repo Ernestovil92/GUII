@@ -61,7 +61,7 @@ Partial Class FrmLogin
         txtUsuario.BackColor = Color.Sienna
         txtUsuario.BorderStyle = BorderStyle.FixedSingle
         txtUsuario.Font = New Font("Segoe UI Semilight", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txtUsuario.ForeColor = Color.Black
+        txtUsuario.ForeColor = Color.White
         txtUsuario.Location = New Point(32, 208)
         txtUsuario.Name = "txtUsuario"
         txtUsuario.Size = New Size(172, 27)
@@ -73,8 +73,10 @@ Partial Class FrmLogin
         txtPassword.BackColor = Color.Sienna
         txtPassword.BorderStyle = BorderStyle.FixedSingle
         txtPassword.Font = New Font("Segoe UI Semilight", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        txtPassword.ForeColor = Color.White
         txtPassword.Location = New Point(32, 274)
         txtPassword.Name = "txtPassword"
+        txtPassword.PasswordChar = "*"c
         txtPassword.Size = New Size(172, 27)
         txtPassword.TabIndex = 4
         txtPassword.TextAlign = HorizontalAlignment.Center

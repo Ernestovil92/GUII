@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmReportes
+Partial Class FrmAyuda
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -34,7 +34,7 @@ Partial Class FrmReportes
         PanelTitulo.Dock = DockStyle.Top
         PanelTitulo.Location = New Point(0, 0)
         PanelTitulo.Name = "PanelTitulo"
-        PanelTitulo.Size = New Size(800, 52)
+        PanelTitulo.Size = New Size(914, 52)
         PanelTitulo.TabIndex = 1
         ' 
         ' Label1
@@ -42,22 +42,23 @@ Partial Class FrmReportes
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Bell MT", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
+        Label1.ForeColor = Color.RosyBrown
         Label1.Location = New Point(382, 19)
         Label1.Name = "Label1"
-        Label1.Size = New Size(67, 18)
+        Label1.Size = New Size(116, 18)
         Label1.TabIndex = 0
-        Label1.Text = "Reportes"
+        Label1.Text = "Soporte Tecnico"
         Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' FrmReportes
+        ' FrmAyuda
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Chocolate
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(914, 507)
         Controls.Add(PanelTitulo)
-        Name = "FrmReportes"
+        Name = "FrmAyuda"
+        Text = "FrmAyuda"
         PanelTitulo.ResumeLayout(False)
         PanelTitulo.PerformLayout()
         ResumeLayout(False)

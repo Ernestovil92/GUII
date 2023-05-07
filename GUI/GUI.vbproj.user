@@ -16,10 +16,13 @@
     <Compile Update="Formularios\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\FrmAyuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\FrmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\FrmDelivery.vb">
+    <Compile Update="Formularios\FrmPendientes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\FrmLogin.vb">

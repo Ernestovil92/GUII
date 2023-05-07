@@ -51,7 +51,6 @@ C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.BackgroundLogin.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.Form1.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmClientes.resources
-C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmDelivery.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmLogin.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmProductos.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmReportes.resources
@@ -67,3 +66,5 @@ C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\ref
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.pdb
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.genruntimeconfig.cache
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\ref\GUI.dll
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmAyuda.resources
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmPendientes.resources

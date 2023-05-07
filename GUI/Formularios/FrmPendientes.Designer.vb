@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmReportes
+Partial Class FrmPendientes
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -45,19 +45,19 @@ Partial Class FrmReportes
         Label1.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
         Label1.Location = New Point(382, 19)
         Label1.Name = "Label1"
-        Label1.Size = New Size(67, 18)
+        Label1.Size = New Size(81, 18)
         Label1.TabIndex = 0
-        Label1.Text = "Reportes"
+        Label1.Text = "Pendientes"
         Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' FrmReportes
+        ' FrmPendientes
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Chocolate
         ClientSize = New Size(800, 450)
         Controls.Add(PanelTitulo)
-        Name = "FrmReportes"
+        Name = "FrmPendientes"
         PanelTitulo.ResumeLayout(False)
         PanelTitulo.PerformLayout()
         ResumeLayout(False)
