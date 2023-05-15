@@ -25,59 +25,79 @@ Partial Class FrmClientes
         PanelTitulo = New Panel()
         Label1 = New Label()
         Panel1 = New Panel()
+        cmbCliente = New ComboBox()
         Label16 = New Label()
         Label9 = New Label()
         Panel2 = New Panel()
-        DataGridView1 = New DataGridView()
-        DateTimePicker2 = New DateTimePicker()
-        TextBox7 = New TextBox()
-        TextBox6 = New TextBox()
-        TextBox5 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox3 = New TextBox()
+        dgArticulos = New DataGridView()
+        dtFechaVen = New DateTimePicker()
+        txtDescuento = New TextBox()
+        txtPrecioVenta = New TextBox()
+        txtPrecionCompra = New TextBox()
+        txtCantdidad = New TextBox()
+        txtArticulo = New TextBox()
         Label15 = New Label()
         Label14 = New Label()
         Label13 = New Label()
         Label12 = New Label()
         Label11 = New Label()
         Label10 = New Label()
-        DateTimePicker1 = New DateTimePicker()
+        dtFecha = New DateTimePicker()
         Label8 = New Label()
         Label7 = New Label()
-        TextBox2 = New TextBox()
-        TextBox1 = New TextBox()
+        txtNum2 = New TextBox()
+        txtNum1 = New TextBox()
         Label6 = New Label()
         Label5 = New Label()
-        ComboBox1 = New ComboBox()
+        cmbFactura = New ComboBox()
         Label4 = New Label()
         Label3 = New Label()
         btnGuardar = New Button()
         btnCancelar = New Button()
         btnNuevo = New Button()
-        txtNumero = New TextBox()
-        txtCliente = New TextBox()
+        txtImpuesto = New TextBox()
         txtCodigo = New TextBox()
         Label2 = New Label()
         TabControl1 = New TabControl()
         TabPage1 = New TabPage()
         Label19 = New Label()
-        DataGridView2 = New DataGridView()
-        CheckBox1 = New CheckBox()
-        Button6 = New Button()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
+        dgListas = New DataGridView()
+        chEliminar = New CheckBox()
+        btnImprimir = New Button()
+        btnEliminar = New Button()
+        btnComprobante = New Button()
+        btnBuscar = New Button()
         Label18 = New Label()
         Label17 = New Label()
-        DateTimePicker4 = New DateTimePicker()
-        DateTimePicker3 = New DateTimePicker()
+        dtFechaFin = New DateTimePicker()
+        dtFechaIni = New DateTimePicker()
+        tbNuevoCliente = New TabControl()
+        TabPage2 = New TabPage()
+        TabPage3 = New TabPage()
+        Panel3 = New Panel()
+        btnActualizarCliente = New Button()
+        dgClientes = New DataGridView()
+        Label23 = New Label()
+        Label22 = New Label()
+        Label21 = New Label()
+        Label20 = New Label()
+        txtRuc = New TextBox()
+        txtCorreo = New TextBox()
+        txtTelefono = New TextBox()
+        txtClienteNuevo = New TextBox()
+        BtnGuardarCliente = New Button()
         PanelTitulo.SuspendLayout()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgArticulos, ComponentModel.ISupportInitialize).BeginInit()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
-        CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgListas, ComponentModel.ISupportInitialize).BeginInit()
+        tbNuevoCliente.SuspendLayout()
+        TabPage2.SuspendLayout()
+        TabPage3.SuspendLayout()
+        Panel3.SuspendLayout()
+        CType(dgClientes, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' PanelTitulo
@@ -87,7 +107,7 @@ Partial Class FrmClientes
         PanelTitulo.Dock = DockStyle.Top
         PanelTitulo.Location = New Point(0, 0)
         PanelTitulo.Name = "PanelTitulo"
-        PanelTitulo.Size = New Size(808, 52)
+        PanelTitulo.Size = New Size(1162, 52)
         PanelTitulo.TabIndex = 0
         ' 
         ' Label1
@@ -96,7 +116,7 @@ Partial Class FrmClientes
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Bell MT", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Label1.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        Label1.Location = New Point(382, 19)
+        Label1.Location = New Point(626, 19)
         Label1.Name = "Label1"
         Label1.Size = New Size(54, 18)
         Label1.TabIndex = 0
@@ -105,29 +125,38 @@ Partial Class FrmClientes
         ' 
         ' Panel1
         ' 
+        Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(cmbCliente)
         Panel1.Controls.Add(Label16)
         Panel1.Controls.Add(Label9)
         Panel1.Controls.Add(Panel2)
-        Panel1.Controls.Add(DateTimePicker1)
+        Panel1.Controls.Add(dtFecha)
         Panel1.Controls.Add(Label8)
         Panel1.Controls.Add(Label7)
-        Panel1.Controls.Add(TextBox2)
-        Panel1.Controls.Add(TextBox1)
+        Panel1.Controls.Add(txtNum2)
+        Panel1.Controls.Add(txtNum1)
         Panel1.Controls.Add(Label6)
         Panel1.Controls.Add(Label5)
-        Panel1.Controls.Add(ComboBox1)
+        Panel1.Controls.Add(cmbFactura)
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(btnGuardar)
         Panel1.Controls.Add(btnCancelar)
         Panel1.Controls.Add(btnNuevo)
-        Panel1.Controls.Add(txtNumero)
-        Panel1.Controls.Add(txtCliente)
+        Panel1.Controls.Add(txtImpuesto)
         Panel1.Controls.Add(txtCodigo)
-        Panel1.Location = New Point(12, 67)
+        Panel1.Location = New Point(19, 27)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(784, 282)
         Panel1.TabIndex = 1
+        ' 
+        ' cmbCliente
+        ' 
+        cmbCliente.FormattingEnabled = True
+        cmbCliente.Location = New Point(279, 10)
+        cmbCliente.Name = "cmbCliente"
+        cmbCliente.Size = New Size(121, 23)
+        cmbCliente.TabIndex = 19
         ' 
         ' Label16
         ' 
@@ -149,13 +178,14 @@ Partial Class FrmClientes
         ' 
         ' Panel2
         ' 
-        Panel2.Controls.Add(DataGridView1)
-        Panel2.Controls.Add(DateTimePicker2)
-        Panel2.Controls.Add(TextBox7)
-        Panel2.Controls.Add(TextBox6)
-        Panel2.Controls.Add(TextBox5)
-        Panel2.Controls.Add(TextBox4)
-        Panel2.Controls.Add(TextBox3)
+        Panel2.BorderStyle = BorderStyle.FixedSingle
+        Panel2.Controls.Add(dgArticulos)
+        Panel2.Controls.Add(dtFechaVen)
+        Panel2.Controls.Add(txtDescuento)
+        Panel2.Controls.Add(txtPrecioVenta)
+        Panel2.Controls.Add(txtPrecionCompra)
+        Panel2.Controls.Add(txtCantdidad)
+        Panel2.Controls.Add(txtArticulo)
         Panel2.Controls.Add(Label15)
         Panel2.Controls.Add(Label14)
         Panel2.Controls.Add(Label13)
@@ -167,56 +197,57 @@ Partial Class FrmClientes
         Panel2.Size = New Size(760, 156)
         Panel2.TabIndex = 17
         ' 
-        ' DataGridView1
+        ' dgArticulos
         ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(3, 78)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(754, 75)
-        DataGridView1.TabIndex = 18
+        dgArticulos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgArticulos.Location = New Point(3, 78)
+        dgArticulos.Name = "dgArticulos"
+        dgArticulos.RowTemplate.Height = 25
+        dgArticulos.Size = New Size(754, 75)
+        dgArticulos.TabIndex = 18
         ' 
-        ' DateTimePicker2
+        ' dtFechaVen
         ' 
-        DateTimePicker2.Location = New Point(590, 14)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(153, 23)
-        DateTimePicker2.TabIndex = 17
+        dtFechaVen.Format = DateTimePickerFormat.Short
+        dtFechaVen.Location = New Point(590, 14)
+        dtFechaVen.Name = "dtFechaVen"
+        dtFechaVen.Size = New Size(99, 23)
+        dtFechaVen.TabIndex = 17
         ' 
-        ' TextBox7
+        ' txtDescuento
         ' 
-        TextBox7.Location = New Point(529, 44)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(100, 23)
-        TextBox7.TabIndex = 11
+        txtDescuento.Location = New Point(589, 47)
+        txtDescuento.Name = "txtDescuento"
+        txtDescuento.Size = New Size(100, 23)
+        txtDescuento.TabIndex = 11
         ' 
-        ' TextBox6
+        ' txtPrecioVenta
         ' 
-        TextBox6.Location = New Point(345, 42)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(100, 23)
-        TextBox6.TabIndex = 10
+        txtPrecioVenta.Location = New Point(345, 42)
+        txtPrecioVenta.Name = "txtPrecioVenta"
+        txtPrecioVenta.Size = New Size(100, 23)
+        txtPrecioVenta.TabIndex = 10
         ' 
-        ' TextBox5
+        ' txtPrecionCompra
         ' 
-        TextBox5.Location = New Point(345, 17)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(100, 23)
-        TextBox5.TabIndex = 9
+        txtPrecionCompra.Location = New Point(345, 17)
+        txtPrecionCompra.Name = "txtPrecionCompra"
+        txtPrecionCompra.Size = New Size(100, 23)
+        txtPrecionCompra.TabIndex = 9
         ' 
-        ' TextBox4
+        ' txtCantdidad
         ' 
-        TextBox4.Location = New Point(83, 44)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(100, 23)
-        TextBox4.TabIndex = 8
+        txtCantdidad.Location = New Point(83, 44)
+        txtCantdidad.Name = "txtCantdidad"
+        txtCantdidad.Size = New Size(100, 23)
+        txtCantdidad.TabIndex = 8
         ' 
-        ' TextBox3
+        ' txtArticulo
         ' 
-        TextBox3.Location = New Point(84, 14)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(100, 23)
-        TextBox3.TabIndex = 7
+        txtArticulo.Location = New Point(84, 14)
+        txtArticulo.Name = "txtArticulo"
+        txtArticulo.Size = New Size(100, 23)
+        txtArticulo.TabIndex = 7
         ' 
         ' Label15
         ' 
@@ -272,13 +303,13 @@ Partial Class FrmClientes
         Label10.TabIndex = 1
         Label10.Text = "Fecha de Vencimiento"
         ' 
-        ' DateTimePicker1
+        ' dtFecha
         ' 
-        DateTimePicker1.Format = DateTimePickerFormat.Short
-        DateTimePicker1.Location = New Point(467, 10)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(98, 23)
-        DateTimePicker1.TabIndex = 16
+        dtFecha.Format = DateTimePickerFormat.Short
+        dtFecha.Location = New Point(467, 10)
+        dtFecha.Name = "dtFecha"
+        dtFecha.Size = New Size(98, 23)
+        dtFecha.TabIndex = 16
         ' 
         ' Label8
         ' 
@@ -298,19 +329,19 @@ Partial Class FrmClientes
         Label7.TabIndex = 14
         Label7.Text = "Impuesto"
         ' 
-        ' TextBox2
+        ' txtNum2
         ' 
-        TextBox2.Location = New Point(320, 49)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(54, 23)
-        TextBox2.TabIndex = 13
+        txtNum2.Location = New Point(320, 49)
+        txtNum2.Name = "txtNum2"
+        txtNum2.Size = New Size(54, 23)
+        txtNum2.TabIndex = 13
         ' 
-        ' TextBox1
+        ' txtNum1
         ' 
-        TextBox1.Location = New Point(279, 49)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(35, 23)
-        TextBox1.TabIndex = 12
+        txtNum1.Location = New Point(279, 49)
+        txtNum1.Name = "txtNum1"
+        txtNum1.Size = New Size(35, 23)
+        txtNum1.TabIndex = 12
         ' 
         ' Label6
         ' 
@@ -330,14 +361,14 @@ Partial Class FrmClientes
         Label5.TabIndex = 10
         Label5.Text = "Cliente"
         ' 
-        ' ComboBox1
+        ' cmbFactura
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(109, 49)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(100, 23)
-        ComboBox1.TabIndex = 9
-        ComboBox1.Text = "Factura"
+        cmbFactura.FormattingEnabled = True
+        cmbFactura.Location = New Point(109, 49)
+        cmbFactura.Name = "cmbFactura"
+        cmbFactura.Size = New Size(100, 23)
+        cmbFactura.TabIndex = 9
+        cmbFactura.Text = "Factura"
         ' 
         ' Label4
         ' 
@@ -384,19 +415,12 @@ Partial Class FrmClientes
         btnNuevo.Text = "Nuevo"
         btnNuevo.UseVisualStyleBackColor = True
         ' 
-        ' txtNumero
+        ' txtImpuesto
         ' 
-        txtNumero.Location = New Point(467, 44)
-        txtNumero.Name = "txtNumero"
-        txtNumero.Size = New Size(100, 23)
-        txtNumero.TabIndex = 2
-        ' 
-        ' txtCliente
-        ' 
-        txtCliente.Location = New Point(274, 10)
-        txtCliente.Name = "txtCliente"
-        txtCliente.Size = New Size(100, 23)
-        txtCliente.TabIndex = 1
+        txtImpuesto.Location = New Point(467, 44)
+        txtImpuesto.Name = "txtImpuesto"
+        txtImpuesto.Size = New Size(100, 23)
+        txtImpuesto.TabIndex = 2
         ' 
         ' txtCodigo
         ' 
@@ -408,7 +432,7 @@ Partial Class FrmClientes
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(24, 55)
+        Label2.Location = New Point(31, 15)
         Label2.Name = "Label2"
         Label2.Size = New Size(41, 15)
         Label2.TabIndex = 0
@@ -417,7 +441,7 @@ Partial Class FrmClientes
         ' TabControl1
         ' 
         TabControl1.Controls.Add(TabPage1)
-        TabControl1.Location = New Point(13, 354)
+        TabControl1.Location = New Point(20, 314)
         TabControl1.Name = "TabControl1"
         TabControl1.SelectedIndex = 0
         TabControl1.Size = New Size(783, 248)
@@ -426,16 +450,16 @@ Partial Class FrmClientes
         ' TabPage1
         ' 
         TabPage1.Controls.Add(Label19)
-        TabPage1.Controls.Add(DataGridView2)
-        TabPage1.Controls.Add(CheckBox1)
-        TabPage1.Controls.Add(Button6)
-        TabPage1.Controls.Add(Button1)
-        TabPage1.Controls.Add(Button2)
-        TabPage1.Controls.Add(Button3)
+        TabPage1.Controls.Add(dgListas)
+        TabPage1.Controls.Add(chEliminar)
+        TabPage1.Controls.Add(btnImprimir)
+        TabPage1.Controls.Add(btnEliminar)
+        TabPage1.Controls.Add(btnComprobante)
+        TabPage1.Controls.Add(btnBuscar)
         TabPage1.Controls.Add(Label18)
         TabPage1.Controls.Add(Label17)
-        TabPage1.Controls.Add(DateTimePicker4)
-        TabPage1.Controls.Add(DateTimePicker3)
+        TabPage1.Controls.Add(dtFechaFin)
+        TabPage1.Controls.Add(dtFechaIni)
         TabPage1.Location = New Point(4, 24)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
@@ -453,60 +477,60 @@ Partial Class FrmClientes
         Label19.TabIndex = 20
         Label19.Text = "Total registros: "
         ' 
-        ' DataGridView2
+        ' dgListas
         ' 
-        DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView2.Location = New Point(10, 82)
-        DataGridView2.Name = "DataGridView2"
-        DataGridView2.RowTemplate.Height = 25
-        DataGridView2.Size = New Size(754, 132)
-        DataGridView2.TabIndex = 19
+        dgListas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgListas.Location = New Point(10, 82)
+        dgListas.Name = "dgListas"
+        dgListas.RowTemplate.Height = 25
+        dgListas.Size = New Size(754, 132)
+        dgListas.TabIndex = 19
         ' 
-        ' CheckBox1
+        ' chEliminar
         ' 
-        CheckBox1.AutoSize = True
-        CheckBox1.Location = New Point(18, 57)
-        CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(69, 19)
-        CheckBox1.TabIndex = 11
-        CheckBox1.Text = "Eliminar"
-        CheckBox1.UseVisualStyleBackColor = True
+        chEliminar.AutoSize = True
+        chEliminar.Location = New Point(18, 57)
+        chEliminar.Name = "chEliminar"
+        chEliminar.Size = New Size(69, 19)
+        chEliminar.TabIndex = 11
+        chEliminar.Text = "Eliminar"
+        chEliminar.UseVisualStyleBackColor = True
         ' 
-        ' Button6
+        ' btnImprimir
         ' 
-        Button6.Location = New Point(537, 25)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(75, 23)
-        Button6.TabIndex = 10
-        Button6.Text = "Imprimir"
-        Button6.UseVisualStyleBackColor = True
+        btnImprimir.Location = New Point(537, 25)
+        btnImprimir.Name = "btnImprimir"
+        btnImprimir.Size = New Size(75, 23)
+        btnImprimir.TabIndex = 10
+        btnImprimir.Text = "Imprimir"
+        btnImprimir.UseVisualStyleBackColor = True
         ' 
-        ' Button1
+        ' btnEliminar
         ' 
-        Button1.Location = New Point(350, 25)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 9
-        Button1.Text = "Eliminar"
-        Button1.UseVisualStyleBackColor = True
+        btnEliminar.Location = New Point(350, 25)
+        btnEliminar.Name = "btnEliminar"
+        btnEliminar.Size = New Size(75, 23)
+        btnEliminar.TabIndex = 9
+        btnEliminar.Text = "Eliminar"
+        btnEliminar.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' btnComprobante
         ' 
-        Button2.Location = New Point(431, 25)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(100, 23)
-        Button2.TabIndex = 8
-        Button2.Text = "Comprobante"
-        Button2.UseVisualStyleBackColor = True
+        btnComprobante.Location = New Point(431, 25)
+        btnComprobante.Name = "btnComprobante"
+        btnComprobante.Size = New Size(100, 23)
+        btnComprobante.TabIndex = 8
+        btnComprobante.Text = "Comprobante"
+        btnComprobante.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' btnBuscar
         ' 
-        Button3.Location = New Point(269, 25)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(75, 23)
-        Button3.TabIndex = 7
-        Button3.Text = "Buscar"
-        Button3.UseVisualStyleBackColor = True
+        btnBuscar.Location = New Point(269, 25)
+        btnBuscar.Name = "btnBuscar"
+        btnBuscar.Size = New Size(75, 23)
+        btnBuscar.TabIndex = 7
+        btnBuscar.Text = "Buscar"
+        btnBuscar.UseVisualStyleBackColor = True
         ' 
         ' Label18
         ' 
@@ -526,31 +550,172 @@ Partial Class FrmClientes
         Label17.TabIndex = 5
         Label17.Text = "Fecha inicio"
         ' 
-        ' DateTimePicker4
+        ' dtFechaFin
         ' 
-        DateTimePicker4.Format = DateTimePickerFormat.Short
-        DateTimePicker4.Location = New Point(133, 25)
-        DateTimePicker4.Name = "DateTimePicker4"
-        DateTimePicker4.Size = New Size(102, 23)
-        DateTimePicker4.TabIndex = 1
+        dtFechaFin.Format = DateTimePickerFormat.Short
+        dtFechaFin.Location = New Point(133, 25)
+        dtFechaFin.Name = "dtFechaFin"
+        dtFechaFin.Size = New Size(102, 23)
+        dtFechaFin.TabIndex = 1
         ' 
-        ' DateTimePicker3
+        ' dtFechaIni
         ' 
-        DateTimePicker3.Format = DateTimePickerFormat.Short
-        DateTimePicker3.Location = New Point(10, 25)
-        DateTimePicker3.Name = "DateTimePicker3"
-        DateTimePicker3.Size = New Size(102, 23)
-        DateTimePicker3.TabIndex = 0
+        dtFechaIni.Format = DateTimePickerFormat.Short
+        dtFechaIni.Location = New Point(10, 25)
+        dtFechaIni.Name = "dtFechaIni"
+        dtFechaIni.Size = New Size(102, 23)
+        dtFechaIni.TabIndex = 0
+        ' 
+        ' tbNuevoCliente
+        ' 
+        tbNuevoCliente.Controls.Add(TabPage2)
+        tbNuevoCliente.Controls.Add(TabPage3)
+        tbNuevoCliente.Location = New Point(195, 99)
+        tbNuevoCliente.Name = "tbNuevoCliente"
+        tbNuevoCliente.SelectedIndex = 0
+        tbNuevoCliente.Size = New Size(828, 630)
+        tbNuevoCliente.TabIndex = 6
+        ' 
+        ' TabPage2
+        ' 
+        TabPage2.Controls.Add(Panel1)
+        TabPage2.Controls.Add(Label2)
+        TabPage2.Controls.Add(TabControl1)
+        TabPage2.Location = New Point(4, 24)
+        TabPage2.Name = "TabPage2"
+        TabPage2.Padding = New Padding(3)
+        TabPage2.Size = New Size(820, 602)
+        TabPage2.TabIndex = 0
+        TabPage2.Text = "Ventas"
+        TabPage2.UseVisualStyleBackColor = True
+        ' 
+        ' TabPage3
+        ' 
+        TabPage3.Controls.Add(Panel3)
+        TabPage3.Location = New Point(4, 24)
+        TabPage3.Name = "TabPage3"
+        TabPage3.Padding = New Padding(3)
+        TabPage3.Size = New Size(820, 602)
+        TabPage3.TabIndex = 1
+        TabPage3.Text = "Nuevo cliente"
+        TabPage3.UseVisualStyleBackColor = True
+        ' 
+        ' Panel3
+        ' 
+        Panel3.Controls.Add(btnActualizarCliente)
+        Panel3.Controls.Add(dgClientes)
+        Panel3.Controls.Add(Label23)
+        Panel3.Controls.Add(Label22)
+        Panel3.Controls.Add(Label21)
+        Panel3.Controls.Add(Label20)
+        Panel3.Controls.Add(txtRuc)
+        Panel3.Controls.Add(txtCorreo)
+        Panel3.Controls.Add(txtTelefono)
+        Panel3.Controls.Add(txtClienteNuevo)
+        Panel3.Controls.Add(BtnGuardarCliente)
+        Panel3.Location = New Point(21, 19)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(687, 411)
+        Panel3.TabIndex = 1
+        ' 
+        ' btnActualizarCliente
+        ' 
+        btnActualizarCliente.Location = New Point(77, 359)
+        btnActualizarCliente.Name = "btnActualizarCliente"
+        btnActualizarCliente.Size = New Size(75, 23)
+        btnActualizarCliente.TabIndex = 10
+        btnActualizarCliente.Text = "Actualizar"
+        btnActualizarCliente.UseVisualStyleBackColor = True
+        ' 
+        ' dgClientes
+        ' 
+        dgClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgClientes.Location = New Point(77, 203)
+        dgClientes.Name = "dgClientes"
+        dgClientes.RowTemplate.Height = 25
+        dgClientes.Size = New Size(532, 150)
+        dgClientes.TabIndex = 9
+        ' 
+        ' Label23
+        ' 
+        Label23.AutoSize = True
+        Label23.Location = New Point(511, 95)
+        Label23.Name = "Label23"
+        Label23.Size = New Size(52, 15)
+        Label23.TabIndex = 8
+        Label23.Text = "Telefono"
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Location = New Point(200, 95)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(105, 15)
+        Label22.TabIndex = 7
+        Label22.Text = "Correo Electronico"
+        ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.Location = New Point(77, 95)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(27, 15)
+        Label21.TabIndex = 6
+        Label21.Text = "Ruc"
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Location = New Point(77, 44)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(44, 15)
+        Label20.TabIndex = 5
+        Label20.Text = "Cliente"
+        ' 
+        ' txtRuc
+        ' 
+        txtRuc.Location = New Point(77, 113)
+        txtRuc.Name = "txtRuc"
+        txtRuc.Size = New Size(100, 23)
+        txtRuc.TabIndex = 4
+        ' 
+        ' txtCorreo
+        ' 
+        txtCorreo.Location = New Point(200, 113)
+        txtCorreo.Name = "txtCorreo"
+        txtCorreo.Size = New Size(288, 23)
+        txtCorreo.TabIndex = 3
+        ' 
+        ' txtTelefono
+        ' 
+        txtTelefono.Location = New Point(511, 113)
+        txtTelefono.Name = "txtTelefono"
+        txtTelefono.Size = New Size(98, 23)
+        txtTelefono.TabIndex = 2
+        ' 
+        ' txtClienteNuevo
+        ' 
+        txtClienteNuevo.Location = New Point(77, 62)
+        txtClienteNuevo.Name = "txtClienteNuevo"
+        txtClienteNuevo.Size = New Size(532, 23)
+        txtClienteNuevo.TabIndex = 1
+        ' 
+        ' BtnGuardarCliente
+        ' 
+        BtnGuardarCliente.Location = New Point(534, 158)
+        BtnGuardarCliente.Name = "BtnGuardarCliente"
+        BtnGuardarCliente.Size = New Size(75, 23)
+        BtnGuardarCliente.TabIndex = 0
+        BtnGuardarCliente.Text = "Guardar"
+        BtnGuardarCliente.UseVisualStyleBackColor = True
         ' 
         ' FrmClientes
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(808, 614)
-        Controls.Add(TabControl1)
-        Controls.Add(Label2)
-        Controls.Add(Panel1)
+        ClientSize = New Size(1162, 710)
+        Controls.Add(tbNuevoCliente)
         Controls.Add(PanelTitulo)
         Name = "FrmClientes"
         PanelTitulo.ResumeLayout(False)
@@ -559,13 +724,19 @@ Partial Class FrmClientes
         Panel1.PerformLayout()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgArticulos, ComponentModel.ISupportInitialize).EndInit()
         TabControl1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()
-        CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgListas, ComponentModel.ISupportInitialize).EndInit()
+        tbNuevoCliente.ResumeLayout(False)
+        TabPage2.ResumeLayout(False)
+        TabPage2.PerformLayout()
+        TabPage3.ResumeLayout(False)
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        CType(dgClientes, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents PanelTitulo As Panel
@@ -573,48 +744,63 @@ Partial Class FrmClientes
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents dtFechaVen As DateTimePicker
+    Friend WithEvents txtDescuento As TextBox
+    Friend WithEvents txtPrecioVenta As TextBox
+    Friend WithEvents txtPrecionCompra As TextBox
+    Friend WithEvents txtCantdidad As TextBox
+    Friend WithEvents txtArticulo As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtFecha As DateTimePicker
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtNum2 As TextBox
+    Friend WithEvents txtNum1 As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbFactura As ComboBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnGuardar As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnNuevo As Button
-    Friend WithEvents txtNumero As TextBox
-    Friend WithEvents txtCliente As TextBox
+    Friend WithEvents txtImpuesto As TextBox
     Friend WithEvents txtCodigo As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgArticulos As DataGridView
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents dgListas As DataGridView
+    Friend WithEvents chEliminar As CheckBox
+    Friend WithEvents btnImprimir As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnComprobante As Button
+    Friend WithEvents btnBuscar As Button
     Friend WithEvents Label18 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents DateTimePicker4 As DateTimePicker
-    Friend WithEvents DateTimePicker3 As DateTimePicker
+    Friend WithEvents dtFechaFin As DateTimePicker
+    Friend WithEvents dtFechaIni As DateTimePicker
     Friend WithEvents Label19 As Label
+    Friend WithEvents tbNuevoCliente As TabControl
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents txtRuc As TextBox
+    Friend WithEvents txtCorreo As TextBox
+    Friend WithEvents txtTelefono As TextBox
+    Friend WithEvents txtClienteNuevo As TextBox
+    Friend WithEvents BtnGuardarCliente As Button
+    Friend WithEvents btnActualizarCliente As Button
+    Friend WithEvents dgClientes As DataGridView
+    Friend WithEvents cmbCliente As ComboBox
 End Class
