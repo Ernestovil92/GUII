@@ -9,7 +9,7 @@ Public Class FrmProductos
 
     Private Sub MostrarNombreUsuario()
         conexion.Open()
-        Dim consulta As String = "select id as Nro_Registro, nombre_producto as Producto,codigo_barra as Codigo, U_cliente as Clientes from Productos"
+        Dim consulta As String = "select id as Nro_Registro, nombre_producto as Producto,codigo_barra as Codigo, Proveedor as Proveedores,C_electronico as Correo_electronico,telefono, Precio_unitario,stock from Productos"
         Dim adapter As New SqlDataAdapter(consulta, conexion)
         Dim dt As New DataTable
         adapter.Fill(dt)
@@ -20,7 +20,7 @@ Public Class FrmProductos
     Private Sub CargarRegistros()
         conexion.Open()
         If conexion.State = 1 Then
-            Dim consulta As String = "INSERT INTO Productos(nombre_producto,codigo_barra,U_cliente)VALUES('" & txtProducto.Text & "','" & txtCodigo.Text & "','" & txtCliente.Text & "')"
+            Dim consulta As String = "INSERT INTO Productos(nombre_producto,codigo_barra,Proveedor,C_electronico,telefono, Precio_unitario,stock)VALUES('" & txtProducto.Text & "','" & txtCodigo.Text & "','" & txtProveedor.Text & "','" & txtCorreo.Text & "','" & txtTelefono.Text & "'," & txtP_unitario.Text & "," & txtStock.Text & ")"
             Dim comando As New SqlCommand(consulta, conexion)
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
@@ -40,18 +40,18 @@ Public Class FrmProductos
         dgProductos.DataSource = " "
     End Sub
 
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+    Private Sub btnGuardar2_Click(sender As Object, e As EventArgs) Handles btnGuardar2.Click
         CargarRegistros()
         txtProducto.Text = " "
         txtCodigo.Text = " "
-        txtCliente.Text = " "
+        txtProveedor.Text = " "
     End Sub
 
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+    Private Sub btnModificar2_Click(sender As Object, e As EventArgs) Handles btnModificar2.Click
         FrmModificarProductos.ShowDialog()
     End Sub
 
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+    Private Sub btnEliminar2_Click(sender As Object, e As EventArgs) Handles btnEliminar2.Click
         FrmEliminarProductos.ShowDialog()
     End Sub
 
@@ -64,6 +64,14 @@ Public Class FrmProductos
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
+
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
     End Sub
 End Class
