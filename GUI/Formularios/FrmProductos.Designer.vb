@@ -59,7 +59,7 @@ Partial Class FrmProductos
         cmbProveedor = New ComboBox()
         Label12 = New Label()
         Label11 = New Label()
-        cmbArticulo = New ComboBox()
+        cmbArticulos = New ComboBox()
         TabControl1 = New TabControl()
         Stock = New TabPage()
         NuevoArticulo = New TabPage()
@@ -87,7 +87,7 @@ Partial Class FrmProductos
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Bell MT", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
+        Label1.ForeColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
         Label1.Location = New Point(549, 20)
         Label1.Name = "Label1"
         Label1.Size = New Size(75, 18)
@@ -422,7 +422,7 @@ Partial Class FrmProductos
         Panel1.Controls.Add(cmbProveedor)
         Panel1.Controls.Add(Label12)
         Panel1.Controls.Add(Label11)
-        Panel1.Controls.Add(cmbArticulo)
+        Panel1.Controls.Add(cmbArticulos)
         Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(btnLimpiar)
         Panel1.Controls.Add(txtBuscar)
@@ -493,19 +493,19 @@ Partial Class FrmProductos
         Label11.TabIndex = 16
         Label11.Text = "Articulo"
         ' 
-        ' cmbArticulo
+        ' cmbArticulos
         ' 
-        cmbArticulo.FormattingEnabled = True
-        cmbArticulo.Location = New Point(68, 56)
-        cmbArticulo.Name = "cmbArticulo"
-        cmbArticulo.Size = New Size(121, 23)
-        cmbArticulo.TabIndex = 15
+        cmbArticulos.FormattingEnabled = True
+        cmbArticulos.Location = New Point(68, 56)
+        cmbArticulos.Name = "cmbArticulos"
+        cmbArticulos.Size = New Size(121, 23)
+        cmbArticulos.TabIndex = 15
         ' 
         ' TabControl1
         ' 
         TabControl1.Controls.Add(Stock)
         TabControl1.Controls.Add(NuevoArticulo)
-        TabControl1.Location = New Point(61, 73)
+        TabControl1.Location = New Point(172, 129)
         TabControl1.Name = "TabControl1"
         TabControl1.SelectedIndex = 0
         TabControl1.Size = New Size(844, 491)
@@ -584,7 +584,7 @@ Partial Class FrmProductos
     Friend WithEvents Label1 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents cmbArticulo As ComboBox
+    Friend WithEvents cmbArticulos As ComboBox
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents Stock As TabPage
     Friend WithEvents NuevoArticulo As TabPage

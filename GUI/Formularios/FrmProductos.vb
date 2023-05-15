@@ -4,9 +4,24 @@ Public Class FrmProductos
     Dim comando As New SqlCommand()
     Private Sub FrmProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion = New SqlConnection("server=DESKTOP-54PHT7T\SQLEXPRESS;DATABASE=GUI;INTEGRATED SECURITY=TRUE")
-
+        cargarCombosProducto()
+        cargarCombosProveedores()
     End Sub
-
+    Public Function SelectResult(ByVal cadConsul As String) As DataTable
+        Dim dtTabla As New DataTable
+        Try
+            conexion.Open()
+            comando = New SqlClient.SqlCommand(cadConsul, conexion)
+            Dim da As New SqlDataAdapter(comando)
+            comando.CommandTimeout = 0
+            da.Fill(dtTabla)
+            conexion.Close()
+        Catch
+            conexion.Close()
+            ' //MessageBox.Show(ex.Message)
+        End Try
+        Return dtTabla
+    End Function
     Private Sub MostrarNombreUsuario()
         conexion.Open()
         Dim consulta As String = "select id as Nro_Registro, nombre_producto as Producto,codigo_barra as Codigo, Proveedor as Proveedores,C_electronico as Correo_electronico,telefono, Precio_unitario,stock from Productos"
@@ -63,15 +78,24 @@ Public Class FrmProductos
         Me.dgProductos.DataSource = dt
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
+    Private Sub cargarCombosProducto()
+        cmbArticulos.Items.Clear()
+        cmbArticulos.DataSource = Nothing
+        cmbArticulos.DataSource = SelectResult("SELECT '' id,'' nombre_producto UNION SELECT id, nombre_producto from Productos")
+        With (cmbArticulos)
+            .DisplayMember = "nombre_producto"
+            .ValueMember = "id"
+        End With
     End Sub
 
-    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
-
+    Private Sub cargarCombosProveedores()
+        cmbProveedor.Items.Clear()
+        cmbProveedor.DataSource = Nothing
+        cmbProveedor.DataSource = SelectResult("SELECT '' id,'' Proveedor UNION SELECT id, Proveedor from Productos")
+        With (cmbProveedor)
+            .DisplayMember = "Proveedor"
+            .ValueMember = "id"
+        End With
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
-    End Sub
 End Class
