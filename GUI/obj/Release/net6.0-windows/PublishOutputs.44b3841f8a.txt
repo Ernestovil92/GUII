@@ -1,0 +1,12 @@
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\GUI.exe
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\GUI.dll
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\GUI.deps.json
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\GUI.runtimeconfig.json
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\GUI.dll.config
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\GUI.pdb
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\System.Data.SqlClient.dll
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\runtimes\win-arm64\native\sni.dll
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\runtimes\win-x64\native\sni.dll
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\runtimes\win-x86\native\sni.dll
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
