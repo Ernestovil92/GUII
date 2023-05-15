@@ -6,6 +6,8 @@ Public Class FrmProductos
         conexion = New SqlConnection("server=DESKTOP-54PHT7T\SQLEXPRESS;DATABASE=GUI;INTEGRATED SECURITY=TRUE")
         cargarCombosProducto()
         cargarCombosProveedores()
+        filtarProveedor()
+        MostrarNombreUsuario()
     End Sub
     Public Function SelectResult(ByVal cadConsul As String) As DataTable
         Dim dtTabla As New DataTable
@@ -70,12 +72,21 @@ Public Class FrmProductos
         FrmEliminarProductos.ShowDialog()
     End Sub
 
-    Private Sub btnBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBuscar.KeyPress
+    ''  Private Sub btnBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBuscar.KeyPress
 
-        Dim ad = New SqlDataAdapter("SELECT * FROM Productos where nombre_producto like '" + txtBuscar.Text + "%'", conexion)
-        Dim dt = New DataTable
-        ad.Fill(dt)
-        Me.dgProductos.DataSource = dt
+    ''Dim ad = New SqlDataAdapter("SELECT * FROM Productos where nombre_producto like '" + txtBuscar.Text + "%'", conexion)
+    ''Dim dt = New DataTable
+    ''  ad.Fill(dt)
+    ''Me.dgProductos.DataSource = dt
+    '' End Sub
+
+
+    Private Sub filtarProveedor()
+        Dim query2 As String = "select id as Nro_Registro, nombre_producto as Producto,codigo_barra as Codigo, Proveedor as Proveedores,C_electronico as Correo_electronico,telefono, Precio_unitario,stock from Productos WHERE Proveedor = '" & cmbProveedor.Text & "' and nombre_producto = '" & cmbArticulos.Text & "'"
+        Dim dt2 As DataTable = SelectResult(query2)
+        Dim DV As New DataView(dt2)
+        dgProductos.DataSource = DV
+        txtCantidadRegistros.Text = SelectResult("select count(*) from Productos").Rows(0).Item(0).ToString
     End Sub
 
     Private Sub cargarCombosProducto()
@@ -97,5 +108,11 @@ Public Class FrmProductos
             .ValueMember = "id"
         End With
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        filtarProveedor()
+    End Sub
+
+
 
 End Class

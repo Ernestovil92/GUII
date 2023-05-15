@@ -35,8 +35,6 @@ Partial Class FrmProductos
         btnLimpiar = New Button()
         btnMostrar = New Button()
         btnEliminar = New Button()
-        txtBuscar = New TextBox()
-        Label5 = New Label()
         dgProductos = New DataGridView()
         Panel2 = New Panel()
         btnModificar2 = New Button()
@@ -52,6 +50,7 @@ Partial Class FrmProductos
         txtTelefono = New TextBox()
         Label6 = New Label()
         Panel1 = New Panel()
+        Button1 = New Button()
         dtFechaFinAr = New DateTimePicker()
         FechaInicioAr = New DateTimePicker()
         Label14 = New Label()
@@ -63,6 +62,8 @@ Partial Class FrmProductos
         TabControl1 = New TabControl()
         Stock = New TabPage()
         NuevoArticulo = New TabPage()
+        Label5 = New Label()
+        txtCantidadRegistros = New TextBox()
         PanelTitulo.SuspendLayout()
         CType(dgProductos, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -195,7 +196,7 @@ Partial Class FrmProductos
         btnLimpiar.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
         btnLimpiar.FlatStyle = FlatStyle.Flat
         btnLimpiar.ForeColor = Color.Black
-        btnLimpiar.Location = New Point(369, 272)
+        btnLimpiar.Location = New Point(370, 288)
         btnLimpiar.Name = "btnLimpiar"
         btnLimpiar.Size = New Size(72, 36)
         btnLimpiar.TabIndex = 8
@@ -210,7 +211,7 @@ Partial Class FrmProductos
         btnMostrar.FlatStyle = FlatStyle.Flat
         btnMostrar.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
         btnMostrar.ForeColor = Color.Black
-        btnMostrar.Location = New Point(234, 272)
+        btnMostrar.Location = New Point(235, 288)
         btnMostrar.Name = "btnMostrar"
         btnMostrar.Size = New Size(129, 36)
         btnMostrar.TabIndex = 10
@@ -231,22 +232,6 @@ Partial Class FrmProductos
         btnEliminar.TabIndex = 11
         btnEliminar.Text = "Eliminar"
         btnEliminar.UseVisualStyleBackColor = True
-        ' 
-        ' txtBuscar
-        ' 
-        txtBuscar.Location = New Point(61, 8)
-        txtBuscar.Name = "txtBuscar"
-        txtBuscar.Size = New Size(384, 23)
-        txtBuscar.TabIndex = 12
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(13, 11)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(42, 15)
-        Label5.TabIndex = 13
-        Label5.Text = "Buscar"
         ' 
         ' dgProductos
         ' 
@@ -415,6 +400,9 @@ Partial Class FrmProductos
         ' Panel1
         ' 
         Panel1.Anchor = AnchorStyles.None
+        Panel1.Controls.Add(txtCantidadRegistros)
+        Panel1.Controls.Add(Label5)
+        Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(dtFechaFinAr)
         Panel1.Controls.Add(FechaInicioAr)
         Panel1.Controls.Add(Label14)
@@ -423,15 +411,22 @@ Partial Class FrmProductos
         Panel1.Controls.Add(Label12)
         Panel1.Controls.Add(Label11)
         Panel1.Controls.Add(cmbArticulos)
-        Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(btnLimpiar)
-        Panel1.Controls.Add(txtBuscar)
         Panel1.Controls.Add(dgProductos)
         Panel1.Controls.Add(btnMostrar)
-        Panel1.Location = New Point(176, 60)
+        Panel1.Location = New Point(199, 63)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(456, 336)
         Panel1.TabIndex = 16
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(13, 296)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(75, 23)
+        Button1.TabIndex = 23
+        Button1.Text = "Actualizar"
+        Button1.UseVisualStyleBackColor = True
         ' 
         ' dtFechaFinAr
         ' 
@@ -533,6 +528,22 @@ Partial Class FrmProductos
         NuevoArticulo.Text = "Nuevo articulo"
         NuevoArticulo.UseVisualStyleBackColor = True
         ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(13, 260)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(94, 15)
+        Label5.TabIndex = 24
+        Label5.Text = "Nro. de registros"
+        ' 
+        ' txtCantidadRegistros
+        ' 
+        txtCantidadRegistros.Location = New Point(113, 257)
+        txtCantidadRegistros.Name = "txtCantidadRegistros"
+        txtCantidadRegistros.Size = New Size(41, 23)
+        txtCantidadRegistros.TabIndex = 25
+        ' 
         ' FrmProductos
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -567,8 +578,6 @@ Partial Class FrmProductos
     Friend WithEvents btnLimpiar As Button
     Friend WithEvents btnMostrar As Button
     Friend WithEvents btnEliminar As Button
-    Friend WithEvents txtBuscar As TextBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents dgProductos As DataGridView
@@ -596,4 +605,7 @@ Partial Class FrmProductos
     Friend WithEvents btnModificar2 As Button
     Friend WithEvents btnEliminar2 As Button
     Friend WithEvents btnGuardar2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txtCantidadRegistros As TextBox
 End Class
