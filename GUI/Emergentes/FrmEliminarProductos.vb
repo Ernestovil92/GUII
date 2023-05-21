@@ -11,13 +11,12 @@ Public Class FrmEliminarProductos
         conexion.Open()
         If txtId.Text = " " Then
             MsgBox("Error 2333: no se pudo eliminar registro")
-        Else
-            Dim consulta As String = "DELETE Productos where id = '" & txtId.Text & "'"
+        ElseIf MsgBox("Está seguro de eliminar permanentemente este registro?", vbOKCancel, "Confirmar") = vbOK Then
+            Dim consulta As String = "DELETE Productos where codigo_barra = '" & txtId.Text & "'"
             Dim comando As New SqlCommand(consulta, conexion)
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
             MsgBox("Se ha eliminado el registro Nro.: " + txtId.Text)
-
         End If
 
         conexion.Close()

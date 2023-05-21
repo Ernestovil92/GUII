@@ -26,7 +26,7 @@ Public Class FrmProductos
     End Function
     Private Sub MostrarNombreUsuario()
         conexion.Open()
-        Dim consulta As String = "select id as Nro_Registro, nombre_producto as Producto,codigo_barra as Codigo, Proveedor as Proveedores,C_electronico as Correo_electronico,telefono, Precio_unitario,stock from Productos"
+        Dim consulta As String = "select codigo_barra as Codigo,nombre_producto as Producto, Proveedor as Proveedores, Precio_unitario,stock,createDate as Fecha from Productos"
         Dim adapter As New SqlDataAdapter(consulta, conexion)
         Dim dt As New DataTable
         adapter.Fill(dt)
@@ -37,7 +37,7 @@ Public Class FrmProductos
     Private Sub CargarRegistros()
         conexion.Open()
         If conexion.State = 1 Then
-            Dim consulta As String = "INSERT INTO Productos(nombre_producto,codigo_barra,Proveedor,C_electronico,telefono, Precio_unitario,stock)VALUES('" & txtProducto.Text & "','" & txtCodigo.Text & "','" & txtProveedor.Text & "','" & txtCorreo.Text & "','" & txtTelefono.Text & "'," & txtP_unitario.Text & "," & txtStock.Text & ")"
+            Dim consulta As String = "INSERT INTO Productos(nombre_producto,codigo_barra,Proveedor,C_electronico,telefono, Precio_unitario,stock,createDate)VALUES('" & txtProducto.Text & "','" & txtCodigo.Text & "','" & txtProveedor.Text & "','" & txtCorreo.Text & "','" & txtTelefono.Text & "'," & txtP_unitario.Text & "," & txtStock.Text & ",getdate())"
             Dim comando As New SqlCommand(consulta, conexion)
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
@@ -49,45 +49,35 @@ Public Class FrmProductos
         conexion.Close()
     End Sub
 
-    Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
-        MostrarNombreUsuario()
-    End Sub
-
-    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-        dgProductos.DataSource = " "
-    End Sub
 
     Private Sub btnGuardar2_Click(sender As Object, e As EventArgs) Handles btnGuardar2.Click
         CargarRegistros()
         txtProducto.Text = " "
         txtCodigo.Text = " "
         txtProveedor.Text = " "
+        txtP_unitario.Text = " "
+        txtTelefono.Text = " "
+        txtStock.Text = " "
+        txtCorreo.Text = " "
     End Sub
 
-    Private Sub btnModificar2_Click(sender As Object, e As EventArgs) Handles btnModificar2.Click
-        FrmModificarProductos.ShowDialog()
-    End Sub
-
-    Private Sub btnEliminar2_Click(sender As Object, e As EventArgs) Handles btnEliminar2.Click
-        FrmEliminarProductos.ShowDialog()
-    End Sub
-
-    ''  Private Sub btnBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBuscar.KeyPress
-
-    ''Dim ad = New SqlDataAdapter("SELECT * FROM Productos where nombre_producto like '" + txtBuscar.Text + "%'", conexion)
-    ''Dim dt = New DataTable
-    ''  ad.Fill(dt)
-    ''Me.dgProductos.DataSource = dt
-    '' End Sub
-
-
-    Private Sub filtarProveedor()
-        Dim query2 As String = "select id as Nro_Registro, nombre_producto as Producto,codigo_barra as Codigo, Proveedor as Proveedores,C_electronico as Correo_electronico,telefono, Precio_unitario,stock from Productos WHERE Proveedor = '" & cmbProveedor.Text & "' and nombre_producto = '" & cmbArticulos.Text & "'"
+    Private Sub filtarArticulos()
+        Dim query2 As String = "select codigo_barra as Codigo, nombre_producto as Producto, Proveedor as Proveedores,Precio_unitario,stock,createDate as Fecha from Productos WHERE nombre_producto = '" & cmbArticulos.Text & "'"
         Dim dt2 As DataTable = SelectResult(query2)
         Dim DV As New DataView(dt2)
         dgProductos.DataSource = DV
         txtCantidadRegistros.Text = SelectResult("select count(*) from Productos").Rows(0).Item(0).ToString
     End Sub
+
+    Private Sub filtarProveedor()
+        Dim query2 As String = "select codigo_barra as Codigo, nombre_producto as Producto, Proveedor as Proveedores, Precio_unitario,stock,createDate as Fecha from Productos WHERE Proveedor = '" & cmbProveedor.Text & "'"
+        Dim dt2 As DataTable = SelectResult(query2)
+        Dim DV As New DataView(dt2)
+        dgProductos.DataSource = DV
+        txtCantidadRegistros.Text = SelectResult("select count(*) from Productos").Rows(0).Item(0).ToString
+    End Sub
+
+
 
     Private Sub cargarCombosProducto()
         cmbArticulos.Items.Clear()
@@ -109,10 +99,25 @@ Public Class FrmProductos
         End With
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnEliminar2_Click_1(sender As Object, e As EventArgs) Handles btnEliminar2.Click
+        FrmEliminarProductos.ShowDialog()
+    End Sub
+
+    Private Sub btnModificar2_Click_1(sender As Object, e As EventArgs) Handles btnModificar2.Click
+        FrmModificarProductos.ShowDialog()
+    End Sub
+
+    Private Sub FiltrarAr_Click(sender As Object, e As EventArgs) Handles FiltrarAr.Click
+        filtarArticulos()
+    End Sub
+
+    Private Sub FiltrarPro_Click(sender As Object, e As EventArgs) Handles FiltrarPro.Click
         filtarProveedor()
     End Sub
 
+    Private Sub btnMostrar_Click_1(sender As Object, e As EventArgs) Handles btnMostrar.Click
+        MostrarNombreUsuario()
+    End Sub
 
 
 End Class

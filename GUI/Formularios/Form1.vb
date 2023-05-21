@@ -6,28 +6,21 @@ Public Class Form1
     Dim conexion As New SqlConnection()
     Dim comando As New SqlCommand()
 
-
-    ''    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
-    ''  Private Shared Sub ReleaseCapture()
-    ''End Sub
-
-    ''<DllImport("user32.DLL", EntryPoint:="SendMessage")>
-    ''Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
-    ''End Sub
-
-
-    '' Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
-    ''     Application.Exit()
-    ''   End Sub
-
-    ''   Private Sub btnMaximizar_Click(sender As Object, e As EventArgs) Handles btnMaximizar.Click
-    '' btnMaximizar.Visible = False
-    ''     btnRestaurar.Visible = True
-    ''  End Sub
-
-    '' Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
-    ''  Me.WindowState = FormWindowState.Minimized
-    ''  End Sub
+    Public Function SelectResult(ByVal cadConsul As String) As DataTable
+        Dim dtTabla As New DataTable
+        Try
+            conexion.Open()
+            comando = New SqlClient.SqlCommand(cadConsul, conexion)
+            Dim da As New SqlDataAdapter(comando)
+            comando.CommandTimeout = 0
+            da.Fill(dtTabla)
+            conexion.Close()
+        Catch
+            conexion.Close()
+            ' //MessageBox.Show(ex.Message)
+        End Try
+        Return dtTabla
+    End Function
     Private Sub AbrirFormEnPanel(ByVal Formhijo As Object)
         If Me.PanelContenedor.Controls.Count > 0 Then Me.PanelContenedor.Controls.RemoveAt(0)
         Dim fh As Form = TryCast(Formhijo, Form)
@@ -38,27 +31,7 @@ Public Class Form1
         Me.PanelContenedor.Tag = fh
         fh.Show()
     End Sub
-    ''Private Sub tmOCULTAR_Tick(sender As Object, e As EventArgs) Handles tmOCULTAR.Tick
-    ''If PanelMenu.Width <= 60 Then
-    ''Me.tmOCULTAR.Enabled = False
-    ''Else
-    ''Me.PanelMenu.Width = PanelMenu.Width - 10
-    ''End If
-    ''End Sub
 
-    ''    Private Sub tmMOSTRAR_Tick(sender As Object, e As EventArgs) Handles tmMOSTRAR.Tick
-    ''  If PanelMenu.Width >= 220 Then
-    ''Me.tmMOSTRAR.Enabled = False
-    ''Else
-    ''Me.PanelMenu.Width = PanelMenu.Width + 10
-    ''End If
-    '' End Sub
-
-    '' Private Sub btnRestaurar_Click(sender As Object, e As EventArgs) Handles btnRestaurar.Click
-    ''  Me.WindowState = FormWindowState.Normal
-    ''      btnRestaurar.Visible = False
-    ''       btnMaximizar.Visible = True
-    ''  End Sub
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
         If PanelMenu.Width = 220 Then
@@ -82,11 +55,6 @@ Public Class Form1
 
 
 
-    ''   Private Sub PanelBarraTitulo_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelBarraTitulo.MouseMove
-    ''       ReleaseCapture()
-    ''     SendMessage(Me.Handle, &H112&, &HF012&, 0)
-    ''  End Sub
-
     Private Sub btnProducto_Click(sender As Object, e As EventArgs) Handles btnProducto.Click
         AbrirFormEnPanel(New FrmClientes)
     End Sub
@@ -101,5 +69,9 @@ Public Class Form1
 
     Private Sub btnAyuda_Click(sender As Object, e As EventArgs) Handles btnAyuda.Click
         AbrirFormEnPanel(New FrmAyuda)
+    End Sub
+
+    Private Sub btnPedidos_Click(sender As Object, e As EventArgs) Handles btnPedidos.Click
+        AbrirFormEnPanel(New FrmPedidos)
     End Sub
 End Class

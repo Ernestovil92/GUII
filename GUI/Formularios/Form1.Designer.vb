@@ -38,6 +38,7 @@ Partial Class Form1
         PictureBox3 = New PictureBox()
         tmOCULTAR = New Timer(components)
         tmMOSTRAR = New Timer(components)
+        btnPedidos = New Button()
         PanelMenu.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(btnMenu, ComponentModel.ISupportInitialize).BeginInit()
@@ -48,6 +49,7 @@ Partial Class Form1
         ' PanelMenu
         ' 
         PanelMenu.BackColor = Color.Sienna
+        PanelMenu.Controls.Add(btnPedidos)
         PanelMenu.Controls.Add(btnCerrarSesion)
         PanelMenu.Controls.Add(Label3)
         PanelMenu.Controls.Add(PictureBox1)
@@ -94,7 +96,7 @@ Partial Class Form1
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.LOGO
-        PictureBox1.Location = New Point(3, 46)
+        PictureBox1.Location = New Point(6, 48)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(170, 50)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
@@ -111,9 +113,9 @@ Partial Class Form1
         btnReportes.ForeColor = SystemColors.Control
         btnReportes.Image = CType(resources.GetObject("btnReportes.Image"), Image)
         btnReportes.ImageAlign = ContentAlignment.MiddleLeft
-        btnReportes.Location = New Point(0, 224)
+        btnReportes.Location = New Point(0, 338)
         btnReportes.Name = "btnReportes"
-        btnReportes.Size = New Size(220, 50)
+        btnReportes.Size = New Size(214, 50)
         btnReportes.TabIndex = 4
         btnReportes.Text = "Reportes"
         btnReportes.UseVisualStyleBackColor = True
@@ -128,9 +130,9 @@ Partial Class Form1
         btnProducto.ForeColor = SystemColors.Control
         btnProducto.Image = CType(resources.GetObject("btnProducto.Image"), Image)
         btnProducto.ImageAlign = ContentAlignment.MiddleLeft
-        btnProducto.Location = New Point(3, 168)
+        btnProducto.Location = New Point(0, 170)
         btnProducto.Name = "btnProducto"
-        btnProducto.Size = New Size(217, 50)
+        btnProducto.Size = New Size(220, 50)
         btnProducto.TabIndex = 3
         btnProducto.Text = "Clientes"
         btnProducto.UseVisualStyleBackColor = True
@@ -145,7 +147,7 @@ Partial Class Form1
         btnDelivery.ForeColor = SystemColors.Control
         btnDelivery.Image = CType(resources.GetObject("btnDelivery.Image"), Image)
         btnDelivery.ImageAlign = ContentAlignment.MiddleLeft
-        btnDelivery.Location = New Point(0, 112)
+        btnDelivery.Location = New Point(3, 114)
         btnDelivery.Name = "btnDelivery"
         btnDelivery.Size = New Size(217, 50)
         btnDelivery.TabIndex = 2
@@ -162,7 +164,7 @@ Partial Class Form1
         btnPendientes.ForeColor = SystemColors.Control
         btnPendientes.Image = CType(resources.GetObject("btnPendientes.Image"), Image)
         btnPendientes.ImageAlign = ContentAlignment.MiddleLeft
-        btnPendientes.Location = New Point(0, 280)
+        btnPendientes.Location = New Point(0, 289)
         btnPendientes.Name = "btnPendientes"
         btnPendientes.Size = New Size(220, 43)
         btnPendientes.TabIndex = 1
@@ -179,7 +181,7 @@ Partial Class Form1
         btnAyuda.ForeColor = SystemColors.Control
         btnAyuda.Image = CType(resources.GetObject("btnAyuda.Image"), Image)
         btnAyuda.ImageAlign = ContentAlignment.MiddleLeft
-        btnAyuda.Location = New Point(0, 329)
+        btnAyuda.Location = New Point(0, 394)
         btnAyuda.Name = "btnAyuda"
         btnAyuda.RightToLeft = RightToLeft.No
         btnAyuda.Size = New Size(220, 50)
@@ -218,11 +220,22 @@ Partial Class Form1
         PictureBox3.TabIndex = 5
         PictureBox3.TabStop = False
         ' 
-        ' tmOCULTAR
+        ' btnPedidos
         ' 
-        ' 
-        ' tmMOSTRAR
-        ' 
+        btnPedidos.FlatAppearance.BorderSize = 0
+        btnPedidos.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(145), CByte(110), CByte(21))
+        btnPedidos.FlatAppearance.MouseOverBackColor = Color.Goldenrod
+        btnPedidos.FlatStyle = FlatStyle.Flat
+        btnPedidos.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        btnPedidos.ForeColor = SystemColors.Control
+        btnPedidos.Image = CType(resources.GetObject("btnPedidos.Image"), Image)
+        btnPedidos.ImageAlign = ContentAlignment.MiddleLeft
+        btnPedidos.Location = New Point(0, 226)
+        btnPedidos.Name = "btnPedidos"
+        btnPedidos.Size = New Size(220, 43)
+        btnPedidos.TabIndex = 10
+        btnPedidos.Text = "Pedidos"
+        btnPedidos.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
@@ -258,4 +271,5 @@ Partial Class Form1
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents btnCerrarSesion As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnPedidos As Button
 End Class

@@ -58,6 +58,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnPedidos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAHrwAAB68Ae5ETfcAAAOrSURBVGhD3dlNyBVlGMbxV/AD
+        Bb/IFmqigispoo0LXYgaSSiIC4VAkyzEohTUVQsjDUIpQbFE8QMpidKIQOkLDSFdCIUuXAhhVKAbEak0
+        tfD1f8HcMOc518yZM+O7GC/4be7nPoPPYd7zfDgwODj4WLDFNrLFNrLFNrLFNrLFNrLFBp7EPKzCu/gY
+        7+NVLMRTcJ9rzBb7NAIrcRx/oyz38R1ewRNwz6vFFvvwOq4jzZ/4GT/iAn5DmtvYijFwz+6LLVYwBxeR
+        z1dYj6LXR6/dS/gE/yByDUvgPlOZLfbwMvI5gOlwvUUmYAfyeQeutxJbLPEWIlfxPFyfTMX8pJZ6BucR
+        2QXX15MtFtBrETmNsnf7WfwH5QxGwvWFI4hsg+spZYuGvrmI/mGuJ28D8pkG15d3GJFlcD2FbNH4FYr+
+        MN14SutGPlXXj5+g/I9RcD2WLSY2ITIbrie1Fvno78X1pcYiftGOwvVYtpj4C8ohuHGn7kTkDUT0k+16
+        uthijlZg5V+Mg+txmkxE9Aor2t648S62mPMLlINw40WaTmQjFL1mw+B6OthiZiIiL8L1FGk6ES2wEe0i
+        XE8HW8wsQkSTcj1Fmk5EYg/3Jtx4B1vMaN+kaOV142XSiUyG6yvzOZQ9cOMdbDGjPzRlP9x4mXQirqeX
+        zVB0PHDjHWwxcwzKB3DjZdKJfI+veziFTxFr1WtQ9Nn0+V1sMfMZlDoTya8F/eZb6Bnx0/8D0ud3scXM
+        Tij74MbLrEDd6FyjZ8R+7QTS53exxUx8q2fhxssMx9vQrla0IexFW5LdmAE9Q6+Z8hHS53exxcwLUB5A
+        eyDXM5T+gKLF0Y13sMXMJETKDlBDYQoiupVxPR1sMecylL1w40NlHZR70GvqejrYYk4cbbUD7ut80FCc
+        fyothmKLibtQap+n+6TLvYheMdfTxRYTujGMDNlNYUav0Q0o8TNciS0asYG7Ajf+qJxEZDxcj2WLxlxE
+        voTraSoWYGUNXE8hWyyQ33Z8AddT14eIVFoAU7ZYQne1Ed3tPgfXV5XOKfnXSdeprq8nW+whf6ui6Oqz
+        zsqv5+giO1L5p9axxQoWI7YQyi3oXL8URZPSOrQA2k/9jsgdrIb7TGW2WNFo6OI51pmIvuVL0P+D6Jzx
+        DfQa3kQa7RjqnB672GKfdPekY/E5VIkmuQUz4Z5Xiy02MAvLoR3rdugn9T3o2KozytNwn2vMFtvIFtvI
+        FtvIFtvIFtvIFtvIFtvIFttncOAhoJJs47Lj69cAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="btnCerrarSesion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6

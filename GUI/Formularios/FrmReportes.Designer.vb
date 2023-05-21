@@ -24,7 +24,14 @@ Partial Class FrmReportes
     Private Sub InitializeComponent()
         PanelTitulo = New Panel()
         Label1 = New Label()
+        TabControl1 = New TabControl()
+        TabPage1 = New TabPage()
+        btnInformeProducto = New Button()
+        TabPage2 = New TabPage()
+        TabPage3 = New TabPage()
         PanelTitulo.SuspendLayout()
+        TabControl1.SuspendLayout()
+        TabPage1.SuspendLayout()
         SuspendLayout()
         ' 
         ' PanelTitulo
@@ -50,19 +57,77 @@ Partial Class FrmReportes
         Label1.Text = "Reportes"
         Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' TabControl1
+        ' 
+        TabControl1.Controls.Add(TabPage1)
+        TabControl1.Controls.Add(TabPage2)
+        TabControl1.Controls.Add(TabPage3)
+        TabControl1.Location = New Point(145, 68)
+        TabControl1.Name = "TabControl1"
+        TabControl1.SelectedIndex = 0
+        TabControl1.Size = New Size(499, 332)
+        TabControl1.TabIndex = 2
+        ' 
+        ' TabPage1
+        ' 
+        TabPage1.Controls.Add(btnInformeProducto)
+        TabPage1.Location = New Point(4, 24)
+        TabPage1.Name = "TabPage1"
+        TabPage1.Padding = New Padding(3)
+        TabPage1.Size = New Size(491, 304)
+        TabPage1.TabIndex = 0
+        TabPage1.Text = "Productos"
+        TabPage1.UseVisualStyleBackColor = True
+        ' 
+        ' btnInformeProducto
+        ' 
+        btnInformeProducto.Location = New Point(380, 275)
+        btnInformeProducto.Name = "btnInformeProducto"
+        btnInformeProducto.Size = New Size(105, 23)
+        btnInformeProducto.TabIndex = 0
+        btnInformeProducto.Text = "Ver Informe"
+        btnInformeProducto.UseVisualStyleBackColor = True
+        ' 
+        ' TabPage2
+        ' 
+        TabPage2.Location = New Point(4, 24)
+        TabPage2.Name = "TabPage2"
+        TabPage2.Padding = New Padding(3)
+        TabPage2.Size = New Size(491, 304)
+        TabPage2.TabIndex = 1
+        TabPage2.Text = "Clientes"
+        TabPage2.UseVisualStyleBackColor = True
+        ' 
+        ' TabPage3
+        ' 
+        TabPage3.Location = New Point(4, 24)
+        TabPage3.Name = "TabPage3"
+        TabPage3.Size = New Size(491, 304)
+        TabPage3.TabIndex = 2
+        TabPage3.Text = "Proveedores"
+        TabPage3.UseVisualStyleBackColor = True
+        ' 
         ' FrmReportes
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Chocolate
         ClientSize = New Size(800, 450)
+        Controls.Add(TabControl1)
         Controls.Add(PanelTitulo)
         Name = "FrmReportes"
         PanelTitulo.ResumeLayout(False)
         PanelTitulo.PerformLayout()
+        TabControl1.ResumeLayout(False)
+        TabPage1.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents PanelTitulo As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents btnInformeProducto As Button
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TabPage3 As TabPage
 End Class

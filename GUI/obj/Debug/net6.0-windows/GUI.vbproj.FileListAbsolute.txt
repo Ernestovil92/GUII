@@ -68,3 +68,4 @@ C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\ref\GUI.dll
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmAyuda.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmPendientes.resources
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmPedidos.resources

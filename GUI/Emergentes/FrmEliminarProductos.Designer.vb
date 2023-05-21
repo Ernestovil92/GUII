@@ -41,11 +41,11 @@ Partial Class FrmEliminarProductos
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(57, 14)
+        Label1.Location = New Point(78, 14)
         Label1.Name = "Label1"
-        Label1.Size = New Size(89, 15)
+        Label1.Size = New Size(46, 15)
         Label1.TabIndex = 1
-        Label1.Text = "Nro. de registro"
+        Label1.Text = "Codigo"
         ' 
         ' txtId
         ' 

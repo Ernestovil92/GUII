@@ -25,38 +25,26 @@ Partial Class FrmClientes
         PanelTitulo = New Panel()
         Label1 = New Label()
         Panel1 = New Panel()
-        cmbCliente = New ComboBox()
         Label16 = New Label()
         Label9 = New Label()
         Panel2 = New Panel()
         dgArticulos = New DataGridView()
-        dtFechaVen = New DateTimePicker()
         txtDescuento = New TextBox()
         txtPrecioVenta = New TextBox()
         txtPrecionCompra = New TextBox()
         txtCantdidad = New TextBox()
+        Label5 = New Label()
         txtArticulo = New TextBox()
+        Label3 = New Label()
         Label15 = New Label()
         Label14 = New Label()
         Label13 = New Label()
         Label12 = New Label()
+        txtCodigoCliente = New TextBox()
         Label11 = New Label()
-        Label10 = New Label()
-        dtFecha = New DateTimePicker()
-        Label8 = New Label()
-        Label7 = New Label()
-        txtNum2 = New TextBox()
-        txtNum1 = New TextBox()
-        Label6 = New Label()
-        Label5 = New Label()
-        cmbFactura = New ComboBox()
-        Label4 = New Label()
-        Label3 = New Label()
         btnGuardar = New Button()
         btnCancelar = New Button()
         btnNuevo = New Button()
-        txtImpuesto = New TextBox()
-        txtCodigo = New TextBox()
         Label2 = New Label()
         TabControl1 = New TabControl()
         TabPage1 = New TabPage()
@@ -75,6 +63,9 @@ Partial Class FrmClientes
         TabPage2 = New TabPage()
         TabPage3 = New TabPage()
         Panel3 = New Panel()
+        Label6 = New Label()
+        Label4 = New Label()
+        txtId = New TextBox()
         btnActualizarCliente = New Button()
         dgClientes = New DataGridView()
         Label23 = New Label()
@@ -86,6 +77,7 @@ Partial Class FrmClientes
         txtTelefono = New TextBox()
         txtClienteNuevo = New TextBox()
         BtnGuardarCliente = New Button()
+        cmbCliente = New ComboBox()
         PanelTitulo.SuspendLayout()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
@@ -126,42 +118,21 @@ Partial Class FrmClientes
         ' Panel1
         ' 
         Panel1.BorderStyle = BorderStyle.FixedSingle
-        Panel1.Controls.Add(cmbCliente)
         Panel1.Controls.Add(Label16)
         Panel1.Controls.Add(Label9)
         Panel1.Controls.Add(Panel2)
-        Panel1.Controls.Add(dtFecha)
-        Panel1.Controls.Add(Label8)
-        Panel1.Controls.Add(Label7)
-        Panel1.Controls.Add(txtNum2)
-        Panel1.Controls.Add(txtNum1)
-        Panel1.Controls.Add(Label6)
-        Panel1.Controls.Add(Label5)
-        Panel1.Controls.Add(cmbFactura)
-        Panel1.Controls.Add(Label4)
-        Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(btnGuardar)
         Panel1.Controls.Add(btnCancelar)
         Panel1.Controls.Add(btnNuevo)
-        Panel1.Controls.Add(txtImpuesto)
-        Panel1.Controls.Add(txtCodigo)
         Panel1.Location = New Point(19, 27)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(784, 282)
+        Panel1.Size = New Size(780, 282)
         Panel1.TabIndex = 1
-        ' 
-        ' cmbCliente
-        ' 
-        cmbCliente.FormattingEnabled = True
-        cmbCliente.Location = New Point(279, 10)
-        cmbCliente.Name = "cmbCliente"
-        cmbCliente.Size = New Size(121, 23)
-        cmbCliente.TabIndex = 19
         ' 
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Location = New Point(3, 260)
+        Label16.Location = New Point(19, 251)
         Label16.Name = "Label16"
         Label16.Size = New Size(110, 15)
         Label16.TabIndex = 18
@@ -170,7 +141,7 @@ Partial Class FrmClientes
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(25, 92)
+        Label9.Location = New Point(28, 17)
         Label9.Name = "Label9"
         Label9.Size = New Size(54, 15)
         Label9.TabIndex = 0
@@ -178,81 +149,94 @@ Partial Class FrmClientes
         ' 
         ' Panel2
         ' 
+        Panel2.Anchor = AnchorStyles.None
         Panel2.BorderStyle = BorderStyle.FixedSingle
+        Panel2.Controls.Add(cmbCliente)
         Panel2.Controls.Add(dgArticulos)
-        Panel2.Controls.Add(dtFechaVen)
         Panel2.Controls.Add(txtDescuento)
         Panel2.Controls.Add(txtPrecioVenta)
         Panel2.Controls.Add(txtPrecionCompra)
         Panel2.Controls.Add(txtCantdidad)
+        Panel2.Controls.Add(Label5)
         Panel2.Controls.Add(txtArticulo)
+        Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(Label15)
         Panel2.Controls.Add(Label14)
         Panel2.Controls.Add(Label13)
         Panel2.Controls.Add(Label12)
+        Panel2.Controls.Add(txtCodigoCliente)
         Panel2.Controls.Add(Label11)
-        Panel2.Controls.Add(Label10)
-        Panel2.Location = New Point(12, 101)
+        Panel2.Location = New Point(19, 35)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(760, 156)
+        Panel2.Size = New Size(639, 213)
         Panel2.TabIndex = 17
         ' 
         ' dgArticulos
         ' 
         dgArticulos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgArticulos.Location = New Point(3, 78)
+        dgArticulos.Location = New Point(3, 105)
         dgArticulos.Name = "dgArticulos"
         dgArticulos.RowTemplate.Height = 25
-        dgArticulos.Size = New Size(754, 75)
+        dgArticulos.Size = New Size(625, 103)
         dgArticulos.TabIndex = 18
-        ' 
-        ' dtFechaVen
-        ' 
-        dtFechaVen.Format = DateTimePickerFormat.Short
-        dtFechaVen.Location = New Point(590, 14)
-        dtFechaVen.Name = "dtFechaVen"
-        dtFechaVen.Size = New Size(99, 23)
-        dtFechaVen.TabIndex = 17
         ' 
         ' txtDescuento
         ' 
-        txtDescuento.Location = New Point(589, 47)
+        txtDescuento.Location = New Point(525, 44)
         txtDescuento.Name = "txtDescuento"
         txtDescuento.Size = New Size(100, 23)
         txtDescuento.TabIndex = 11
         ' 
         ' txtPrecioVenta
         ' 
-        txtPrecioVenta.Location = New Point(345, 42)
+        txtPrecioVenta.Location = New Point(325, 76)
         txtPrecioVenta.Name = "txtPrecioVenta"
         txtPrecioVenta.Size = New Size(100, 23)
         txtPrecioVenta.TabIndex = 10
         ' 
         ' txtPrecionCompra
         ' 
-        txtPrecionCompra.Location = New Point(345, 17)
+        txtPrecionCompra.Location = New Point(325, 44)
         txtPrecionCompra.Name = "txtPrecionCompra"
         txtPrecionCompra.Size = New Size(100, 23)
         txtPrecionCompra.TabIndex = 9
         ' 
         ' txtCantdidad
         ' 
-        txtCantdidad.Location = New Point(83, 44)
+        txtCantdidad.Location = New Point(84, 76)
         txtCantdidad.Name = "txtCantdidad"
         txtCantdidad.Size = New Size(100, 23)
         txtCantdidad.TabIndex = 8
         ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(200, 16)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(44, 15)
+        Label5.TabIndex = 10
+        Label5.Text = "Cliente"
+        ' 
         ' txtArticulo
         ' 
-        txtArticulo.Location = New Point(84, 14)
+        txtArticulo.Location = New Point(84, 44)
         txtArticulo.Name = "txtArticulo"
         txtArticulo.Size = New Size(100, 23)
         txtArticulo.TabIndex = 7
         ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(13, 16)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(46, 15)
+        Label3.TabIndex = 7
+        Label3.Text = "Codigo"
+        ' 
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Location = New Point(461, 50)
+        Label15.Location = New Point(452, 47)
         Label15.Name = "Label15"
         Label15.Size = New Size(63, 15)
         Label15.TabIndex = 6
@@ -261,7 +245,7 @@ Partial Class FrmClientes
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Location = New Point(13, 17)
+        Label14.Location = New Point(13, 47)
         Label14.Name = "Label14"
         Label14.Size = New Size(49, 15)
         Label14.TabIndex = 5
@@ -270,7 +254,7 @@ Partial Class FrmClientes
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Location = New Point(12, 44)
+        Label13.Location = New Point(13, 76)
         Label13.Name = "Label13"
         Label13.Size = New Size(55, 15)
         Label13.TabIndex = 4
@@ -279,118 +263,31 @@ Partial Class FrmClientes
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Location = New Point(219, 17)
+        Label12.Location = New Point(199, 47)
         Label12.Name = "Label12"
         Label12.Size = New Size(102, 15)
         Label12.TabIndex = 3
         Label12.Text = "Precio de Compra"
         ' 
+        ' txtCodigoCliente
+        ' 
+        txtCodigoCliente.Location = New Point(84, 13)
+        txtCodigoCliente.Name = "txtCodigoCliente"
+        txtCodigoCliente.Size = New Size(100, 23)
+        txtCodigoCliente.TabIndex = 0
+        ' 
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Location = New Point(219, 50)
+        Label11.Location = New Point(200, 79)
         Label11.Name = "Label11"
         Label11.Size = New Size(88, 15)
         Label11.TabIndex = 2
         Label11.Text = "Precio de venta"
         ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.Location = New Point(461, 17)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(123, 15)
-        Label10.TabIndex = 1
-        Label10.Text = "Fecha de Vencimiento"
-        ' 
-        ' dtFecha
-        ' 
-        dtFecha.Format = DateTimePickerFormat.Short
-        dtFecha.Location = New Point(467, 10)
-        dtFecha.Name = "dtFecha"
-        dtFecha.Size = New Size(98, 23)
-        dtFecha.TabIndex = 16
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Location = New Point(423, 13)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(38, 15)
-        Label8.TabIndex = 15
-        Label8.Text = "Fecha"
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(404, 52)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(57, 15)
-        Label7.TabIndex = 14
-        Label7.Text = "Impuesto"
-        ' 
-        ' txtNum2
-        ' 
-        txtNum2.Location = New Point(320, 49)
-        txtNum2.Name = "txtNum2"
-        txtNum2.Size = New Size(54, 23)
-        txtNum2.TabIndex = 13
-        ' 
-        ' txtNum1
-        ' 
-        txtNum1.Location = New Point(279, 49)
-        txtNum1.Name = "txtNum1"
-        txtNum1.Size = New Size(35, 23)
-        txtNum1.TabIndex = 12
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Location = New Point(222, 57)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(51, 15)
-        Label6.TabIndex = 11
-        Label6.Text = "Numero"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(222, 18)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(44, 15)
-        Label5.TabIndex = 10
-        Label5.Text = "Cliente"
-        ' 
-        ' cmbFactura
-        ' 
-        cmbFactura.FormattingEnabled = True
-        cmbFactura.Location = New Point(109, 49)
-        cmbFactura.Name = "cmbFactura"
-        cmbFactura.Size = New Size(100, 23)
-        cmbFactura.TabIndex = 9
-        cmbFactura.Text = "Factura"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(11, 52)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(81, 15)
-        Label4.TabIndex = 8
-        Label4.Text = "Comprobante"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(11, 13)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(46, 15)
-        Label3.TabIndex = 7
-        Label3.Text = "Codigo"
-        ' 
         ' btnGuardar
         ' 
-        btnGuardar.Location = New Point(697, 39)
+        btnGuardar.Location = New Point(682, 64)
         btnGuardar.Name = "btnGuardar"
         btnGuardar.Size = New Size(75, 23)
         btnGuardar.TabIndex = 6
@@ -399,7 +296,7 @@ Partial Class FrmClientes
         ' 
         ' btnCancelar
         ' 
-        btnCancelar.Location = New Point(697, 68)
+        btnCancelar.Location = New Point(682, 93)
         btnCancelar.Name = "btnCancelar"
         btnCancelar.Size = New Size(75, 23)
         btnCancelar.TabIndex = 5
@@ -408,26 +305,12 @@ Partial Class FrmClientes
         ' 
         ' btnNuevo
         ' 
-        btnNuevo.Location = New Point(697, 10)
+        btnNuevo.Location = New Point(682, 35)
         btnNuevo.Name = "btnNuevo"
         btnNuevo.Size = New Size(75, 23)
         btnNuevo.TabIndex = 4
         btnNuevo.Text = "Nuevo"
         btnNuevo.UseVisualStyleBackColor = True
-        ' 
-        ' txtImpuesto
-        ' 
-        txtImpuesto.Location = New Point(467, 44)
-        txtImpuesto.Name = "txtImpuesto"
-        txtImpuesto.Size = New Size(100, 23)
-        txtImpuesto.TabIndex = 2
-        ' 
-        ' txtCodigo
-        ' 
-        txtCodigo.Location = New Point(109, 10)
-        txtCodigo.Name = "txtCodigo"
-        txtCodigo.Size = New Size(100, 23)
-        txtCodigo.TabIndex = 0
         ' 
         ' Label2
         ' 
@@ -602,6 +485,9 @@ Partial Class FrmClientes
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(Label6)
+        Panel3.Controls.Add(Label4)
+        Panel3.Controls.Add(txtId)
         Panel3.Controls.Add(btnActualizarCliente)
         Panel3.Controls.Add(dgClientes)
         Panel3.Controls.Add(Label23)
@@ -615,12 +501,39 @@ Partial Class FrmClientes
         Panel3.Controls.Add(BtnGuardarCliente)
         Panel3.Location = New Point(21, 19)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(687, 411)
+        Panel3.Size = New Size(687, 483)
         Panel3.TabIndex = 1
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Bell MT", 14.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label6.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
+        Label6.Location = New Point(231, 17)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(209, 22)
+        Label6.TabIndex = 15
+        Label6.Text = "Registrar clientes nuevos"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(75, 77)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(100, 15)
+        Label4.TabIndex = 12
+        Label4.Text = "Codigo de cliente"
+        ' 
+        ' txtId
+        ' 
+        txtId.Location = New Point(75, 95)
+        txtId.Name = "txtId"
+        txtId.Size = New Size(100, 23)
+        txtId.TabIndex = 11
         ' 
         ' btnActualizarCliente
         ' 
-        btnActualizarCliente.Location = New Point(77, 359)
+        btnActualizarCliente.Location = New Point(79, 419)
         btnActualizarCliente.Name = "btnActualizarCliente"
         btnActualizarCliente.Size = New Size(75, 23)
         btnActualizarCliente.TabIndex = 10
@@ -630,7 +543,7 @@ Partial Class FrmClientes
         ' dgClientes
         ' 
         dgClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgClientes.Location = New Point(77, 203)
+        dgClientes.Location = New Point(79, 263)
         dgClientes.Name = "dgClientes"
         dgClientes.RowTemplate.Height = 25
         dgClientes.Size = New Size(532, 150)
@@ -639,7 +552,7 @@ Partial Class FrmClientes
         ' Label23
         ' 
         Label23.AutoSize = True
-        Label23.Location = New Point(511, 95)
+        Label23.Location = New Point(513, 183)
         Label23.Name = "Label23"
         Label23.Size = New Size(52, 15)
         Label23.TabIndex = 8
@@ -648,7 +561,7 @@ Partial Class FrmClientes
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Location = New Point(200, 95)
+        Label22.Location = New Point(202, 183)
         Label22.Name = "Label22"
         Label22.Size = New Size(105, 15)
         Label22.TabIndex = 7
@@ -657,7 +570,7 @@ Partial Class FrmClientes
         ' Label21
         ' 
         Label21.AutoSize = True
-        Label21.Location = New Point(77, 95)
+        Label21.Location = New Point(79, 183)
         Label21.Name = "Label21"
         Label21.Size = New Size(27, 15)
         Label21.TabIndex = 6
@@ -666,7 +579,7 @@ Partial Class FrmClientes
         ' Label20
         ' 
         Label20.AutoSize = True
-        Label20.Location = New Point(77, 44)
+        Label20.Location = New Point(79, 132)
         Label20.Name = "Label20"
         Label20.Size = New Size(44, 15)
         Label20.TabIndex = 5
@@ -674,40 +587,48 @@ Partial Class FrmClientes
         ' 
         ' txtRuc
         ' 
-        txtRuc.Location = New Point(77, 113)
+        txtRuc.Location = New Point(79, 201)
         txtRuc.Name = "txtRuc"
         txtRuc.Size = New Size(100, 23)
         txtRuc.TabIndex = 4
         ' 
         ' txtCorreo
         ' 
-        txtCorreo.Location = New Point(200, 113)
+        txtCorreo.Location = New Point(202, 201)
         txtCorreo.Name = "txtCorreo"
         txtCorreo.Size = New Size(288, 23)
         txtCorreo.TabIndex = 3
         ' 
         ' txtTelefono
         ' 
-        txtTelefono.Location = New Point(511, 113)
+        txtTelefono.Location = New Point(513, 201)
         txtTelefono.Name = "txtTelefono"
         txtTelefono.Size = New Size(98, 23)
         txtTelefono.TabIndex = 2
         ' 
         ' txtClienteNuevo
         ' 
-        txtClienteNuevo.Location = New Point(77, 62)
+        txtClienteNuevo.Location = New Point(79, 150)
         txtClienteNuevo.Name = "txtClienteNuevo"
         txtClienteNuevo.Size = New Size(532, 23)
         txtClienteNuevo.TabIndex = 1
         ' 
         ' BtnGuardarCliente
         ' 
-        BtnGuardarCliente.Location = New Point(534, 158)
+        BtnGuardarCliente.Location = New Point(540, 231)
         BtnGuardarCliente.Name = "BtnGuardarCliente"
         BtnGuardarCliente.Size = New Size(75, 23)
         BtnGuardarCliente.TabIndex = 0
         BtnGuardarCliente.Text = "Guardar"
         BtnGuardarCliente.UseVisualStyleBackColor = True
+        ' 
+        ' cmbCliente
+        ' 
+        cmbCliente.FormattingEnabled = True
+        cmbCliente.Location = New Point(325, 13)
+        cmbCliente.Name = "cmbCliente"
+        cmbCliente.Size = New Size(300, 23)
+        cmbCliente.TabIndex = 19
         ' 
         ' FrmClientes
         ' 
@@ -744,7 +665,6 @@ Partial Class FrmClientes
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents dtFechaVen As DateTimePicker
     Friend WithEvents txtDescuento As TextBox
     Friend WithEvents txtPrecioVenta As TextBox
     Friend WithEvents txtPrecionCompra As TextBox
@@ -755,22 +675,12 @@ Partial Class FrmClientes
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents dtFecha As DateTimePicker
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents txtNum2 As TextBox
-    Friend WithEvents txtNum1 As TextBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents cmbFactura As ComboBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnGuardar As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnNuevo As Button
-    Friend WithEvents txtImpuesto As TextBox
-    Friend WithEvents txtCodigo As TextBox
+    Friend WithEvents txtCodigoCliente As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents dgArticulos As DataGridView
@@ -802,5 +712,8 @@ Partial Class FrmClientes
     Friend WithEvents BtnGuardarCliente As Button
     Friend WithEvents btnActualizarCliente As Button
     Friend WithEvents dgClientes As DataGridView
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtId As TextBox
+    Friend WithEvents Label6 As Label
     Friend WithEvents cmbCliente As ComboBox
 End Class
