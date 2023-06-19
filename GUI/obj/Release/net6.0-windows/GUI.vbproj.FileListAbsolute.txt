@@ -40,7 +40,6 @@ C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\G
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.FrmEliminarProductos.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.FrmModificarProductos.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.BackgroundLogin.resources
-C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.Form1.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.FrmAyuda.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.FrmClientes.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.FrmLogin.resources
@@ -60,6 +59,9 @@ C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\G
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.genruntimeconfig.cache
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\ref\GUI.dll
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.FrmPedidos.resources
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.ModificarCuenta.resources
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.FrmHome.resources
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.FrmPrincipal.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\GUI.dll.manifest
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\bin\Release\net6.0-windows\GUI.application
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Release\net6.0-windows\GUI.dll.manifest

@@ -10,16 +10,19 @@
     <Compile Update="Emergentes\FrmModificarProductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\BackgroundLogin.vb">
+    <Compile Update="Emergentes\ModificarCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\Form1.vb">
+    <Compile Update="Formularios\BackgroundLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\FrmAyuda.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\FrmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FrmHome.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\FrmPedidos.vb">
@@ -29,6 +32,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\FrmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\FrmProductos.vb">
