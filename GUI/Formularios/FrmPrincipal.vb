@@ -3,6 +3,7 @@ Imports System.Runtime.InteropServices
 Imports System.Data.SqlClient
 Imports System.Reflection.Emit
 Imports System.Reflection.Module
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar
 
 Public Class FrmPrincipal
 
@@ -27,13 +28,12 @@ Public Class FrmPrincipal
     End Function
 
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        PAdmin.Hide()
+        ''  PAdmin.Hide()
         Timer1.Enabled = True
+        prueba()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Close()
-    End Sub
+
 
     Private Sub AbrirFormEnPanel(ByVal Formhijo As Object)
         If Me.PanelContenedor.Controls.Count > 0 Then Me.PanelContenedor.Controls.RemoveAt(0)
@@ -64,7 +64,7 @@ Public Class FrmPrincipal
         Me.btnReportes.BackColor = Color.DarkSlateGray
         Me.btnAyuda.BackColor = Color.DarkSlateGray
         Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        AbrirFormEnPanel(New FrmHome)
+        TabControl1.SelectedIndex = 0
     End Sub
 
     ''PRODUCTOS
@@ -77,7 +77,7 @@ Public Class FrmPrincipal
         Me.btnReportes.BackColor = Color.DarkSlateGray
         Me.btnAyuda.BackColor = Color.DarkSlateGray
         Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        AbrirFormEnPanel(New FrmProductos)
+        TabControl1.SelectedIndex = 1
     End Sub
 
     ''CLIENTES
@@ -90,7 +90,7 @@ Public Class FrmPrincipal
         Me.btnReportes.BackColor = Color.DarkSlateGray
         Me.btnAyuda.BackColor = Color.DarkSlateGray
         Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        AbrirFormEnPanel(New FrmClientes)
+        TabControl1.SelectedIndex = 2
     End Sub
 
     ''PEDIDOS
@@ -103,7 +103,7 @@ Public Class FrmPrincipal
         Me.btnReportes.BackColor = Color.DarkSlateGray
         Me.btnAyuda.BackColor = Color.DarkSlateGray
         Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        AbrirFormEnPanel(New FrmPedidos)
+        TabControl1.SelectedIndex = 3
     End Sub
 
     ''PENDIENTES
@@ -116,7 +116,7 @@ Public Class FrmPrincipal
         Me.btnReportes.BackColor = Color.DarkSlateGray
         Me.btnAyuda.BackColor = Color.DarkSlateGray
         Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        AbrirFormEnPanel(New FrmPendientes)
+        TabControl1.SelectedIndex = 4
     End Sub
 
     ''REPORTES
@@ -129,7 +129,7 @@ Public Class FrmPrincipal
         Me.btnReportes.BackColor = Color.Teal
         Me.btnAyuda.BackColor = Color.DarkSlateGray
         Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        AbrirFormEnPanel(New FrmReportes)
+        TabControl1.SelectedIndex = 5
     End Sub
 
     ''AYUDA
@@ -143,7 +143,7 @@ Public Class FrmPrincipal
         Me.btnAyuda.BackColor = Color.Teal
         Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
 
-        AbrirFormEnPanel(New FrmAyuda)
+        TabControl1.SelectedIndex = 6
     End Sub
 
     ''CERRAR SESION
@@ -159,40 +159,24 @@ Public Class FrmPrincipal
         Close()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        PAdmin.Show()
-    End Sub
 
     Private Sub PanelContenedor_MouseHover(sender As Object, e As EventArgs) Handles PanelContenedor.MouseHover
-        PAdmin.Hide()
+        ''   PAdmin.Hide()
     End Sub
 
 
 
-    Private Sub btnCuenta_MouseHover(sender As Object, e As EventArgs) Handles btnCuenta.MouseHover
-        btnCuenta.ForeColor = Color.White
-        btnCS.ForeColor = Color.DarkSlateGray
-    End Sub
 
-    Private Sub btnCS_MouseHover(sender As Object, e As EventArgs) Handles btnCS.MouseHover
-        btnCuenta.ForeColor = Color.DarkSlateGray
-        btnCS.ForeColor = Color.White
-    End Sub
-
-    Private Sub btnCuenta_Click(sender As Object, e As EventArgs) Handles btnCuenta.Click
-        ModificarCuenta.Show()
-    End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblHora.Text = DateTime.Now.ToString("hh:mm:ss")
         lblFecha.Text = DateTime.Now.ToLongDateString()
     End Sub
 
-    Private Sub Button3_DoubleClick(sender As Object, e As EventArgs) Handles Button3.DoubleClick
-        PAdmin.Hide()
+
+    Private Sub prueba()
+        TabControl1.SelectedIndex = 2S
     End Sub
+
+
 End Class

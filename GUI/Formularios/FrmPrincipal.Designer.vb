@@ -47,47 +47,37 @@ Partial Class FrmPrincipal
         tmOCULTAR = New Timer(components)
         tmMOSTRAR = New Timer(components)
         PanelContenedor = New Panel()
+        TabControl1 = New TabControl()
+        TabPage1 = New TabPage()
         Panel11 = New Panel()
         lblHora = New Label()
         lblFecha = New Label()
-        Panel7 = New Panel()
-        Panel10 = New Panel()
-        Button1 = New Button()
-        Button2 = New Button()
-        Label6 = New Label()
-        Button7 = New Button()
-        Button14 = New Button()
-        Button15 = New Button()
-        Label7 = New Label()
-        Button16 = New Button()
-        Button8 = New Button()
-        Button9 = New Button()
-        Label4 = New Label()
-        Button10 = New Button()
-        Button11 = New Button()
-        Button12 = New Button()
-        Label5 = New Label()
-        Button13 = New Button()
-        PAdmin = New Panel()
-        btnCS = New Button()
-        btnCuenta = New Button()
-        Panel9 = New Panel()
-        Button4 = New Button()
-        Button5 = New Button()
-        Label2 = New Label()
-        Label1 = New Label()
-        Button3 = New Button()
-        Button6 = New Button()
+        TabPage2 = New TabPage()
+        Label8 = New Label()
+        TabPage3 = New TabPage()
+        Label9 = New Label()
+        TabPage4 = New TabPage()
+        Label10 = New Label()
+        TabPage5 = New TabPage()
+        Label11 = New Label()
+        TabPage6 = New TabPage()
+        Label12 = New Label()
+        TabPage7 = New TabPage()
+        Label13 = New Label()
         Timer1 = New Timer(components)
         menuContenedor.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(btnMenu, ComponentModel.ISupportInitialize).BeginInit()
         PanelContenedor.SuspendLayout()
+        TabControl1.SuspendLayout()
+        TabPage1.SuspendLayout()
         Panel11.SuspendLayout()
-        Panel7.SuspendLayout()
-        Panel10.SuspendLayout()
-        PAdmin.SuspendLayout()
-        Panel9.SuspendLayout()
+        TabPage2.SuspendLayout()
+        TabPage3.SuspendLayout()
+        TabPage4.SuspendLayout()
+        TabPage5.SuspendLayout()
+        TabPage6.SuspendLayout()
+        TabPage7.SuspendLayout()
         SuspendLayout()
         ' 
         ' menuContenedor
@@ -357,21 +347,47 @@ Partial Class FrmPrincipal
         ' PanelContenedor
         ' 
         PanelContenedor.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
-        PanelContenedor.Controls.Add(Panel11)
-        PanelContenedor.Controls.Add(Panel7)
-        PanelContenedor.Controls.Add(PAdmin)
-        PanelContenedor.Controls.Add(Panel9)
+        PanelContenedor.Controls.Add(TabControl1)
         PanelContenedor.Dock = DockStyle.Fill
         PanelContenedor.Location = New Point(220, 0)
         PanelContenedor.Name = "PanelContenedor"
-        PanelContenedor.Size = New Size(930, 669)
+        PanelContenedor.Size = New Size(951, 669)
         PanelContenedor.TabIndex = 2
+        ' 
+        ' TabControl1
+        ' 
+        TabControl1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        TabControl1.Controls.Add(TabPage1)
+        TabControl1.Controls.Add(TabPage2)
+        TabControl1.Controls.Add(TabPage3)
+        TabControl1.Controls.Add(TabPage4)
+        TabControl1.Controls.Add(TabPage5)
+        TabControl1.Controls.Add(TabPage6)
+        TabControl1.Controls.Add(TabPage7)
+        TabControl1.Location = New Point(3, 0)
+        TabControl1.Name = "TabControl1"
+        TabControl1.SelectedIndex = 0
+        TabControl1.Size = New Size(948, 666)
+        TabControl1.TabIndex = 13
+        ' 
+        ' TabPage1
+        ' 
+        TabPage1.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
+        TabPage1.Controls.Add(Panel11)
+        TabPage1.ForeColor = Color.Black
+        TabPage1.ImeMode = ImeMode.NoControl
+        TabPage1.Location = New Point(4, 24)
+        TabPage1.Name = "TabPage1"
+        TabPage1.Padding = New Padding(3)
+        TabPage1.Size = New Size(940, 638)
+        TabPage1.TabIndex = 0
+        TabPage1.Text = "Home"
         ' 
         ' Panel11
         ' 
         Panel11.Controls.Add(lblHora)
         Panel11.Controls.Add(lblFecha)
-        Panel11.Location = New Point(293, 316)
+        Panel11.Location = New Point(248, 260)
         Panel11.Name = "Panel11"
         Panel11.Size = New Size(540, 105)
         Panel11.TabIndex = 12
@@ -398,409 +414,126 @@ Partial Class FrmPrincipal
         lblFecha.TabIndex = 0
         lblFecha.Text = "DOMINGO, 18 DE JUNIO DE 2023"
         ' 
-        ' Panel7
+        ' TabPage2
         ' 
-        Panel7.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        Panel7.BackColor = Color.FromArgb(CByte(0), CByte(20), CByte(20))
-        Panel7.Controls.Add(Panel10)
-        Panel7.Controls.Add(Button8)
-        Panel7.Controls.Add(Button9)
-        Panel7.Controls.Add(Label4)
-        Panel7.Controls.Add(Button10)
-        Panel7.Controls.Add(Button11)
-        Panel7.Controls.Add(Button12)
-        Panel7.Controls.Add(Label5)
-        Panel7.Controls.Add(Button13)
-        Panel7.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Panel7.Location = New Point(0, 50)
-        Panel7.Name = "Panel7"
-        Panel7.Size = New Size(1162, 5)
-        Panel7.TabIndex = 9
+        TabPage2.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
+        TabPage2.Controls.Add(Label8)
+        TabPage2.Location = New Point(4, 24)
+        TabPage2.Name = "TabPage2"
+        TabPage2.Padding = New Padding(3)
+        TabPage2.Size = New Size(940, 582)
+        TabPage2.TabIndex = 1
+        TabPage2.Text = "Productos"
         ' 
-        ' Panel10
+        ' Label8
         ' 
-        Panel10.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        Panel10.BackColor = Color.FromArgb(CByte(0), CByte(20), CByte(20))
-        Panel10.Controls.Add(Button1)
-        Panel10.Controls.Add(Button2)
-        Panel10.Controls.Add(Label6)
-        Panel10.Controls.Add(Button7)
-        Panel10.Controls.Add(Button14)
-        Panel10.Controls.Add(Button15)
-        Panel10.Controls.Add(Label7)
-        Panel10.Controls.Add(Button16)
-        Panel10.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Panel10.Location = New Point(0, 0)
-        Panel10.Name = "Panel10"
-        Panel10.Size = New Size(1162, 5)
-        Panel10.TabIndex = 26
+        Label8.AutoSize = True
+        Label8.ForeColor = Color.White
+        Label8.Location = New Point(420, 288)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(74, 15)
+        Label8.TabIndex = 0
+        Label8.Text = "PRODUCTOS"
         ' 
-        ' Button1
+        ' TabPage3
         ' 
-        Button1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button1.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button1.FlatAppearance.BorderColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button1.FlatAppearance.MouseDownBackColor = Color.DarkSlateGray
-        Button1.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button1.Image = CType(resources.GetObject("Button1.Image"), Image)
-        Button1.Location = New Point(3862, 12)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(29, 28)
-        Button1.TabIndex = 23
-        Button1.UseVisualStyleBackColor = False
+        TabPage3.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
+        TabPage3.Controls.Add(Label9)
+        TabPage3.Location = New Point(4, 24)
+        TabPage3.Name = "TabPage3"
+        TabPage3.Size = New Size(940, 582)
+        TabPage3.TabIndex = 2
+        TabPage3.Text = "Clientes"
         ' 
-        ' Button2
+        ' Label9
         ' 
-        Button2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button2.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button2.FlatAppearance.BorderColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button2.FlatAppearance.MouseDownBackColor = Color.DarkSlateGray
-        Button2.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button2.Image = CType(resources.GetObject("Button2.Image"), Image)
-        Button2.Location = New Point(3890, 12)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(29, 28)
-        Button2.TabIndex = 24
-        Button2.UseVisualStyleBackColor = False
+        Label9.AutoSize = True
+        Label9.ForeColor = Color.White
+        Label9.Location = New Point(433, 284)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(57, 15)
+        Label9.TabIndex = 1
+        Label9.Text = "CLIENTES"
         ' 
-        ' Label6
+        ' TabPage4
         ' 
-        Label6.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Label6.ForeColor = Color.White
-        Label6.Location = New Point(3916, 17)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(98, 17)
-        Label6.TabIndex = 25
-        Label6.Text = "Ernesto Villalba"
+        TabPage4.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
+        TabPage4.Controls.Add(Label10)
+        TabPage4.Location = New Point(4, 24)
+        TabPage4.Name = "TabPage4"
+        TabPage4.Size = New Size(940, 582)
+        TabPage4.TabIndex = 3
+        TabPage4.Text = "Pedidos"
         ' 
-        ' Button7
+        ' Label10
         ' 
-        Button7.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button7.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button7.FlatAppearance.BorderColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button7.FlatAppearance.MouseDownBackColor = Color.DarkSlateGray
-        Button7.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray
-        Button7.FlatStyle = FlatStyle.Flat
-        Button7.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button7.Image = CType(resources.GetObject("Button7.Image"), Image)
-        Button7.Location = New Point(4016, 12)
-        Button7.Name = "Button7"
-        Button7.Size = New Size(29, 28)
-        Button7.TabIndex = 22
-        Button7.UseVisualStyleBackColor = False
+        Label10.AutoSize = True
+        Label10.ForeColor = Color.White
+        Label10.Location = New Point(433, 284)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(54, 15)
+        Label10.TabIndex = 1
+        Label10.Text = "PEDIDOS"
         ' 
-        ' Button14
+        ' TabPage5
         ' 
-        Button14.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button14.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button14.FlatStyle = FlatStyle.Flat
-        Button14.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button14.Image = CType(resources.GetObject("Button14.Image"), Image)
-        Button14.Location = New Point(4589, 10)
-        Button14.Name = "Button14"
-        Button14.Size = New Size(29, 28)
-        Button14.TabIndex = 8
-        Button14.UseVisualStyleBackColor = False
+        TabPage5.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
+        TabPage5.Controls.Add(Label11)
+        TabPage5.Location = New Point(4, 24)
+        TabPage5.Name = "TabPage5"
+        TabPage5.Size = New Size(940, 582)
+        TabPage5.TabIndex = 4
+        TabPage5.Text = "Pendiente"
         ' 
-        ' Button15
+        ' Label11
         ' 
-        Button15.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button15.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button15.FlatStyle = FlatStyle.Flat
-        Button15.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button15.Image = CType(resources.GetObject("Button15.Image"), Image)
-        Button15.Location = New Point(4617, 10)
-        Button15.Name = "Button15"
-        Button15.Size = New Size(29, 28)
-        Button15.TabIndex = 9
-        Button15.UseVisualStyleBackColor = False
+        Label11.AutoSize = True
+        Label11.ForeColor = Color.White
+        Label11.Location = New Point(433, 284)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(73, 15)
+        Label11.TabIndex = 1
+        Label11.Text = "PENDIENTES"
         ' 
-        ' Label7
+        ' TabPage6
         ' 
-        Label7.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Label7.ForeColor = Color.White
-        Label7.Location = New Point(4643, 15)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(98, 17)
-        Label7.TabIndex = 21
-        Label7.Text = "Ernesto Villalba"
+        TabPage6.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
+        TabPage6.Controls.Add(Label12)
+        TabPage6.Location = New Point(4, 24)
+        TabPage6.Name = "TabPage6"
+        TabPage6.Size = New Size(940, 582)
+        TabPage6.TabIndex = 5
+        TabPage6.Text = "Reportes"
         ' 
-        ' Button16
+        ' Label12
         ' 
-        Button16.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button16.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button16.FlatStyle = FlatStyle.Flat
-        Button16.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button16.Image = CType(resources.GetObject("Button16.Image"), Image)
-        Button16.Location = New Point(4737, 12)
-        Button16.Name = "Button16"
-        Button16.Size = New Size(29, 28)
-        Button16.TabIndex = 7
-        Button16.UseVisualStyleBackColor = False
+        Label12.AutoSize = True
+        Label12.ForeColor = Color.White
+        Label12.Location = New Point(433, 284)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(60, 15)
+        Label12.TabIndex = 1
+        Label12.Text = "REPORTES"
         ' 
-        ' Button8
+        ' TabPage7
         ' 
-        Button8.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button8.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button8.FlatAppearance.BorderColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button8.FlatAppearance.MouseDownBackColor = Color.DarkSlateGray
-        Button8.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray
-        Button8.FlatStyle = FlatStyle.Flat
-        Button8.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button8.Image = CType(resources.GetObject("Button8.Image"), Image)
-        Button8.Location = New Point(2900, 12)
-        Button8.Name = "Button8"
-        Button8.Size = New Size(29, 28)
-        Button8.TabIndex = 23
-        Button8.UseVisualStyleBackColor = False
+        TabPage7.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
+        TabPage7.Controls.Add(Label13)
+        TabPage7.Location = New Point(4, 24)
+        TabPage7.Name = "TabPage7"
+        TabPage7.Size = New Size(940, 582)
+        TabPage7.TabIndex = 6
+        TabPage7.Text = "Ayuda"
         ' 
-        ' Button9
+        ' Label13
         ' 
-        Button9.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button9.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button9.FlatAppearance.BorderColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button9.FlatAppearance.MouseDownBackColor = Color.DarkSlateGray
-        Button9.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray
-        Button9.FlatStyle = FlatStyle.Flat
-        Button9.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button9.Image = CType(resources.GetObject("Button9.Image"), Image)
-        Button9.Location = New Point(2928, 12)
-        Button9.Name = "Button9"
-        Button9.Size = New Size(29, 28)
-        Button9.TabIndex = 24
-        Button9.UseVisualStyleBackColor = False
-        ' 
-        ' Label4
-        ' 
-        Label4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.ForeColor = Color.White
-        Label4.Location = New Point(2954, 17)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(98, 17)
-        Label4.TabIndex = 25
-        Label4.Text = "Ernesto Villalba"
-        ' 
-        ' Button10
-        ' 
-        Button10.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button10.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button10.FlatAppearance.BorderColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button10.FlatAppearance.MouseDownBackColor = Color.DarkSlateGray
-        Button10.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray
-        Button10.FlatStyle = FlatStyle.Flat
-        Button10.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button10.Image = CType(resources.GetObject("Button10.Image"), Image)
-        Button10.Location = New Point(3054, 12)
-        Button10.Name = "Button10"
-        Button10.Size = New Size(29, 28)
-        Button10.TabIndex = 22
-        Button10.UseVisualStyleBackColor = False
-        ' 
-        ' Button11
-        ' 
-        Button11.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button11.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button11.FlatStyle = FlatStyle.Flat
-        Button11.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button11.Image = CType(resources.GetObject("Button11.Image"), Image)
-        Button11.Location = New Point(3627, 10)
-        Button11.Name = "Button11"
-        Button11.Size = New Size(29, 28)
-        Button11.TabIndex = 8
-        Button11.UseVisualStyleBackColor = False
-        ' 
-        ' Button12
-        ' 
-        Button12.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button12.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button12.FlatStyle = FlatStyle.Flat
-        Button12.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button12.Image = CType(resources.GetObject("Button12.Image"), Image)
-        Button12.Location = New Point(3655, 10)
-        Button12.Name = "Button12"
-        Button12.Size = New Size(29, 28)
-        Button12.TabIndex = 9
-        Button12.UseVisualStyleBackColor = False
-        ' 
-        ' Label5
-        ' 
-        Label5.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Label5.ForeColor = Color.White
-        Label5.Location = New Point(3681, 15)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(98, 17)
-        Label5.TabIndex = 21
-        Label5.Text = "Ernesto Villalba"
-        ' 
-        ' Button13
-        ' 
-        Button13.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button13.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button13.FlatStyle = FlatStyle.Flat
-        Button13.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button13.Image = CType(resources.GetObject("Button13.Image"), Image)
-        Button13.Location = New Point(3775, 12)
-        Button13.Name = "Button13"
-        Button13.Size = New Size(29, 28)
-        Button13.TabIndex = 7
-        Button13.UseVisualStyleBackColor = False
-        ' 
-        ' PAdmin
-        ' 
-        PAdmin.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        PAdmin.BackColor = Color.Silver
-        PAdmin.Controls.Add(btnCS)
-        PAdmin.Controls.Add(btnCuenta)
-        PAdmin.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        PAdmin.Location = New Point(730, 56)
-        PAdmin.Name = "PAdmin"
-        PAdmin.Size = New Size(200, 57)
-        PAdmin.TabIndex = 7
-        ' 
-        ' btnCS
-        ' 
-        btnCS.BackColor = Color.Silver
-        btnCS.FlatAppearance.BorderColor = Color.White
-        btnCS.FlatAppearance.BorderSize = 0
-        btnCS.FlatAppearance.MouseDownBackColor = Color.DarkSlateGray
-        btnCS.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray
-        btnCS.FlatStyle = FlatStyle.Flat
-        btnCS.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        btnCS.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        btnCS.Location = New Point(0, 25)
-        btnCS.Name = "btnCS"
-        btnCS.Size = New Size(200, 25)
-        btnCS.TabIndex = 9
-        btnCS.Text = "Cerrar Sesion"
-        btnCS.UseVisualStyleBackColor = False
-        ' 
-        ' btnCuenta
-        ' 
-        btnCuenta.BackColor = Color.Silver
-        btnCuenta.FlatAppearance.BorderColor = Color.White
-        btnCuenta.FlatAppearance.BorderSize = 0
-        btnCuenta.FlatAppearance.MouseDownBackColor = Color.DarkSlateGray
-        btnCuenta.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray
-        btnCuenta.FlatStyle = FlatStyle.Flat
-        btnCuenta.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        btnCuenta.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        btnCuenta.Location = New Point(0, 0)
-        btnCuenta.Name = "btnCuenta"
-        btnCuenta.Size = New Size(200, 25)
-        btnCuenta.TabIndex = 8
-        btnCuenta.Text = "Configuracion de cuenta"
-        btnCuenta.UseVisualStyleBackColor = False
-        ' 
-        ' Panel9
-        ' 
-        Panel9.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        Panel9.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Panel9.Controls.Add(Button4)
-        Panel9.Controls.Add(Button5)
-        Panel9.Controls.Add(Label2)
-        Panel9.Controls.Add(Label1)
-        Panel9.Controls.Add(Button3)
-        Panel9.Controls.Add(Button6)
-        Panel9.Location = New Point(0, 0)
-        Panel9.Name = "Panel9"
-        Panel9.Size = New Size(930, 50)
-        Panel9.TabIndex = 6
-        ' 
-        ' Button4
-        ' 
-        Button4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button4.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button4.FlatAppearance.BorderColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button4.FlatAppearance.MouseDownBackColor = Color.DarkSlateGray
-        Button4.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button4.Image = CType(resources.GetObject("Button4.Image"), Image)
-        Button4.Location = New Point(741, 10)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(29, 28)
-        Button4.TabIndex = 8
-        Button4.UseVisualStyleBackColor = False
-        ' 
-        ' Button5
-        ' 
-        Button5.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button5.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button5.FlatAppearance.BorderColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button5.FlatAppearance.MouseDownBackColor = Color.DarkSlateGray
-        Button5.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray
-        Button5.FlatStyle = FlatStyle.Flat
-        Button5.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button5.Image = CType(resources.GetObject("Button5.Image"), Image)
-        Button5.Location = New Point(769, 10)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(29, 28)
-        Button5.TabIndex = 9
-        Button5.UseVisualStyleBackColor = False
-        ' 
-        ' Label2
-        ' 
-        Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.ForeColor = Color.White
-        Label2.Location = New Point(795, 15)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(98, 17)
-        Label2.TabIndex = 21
-        Label2.Text = "Ernesto Villalba"
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(46, 17)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(43, 17)
-        Label1.TabIndex = 20
-        Label1.Text = "Home"
-        ' 
-        ' Button3
-        ' 
-        Button3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button3.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button3.FlatAppearance.BorderColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button3.FlatAppearance.MouseDownBackColor = Color.DarkSlateGray
-        Button3.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray
-        Button3.FlatStyle = FlatStyle.Flat
-        Button3.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button3.Image = CType(resources.GetObject("Button3.Image"), Image)
-        Button3.Location = New Point(898, 10)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(29, 28)
-        Button3.TabIndex = 7
-        Button3.UseVisualStyleBackColor = False
-        ' 
-        ' Button6
-        ' 
-        Button6.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button6.Enabled = False
-        Button6.FlatStyle = FlatStyle.Flat
-        Button6.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
-        Button6.Image = CType(resources.GetObject("Button6.Image"), Image)
-        Button6.Location = New Point(6, 10)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(29, 28)
-        Button6.TabIndex = 10
-        Button6.UseVisualStyleBackColor = False
+        Label13.AutoSize = True
+        Label13.ForeColor = Color.White
+        Label13.Location = New Point(433, 284)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(45, 15)
+        Label13.TabIndex = 1
+        Label13.Text = "AYUDA"
         ' 
         ' Timer1
         ' 
@@ -810,7 +543,7 @@ Partial Class FrmPrincipal
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
-        ClientSize = New Size(1150, 669)
+        ClientSize = New Size(1171, 669)
         Controls.Add(PanelContenedor)
         Controls.Add(menuContenedor)
         FormBorderStyle = FormBorderStyle.FixedSingle
@@ -822,15 +555,22 @@ Partial Class FrmPrincipal
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(btnMenu, ComponentModel.ISupportInitialize).EndInit()
         PanelContenedor.ResumeLayout(False)
+        TabControl1.ResumeLayout(False)
+        TabPage1.ResumeLayout(False)
         Panel11.ResumeLayout(False)
         Panel11.PerformLayout()
-        Panel7.ResumeLayout(False)
-        Panel7.PerformLayout()
-        Panel10.ResumeLayout(False)
-        Panel10.PerformLayout()
-        PAdmin.ResumeLayout(False)
-        Panel9.ResumeLayout(False)
-        Panel9.PerformLayout()
+        TabPage2.ResumeLayout(False)
+        TabPage2.PerformLayout()
+        TabPage3.ResumeLayout(False)
+        TabPage3.PerformLayout()
+        TabPage4.ResumeLayout(False)
+        TabPage4.PerformLayout()
+        TabPage5.ResumeLayout(False)
+        TabPage5.PerformLayout()
+        TabPage6.ResumeLayout(False)
+        TabPage6.PerformLayout()
+        TabPage7.ResumeLayout(False)
+        TabPage7.PerformLayout()
         ResumeLayout(False)
     End Sub
     Friend WithEvents menuContenedor As Panel
@@ -854,7 +594,6 @@ Partial Class FrmPrincipal
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Panel7 As Panel
     Friend WithEvents btnHome As Button
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel5 As Panel
@@ -870,36 +609,23 @@ Partial Class FrmPrincipal
     Friend WithEvents btnClientes As Button
     Friend WithEvents btnProductos As Button
     Friend WithEvents PanelContenedor As Panel
-    Friend WithEvents Panel9 As Panel
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents PAdmin As Panel
-    Friend WithEvents btnCS As Button
-    Friend WithEvents btnCuenta As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button14 As Button
-    Friend WithEvents Button15 As Button
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Button16 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel11 As Panel
     Friend WithEvents lblHora As Label
     Friend WithEvents lblFecha As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents TabPage7 As TabPage
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
 End Class
