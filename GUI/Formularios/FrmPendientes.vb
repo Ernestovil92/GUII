@@ -5,7 +5,7 @@ Public Class FrmPendientes
     Dim comando As New SqlCommand()
     Private Sub FrmProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion = New SqlConnection("server=DESKTOP-54PHT7T\SQLEXPRESS;DATABASE=GUI;INTEGRATED SECURITY=TRUE")
-        Pendientes()
+
     End Sub
 
     Public Function SelectResult(ByVal cadConsul As String) As DataTable
@@ -25,12 +25,7 @@ Public Class FrmPendientes
     End Function
 
 
-    Private Sub Pendientes()
-        Dim query2 As String = "select codigo_barra as Codigo, nombre_producto as Producto, Proveedor as Proveedores, Precio_unitario,stock,createDate as Fecha from Productos"
-        Dim dt2 As DataTable = SelectResult(query2)
-        Dim DV As New DataView(dt2)
-        dgPendientes.DataSource = DV
-    End Sub
+
 
 
 End Class

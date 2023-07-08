@@ -25,7 +25,6 @@ Partial Class FrmReportes
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FrmReportes))
         TabControl1 = New TabControl()
         TabPage1 = New TabPage()
-        btnInformeProducto = New Button()
         TabPage2 = New TabPage()
         TabPage3 = New TabPage()
         Panel9 = New Panel()
@@ -57,7 +56,6 @@ Partial Class FrmReportes
         Label17 = New Label()
         Button19 = New Button()
         TabControl1.SuspendLayout()
-        TabPage1.SuspendLayout()
         Panel9.SuspendLayout()
         Panel10.SuspendLayout()
         SuspendLayout()
@@ -67,50 +65,40 @@ Partial Class FrmReportes
         TabControl1.Controls.Add(TabPage1)
         TabControl1.Controls.Add(TabPage2)
         TabControl1.Controls.Add(TabPage3)
-        TabControl1.Location = New Point(344, 141)
+        TabControl1.Location = New Point(0, 56)
         TabControl1.Name = "TabControl1"
         TabControl1.SelectedIndex = 0
-        TabControl1.Size = New Size(499, 332)
+        TabControl1.Size = New Size(1124, 617)
         TabControl1.TabIndex = 2
         ' 
         ' TabPage1
         ' 
-        TabPage1.Controls.Add(btnInformeProducto)
+        TabPage1.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         TabPage1.Location = New Point(4, 24)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(491, 304)
+        TabPage1.Size = New Size(1116, 589)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Productos"
-        TabPage1.UseVisualStyleBackColor = True
-        ' 
-        ' btnInformeProducto
-        ' 
-        btnInformeProducto.Location = New Point(380, 275)
-        btnInformeProducto.Name = "btnInformeProducto"
-        btnInformeProducto.Size = New Size(105, 23)
-        btnInformeProducto.TabIndex = 0
-        btnInformeProducto.Text = "Ver Informe"
-        btnInformeProducto.UseVisualStyleBackColor = True
         ' 
         ' TabPage2
         ' 
+        TabPage2.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         TabPage2.Location = New Point(4, 24)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(491, 304)
+        TabPage2.Size = New Size(1116, 589)
         TabPage2.TabIndex = 1
         TabPage2.Text = "Clientes"
-        TabPage2.UseVisualStyleBackColor = True
         ' 
         ' TabPage3
         ' 
+        TabPage3.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         TabPage3.Location = New Point(4, 24)
         TabPage3.Name = "TabPage3"
-        TabPage3.Size = New Size(491, 304)
+        TabPage3.Size = New Size(1116, 589)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Proveedores"
-        TabPage3.UseVisualStyleBackColor = True
         ' 
         ' Panel9
         ' 
@@ -346,9 +334,9 @@ Partial Class FrmReportes
         Label6.ForeColor = Color.White
         Label6.Location = New Point(46, 17)
         Label6.Name = "Label6"
-        Label6.Size = New Size(44, 17)
+        Label6.Size = New Size(61, 17)
         Label6.TabIndex = 20
-        Label6.Text = "Ayuda"
+        Label6.Text = "Reportes"
         ' 
         ' Button3
         ' 
@@ -519,7 +507,6 @@ Partial Class FrmReportes
         Controls.Add(TabControl1)
         Name = "FrmReportes"
         TabControl1.ResumeLayout(False)
-        TabPage1.ResumeLayout(False)
         Panel9.ResumeLayout(False)
         Panel9.PerformLayout()
         Panel10.ResumeLayout(False)
@@ -528,7 +515,6 @@ Partial Class FrmReportes
     End Sub
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents btnInformeProducto As Button
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Panel9 As Panel

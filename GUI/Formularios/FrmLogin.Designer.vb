@@ -31,12 +31,15 @@ Partial Class FrmLogin
         txtUsuario = New TextBox()
         txtPassword = New TextBox()
         PictureBox2 = New PictureBox()
+        Panel1 = New Panel()
+        Panel2 = New Panel()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Button1
         ' 
-        Button1.BackColor = Color.DarkSlateGray
+        Button1.BackColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
+        Button1.FlatAppearance.BorderColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
         Button1.ForeColor = Color.White
@@ -72,46 +75,48 @@ Partial Class FrmLogin
         ' Label2
         ' 
         Label2.AutoSize = True
+        Label2.Font = New Font("Bell MT", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label2.ForeColor = Color.White
         Label2.Location = New Point(22, 207)
         Label2.Name = "Label2"
-        Label2.Size = New Size(67, 15)
+        Label2.Size = New Size(48, 19)
         Label2.TabIndex = 6
-        Label2.Text = "Contraseña"
+        Label2.Text = "Clave"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
+        Label1.Font = New Font("Bell MT", 12F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(22, 140)
+        Label1.Location = New Point(22, 131)
         Label1.Name = "Label1"
-        Label1.Size = New Size(47, 15)
+        Label1.Size = New Size(65, 19)
         Label1.TabIndex = 5
         Label1.Text = "Usuario"
         ' 
         ' txtUsuario
         ' 
-        txtUsuario.BackColor = Color.FromArgb(CByte(6), CByte(70), CByte(64))
+        txtUsuario.BackColor = Color.DarkSlateGray
         txtUsuario.BorderStyle = BorderStyle.FixedSingle
-        txtUsuario.Font = New Font("Segoe UI Semilight", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        txtUsuario.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
         txtUsuario.ForeColor = Color.White
-        txtUsuario.Location = New Point(22, 159)
+        txtUsuario.Location = New Point(22, 158)
         txtUsuario.Name = "txtUsuario"
-        txtUsuario.Size = New Size(172, 27)
+        txtUsuario.Size = New Size(172, 25)
         txtUsuario.TabIndex = 3
         txtUsuario.Text = "admin"
         txtUsuario.TextAlign = HorizontalAlignment.Center
         ' 
         ' txtPassword
         ' 
-        txtPassword.BackColor = Color.FromArgb(CByte(6), CByte(70), CByte(64))
+        txtPassword.BackColor = Color.DarkSlateGray
         txtPassword.BorderStyle = BorderStyle.FixedSingle
-        txtPassword.Font = New Font("Segoe UI Semilight", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        txtPassword.Font = New Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
         txtPassword.ForeColor = Color.White
-        txtPassword.Location = New Point(22, 225)
+        txtPassword.Location = New Point(22, 234)
         txtPassword.Name = "txtPassword"
         txtPassword.PasswordChar = "*"c
-        txtPassword.Size = New Size(172, 27)
+        txtPassword.Size = New Size(172, 25)
         txtPassword.TabIndex = 4
         txtPassword.Text = "123"
         txtPassword.TextAlign = HorizontalAlignment.Center
@@ -127,12 +132,30 @@ Partial Class FrmLogin
         PictureBox2.TabIndex = 1
         PictureBox2.TabStop = False
         ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.Teal
+        Panel1.Location = New Point(22, 149)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(86, 3)
+        Panel1.TabIndex = 9
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.Teal
+        Panel2.Location = New Point(22, 225)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(86, 3)
+        Panel2.TabIndex = 10
+        ' 
         ' FrmLogin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSlateGray
         ClientSize = New Size(215, 362)
+        Controls.Add(Panel2)
+        Controls.Add(Panel1)
         Controls.Add(Button2)
         Controls.Add(PictureBox2)
         Controls.Add(txtPassword)
@@ -156,4 +179,6 @@ Partial Class FrmLogin
     Friend WithEvents txtUsuario As TextBox
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
 End Class

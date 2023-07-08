@@ -23,7 +23,6 @@ Partial Class FrmPendientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FrmPendientes))
-        dgPendientes = New DataGridView()
         Panel9 = New Panel()
         Button8 = New Button()
         Button9 = New Button()
@@ -48,20 +47,9 @@ Partial Class FrmPendientes
         Button15 = New Button()
         Label6 = New Label()
         Button16 = New Button()
-        CType(dgPendientes, ComponentModel.ISupportInitialize).BeginInit()
         Panel9.SuspendLayout()
         Panel7.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' dgPendientes
-        ' 
-        dgPendientes.BackgroundColor = Color.Silver
-        dgPendientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgPendientes.Location = New Point(259, 106)
-        dgPendientes.Name = "dgPendientes"
-        dgPendientes.RowTemplate.Height = 25
-        dgPendientes.Size = New Size(707, 354)
-        dgPendientes.TabIndex = 2
         ' 
         ' Panel9
         ' 
@@ -409,16 +397,13 @@ Partial Class FrmPendientes
         ClientSize = New Size(1162, 710)
         Controls.Add(Panel7)
         Controls.Add(Panel9)
-        Controls.Add(dgPendientes)
         Name = "FrmPendientes"
-        CType(dgPendientes, ComponentModel.ISupportInitialize).EndInit()
         Panel9.ResumeLayout(False)
         Panel9.PerformLayout()
         Panel7.ResumeLayout(False)
         Panel7.PerformLayout()
         ResumeLayout(False)
     End Sub
-    Friend WithEvents dgPendientes As DataGridView
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button

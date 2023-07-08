@@ -75,27 +75,27 @@ Partial Class FrmPedidos
         ' TabControl1
         ' 
         TabControl1.Controls.Add(NuevoArticulo)
-        TabControl1.Location = New Point(129, 78)
+        TabControl1.Location = New Point(12, 56)
         TabControl1.Name = "TabControl1"
         TabControl1.SelectedIndex = 0
-        TabControl1.Size = New Size(841, 550)
+        TabControl1.Size = New Size(1124, 617)
         TabControl1.TabIndex = 18
         ' 
         ' NuevoArticulo
         ' 
+        NuevoArticulo.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         NuevoArticulo.Controls.Add(Panel3)
         NuevoArticulo.Location = New Point(4, 24)
         NuevoArticulo.Name = "NuevoArticulo"
         NuevoArticulo.Padding = New Padding(3)
-        NuevoArticulo.Size = New Size(833, 522)
+        NuevoArticulo.Size = New Size(1116, 589)
         NuevoArticulo.TabIndex = 1
         NuevoArticulo.Text = "Nuevo pedido"
-        NuevoArticulo.UseVisualStyleBackColor = True
         ' 
         ' Panel3
         ' 
         Panel3.Anchor = AnchorStyles.None
-        Panel3.BackColor = Color.White
+        Panel3.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         Panel3.Controls.Add(cmbArticulos)
         Panel3.Controls.Add(DateTimePicker1)
         Panel3.Controls.Add(Label3)
@@ -111,8 +111,8 @@ Partial Class FrmPedidos
         Panel3.Controls.Add(btnEliminar)
         Panel3.Controls.Add(btnGuardar)
         Panel3.Controls.Add(btnModificar)
-        Panel3.ForeColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
-        Panel3.Location = New Point(235, 100)
+        Panel3.ForeColor = Color.White
+        Panel3.Location = New Point(377, 133)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(409, 322)
         Panel3.TabIndex = 15
@@ -138,7 +138,7 @@ Partial Class FrmPedidos
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        Label3.ForeColor = Color.White
         Label3.Location = New Point(13, 198)
         Label3.Name = "Label3"
         Label3.Size = New Size(137, 18)
@@ -147,6 +147,7 @@ Partial Class FrmPedidos
         ' 
         ' btnGuardar2
         ' 
+        btnGuardar2.ForeColor = Color.Black
         btnGuardar2.Location = New Point(304, 282)
         btnGuardar2.Name = "btnGuardar2"
         btnGuardar2.Size = New Size(75, 23)
@@ -158,7 +159,7 @@ Partial Class FrmPedidos
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label7.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        Label7.ForeColor = Color.White
         Label7.Location = New Point(252, 198)
         Label7.Name = "Label7"
         Label7.Size = New Size(58, 18)
@@ -179,7 +180,7 @@ Partial Class FrmPedidos
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label8.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        Label8.ForeColor = Color.White
         Label8.Location = New Point(13, 126)
         Label8.Name = "Label8"
         Label8.Size = New Size(146, 18)
@@ -200,7 +201,7 @@ Partial Class FrmPedidos
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label9.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        Label9.ForeColor = Color.White
         Label9.Location = New Point(252, 126)
         Label9.Name = "Label9"
         Label9.Size = New Size(71, 18)
@@ -221,7 +222,7 @@ Partial Class FrmPedidos
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Bell MT", 14.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label6.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
+        Label6.ForeColor = Color.White
         Label6.Location = New Point(13, 12)
         Label6.Name = "Label6"
         Label6.Size = New Size(210, 22)
@@ -232,7 +233,7 @@ Partial Class FrmPedidos
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
+        Label2.ForeColor = Color.White
         Label2.Location = New Point(13, 57)
         Label2.Name = "Label2"
         Label2.Size = New Size(75, 18)

@@ -45,7 +45,6 @@ Partial Class FrmClientes
         btnGuardar = New Button()
         btnCancelar = New Button()
         btnNuevo = New Button()
-        Label2 = New Label()
         TabControl1 = New TabControl()
         TabPage1 = New TabPage()
         Label19 = New Label()
@@ -125,7 +124,7 @@ Partial Class FrmClientes
         Panel1.Controls.Add(btnGuardar)
         Panel1.Controls.Add(btnCancelar)
         Panel1.Controls.Add(btnNuevo)
-        Panel1.Location = New Point(19, 27)
+        Panel1.Location = New Point(168, 36)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(780, 282)
         Panel1.TabIndex = 1
@@ -133,6 +132,7 @@ Partial Class FrmClientes
         ' Label16
         ' 
         Label16.AutoSize = True
+        Label16.ForeColor = Color.White
         Label16.Location = New Point(19, 251)
         Label16.Name = "Label16"
         Label16.Size = New Size(110, 15)
@@ -142,6 +142,7 @@ Partial Class FrmClientes
         ' Label9
         ' 
         Label9.AutoSize = True
+        Label9.ForeColor = Color.White
         Label9.Location = New Point(28, 17)
         Label9.Name = "Label9"
         Label9.Size = New Size(54, 15)
@@ -167,6 +168,7 @@ Partial Class FrmClientes
         Panel2.Controls.Add(Label12)
         Panel2.Controls.Add(txtCodigoCliente)
         Panel2.Controls.Add(Label11)
+        Panel2.ForeColor = Color.White
         Panel2.Location = New Point(19, 35)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(639, 213)
@@ -182,6 +184,7 @@ Partial Class FrmClientes
         ' 
         ' dgArticulos
         ' 
+        dgArticulos.BackgroundColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         dgArticulos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgArticulos.Location = New Point(3, 105)
         dgArticulos.Name = "dgArticulos"
@@ -236,6 +239,7 @@ Partial Class FrmClientes
         ' Label3
         ' 
         Label3.AutoSize = True
+        Label3.ForeColor = Color.White
         Label3.Location = New Point(13, 16)
         Label3.Name = "Label3"
         Label3.Size = New Size(46, 15)
@@ -321,19 +325,10 @@ Partial Class FrmClientes
         btnNuevo.Text = "Nuevo"
         btnNuevo.UseVisualStyleBackColor = True
         ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(31, 15)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(41, 15)
-        Label2.TabIndex = 0
-        Label2.Text = "Ventas"
-        ' 
         ' TabControl1
         ' 
         TabControl1.Controls.Add(TabPage1)
-        TabControl1.Location = New Point(20, 314)
+        TabControl1.Location = New Point(169, 323)
         TabControl1.Name = "TabControl1"
         TabControl1.SelectedIndex = 0
         TabControl1.Size = New Size(783, 248)
@@ -341,6 +336,7 @@ Partial Class FrmClientes
         ' 
         ' TabPage1
         ' 
+        TabPage1.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         TabPage1.Controls.Add(Label19)
         TabPage1.Controls.Add(dgListas)
         TabPage1.Controls.Add(chEliminar)
@@ -352,13 +348,13 @@ Partial Class FrmClientes
         TabPage1.Controls.Add(Label17)
         TabPage1.Controls.Add(dtFechaFin)
         TabPage1.Controls.Add(dtFechaIni)
+        TabPage1.ForeColor = Color.White
         TabPage1.Location = New Point(4, 24)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(775, 220)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Listado"
-        TabPage1.UseVisualStyleBackColor = True
         ' 
         ' Label19
         ' 
@@ -371,6 +367,7 @@ Partial Class FrmClientes
         ' 
         ' dgListas
         ' 
+        dgListas.BackgroundColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         dgListas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgListas.Location = New Point(10, 82)
         dgListas.Name = "dgListas"
@@ -436,6 +433,7 @@ Partial Class FrmClientes
         ' Label17
         ' 
         Label17.AutoSize = True
+        Label17.ForeColor = Color.White
         Label17.Location = New Point(20, 7)
         Label17.Name = "Label17"
         Label17.Size = New Size(70, 15)
@@ -462,24 +460,23 @@ Partial Class FrmClientes
         ' 
         tbNuevoCliente.Controls.Add(TabPage2)
         tbNuevoCliente.Controls.Add(TabPage3)
-        tbNuevoCliente.Location = New Point(195, 99)
+        tbNuevoCliente.Location = New Point(12, 56)
         tbNuevoCliente.Name = "tbNuevoCliente"
         tbNuevoCliente.SelectedIndex = 0
-        tbNuevoCliente.Size = New Size(828, 630)
+        tbNuevoCliente.Size = New Size(1124, 617)
         tbNuevoCliente.TabIndex = 6
         ' 
         ' TabPage2
         ' 
+        TabPage2.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         TabPage2.Controls.Add(Panel1)
-        TabPage2.Controls.Add(Label2)
         TabPage2.Controls.Add(TabControl1)
         TabPage2.Location = New Point(4, 24)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(820, 602)
+        TabPage2.Size = New Size(1116, 589)
         TabPage2.TabIndex = 0
         TabPage2.Text = "Ventas"
-        TabPage2.UseVisualStyleBackColor = True
         ' 
         ' TabPage3
         ' 
@@ -487,7 +484,7 @@ Partial Class FrmClientes
         TabPage3.Location = New Point(4, 24)
         TabPage3.Name = "TabPage3"
         TabPage3.Padding = New Padding(3)
-        TabPage3.Size = New Size(820, 602)
+        TabPage3.Size = New Size(1116, 589)
         TabPage3.TabIndex = 1
         TabPage3.Text = "Nuevo cliente"
         TabPage3.UseVisualStyleBackColor = True
@@ -990,7 +987,6 @@ Partial Class FrmClientes
         CType(dgListas, ComponentModel.ISupportInitialize).EndInit()
         tbNuevoCliente.ResumeLayout(False)
         TabPage2.ResumeLayout(False)
-        TabPage2.PerformLayout()
         TabPage3.ResumeLayout(False)
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
@@ -1020,7 +1016,6 @@ Partial Class FrmClientes
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnNuevo As Button
     Friend WithEvents txtCodigoCliente As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents dgArticulos As DataGridView
     Friend WithEvents TabControl1 As TabControl

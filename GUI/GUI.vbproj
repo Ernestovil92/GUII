@@ -3,17 +3,17 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
-    <StartupObject>GUI.My.MyApplication</StartupObject>
+    <StartupObject>GUI.FrmLogin</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
-    <ApplicationIcon>1486504348-business-coins-finance-banking-bank-marketing_81341.ico</ApplicationIcon>
+    <ApplicationIcon>borrow_book-48_45030.ico</ApplicationIcon>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
 
   <ItemGroup>
-    <Content Include="1486504348-business-coins-finance-banking-bank-marketing_81341.ico" />
+    <Content Include="borrow_book-48_45030.ico" />
   </ItemGroup>
 
   <ItemGroup>

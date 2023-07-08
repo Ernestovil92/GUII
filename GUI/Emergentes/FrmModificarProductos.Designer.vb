@@ -30,6 +30,7 @@ Partial Class FrmModificarProductos
         txtProducto = New TextBox()
         Label2 = New Label()
         Panel1 = New Panel()
+        btnCancelar = New Button()
         btnMostrar = New Button()
         txtTelefono = New TextBox()
         Label8 = New Label()
@@ -39,7 +40,6 @@ Partial Class FrmModificarProductos
         Label6 = New Label()
         Label1 = New Label()
         txtId = New TextBox()
-        btnCancelar = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -105,7 +105,7 @@ Partial Class FrmModificarProductos
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.Transparent
+        Panel1.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         Panel1.Controls.Add(btnCancelar)
         Panel1.Controls.Add(btnMostrar)
         Panel1.Controls.Add(txtTelefono)
@@ -127,6 +127,15 @@ Partial Class FrmModificarProductos
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(380, 345)
         Panel1.TabIndex = 18
+        ' 
+        ' btnCancelar
+        ' 
+        btnCancelar.Location = New Point(199, 296)
+        btnCancelar.Name = "btnCancelar"
+        btnCancelar.Size = New Size(75, 23)
+        btnCancelar.TabIndex = 29
+        btnCancelar.Text = "Cancelar"
+        btnCancelar.UseVisualStyleBackColor = True
         ' 
         ' btnMostrar
         ' 
@@ -205,20 +214,11 @@ Partial Class FrmModificarProductos
         txtId.Size = New Size(73, 23)
         txtId.TabIndex = 19
         ' 
-        ' btnCancelar
-        ' 
-        btnCancelar.Location = New Point(199, 296)
-        btnCancelar.Name = "btnCancelar"
-        btnCancelar.Size = New Size(75, 23)
-        btnCancelar.TabIndex = 29
-        btnCancelar.Text = "Cancelar"
-        btnCancelar.UseVisualStyleBackColor = True
-        ' 
         ' FrmModificarProductos
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.Sienna
+        BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         ClientSize = New Size(403, 367)
         Controls.Add(Panel1)
         Name = "FrmModificarProductos"

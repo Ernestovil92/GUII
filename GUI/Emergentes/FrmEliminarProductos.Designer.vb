@@ -41,6 +41,7 @@ Partial Class FrmEliminarProductos
         ' Label1
         ' 
         Label1.AutoSize = True
+        Label1.ForeColor = Color.White
         Label1.Location = New Point(78, 14)
         Label1.Name = "Label1"
         Label1.Size = New Size(46, 15)
@@ -68,7 +69,7 @@ Partial Class FrmEliminarProductos
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.Sienna
+        BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         ClientSize = New Size(229, 124)
         Controls.Add(Panel1)
         Name = "FrmEliminarProductos"

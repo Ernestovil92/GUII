@@ -191,4 +191,8 @@ Public Class FrmPrincipal
         lblHora.Text = DateTime.Now.ToString("hh:mm:ss")
         lblFecha.Text = DateTime.Now.ToLongDateString()
     End Sub
+
+    Private Sub Button3_DoubleClick(sender As Object, e As EventArgs) Handles Button3.DoubleClick
+        PAdmin.Hide()
+    End Sub
 End Class
