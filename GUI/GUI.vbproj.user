@@ -7,6 +7,9 @@
     <Compile Update="Emergentes\FrmEliminarProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Emergentes\FrmModificarPedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Emergentes\FrmModificarProductos.vb">
       <SubType>Form</SubType>
     </Compile>

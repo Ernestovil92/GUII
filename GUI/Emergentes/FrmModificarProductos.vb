@@ -78,4 +78,6 @@ Public Class FrmModificarProductos
         txtTelefono.Text = ""
         Me.Hide()
     End Sub
+
+
 End Class
