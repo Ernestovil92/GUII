@@ -43,8 +43,50 @@ Public Class FrmModificarPedido
         conexion.Close()
         limpiar()
     End Sub
+    '------------GUARDAR--------------------------'
+    Public Sub GuardarPedidos()
+        Dim connectionString As String = "server=DESKTOP-54PHT7T\SQLEXPRESS;DATABASE=GUI;INTEGRATED SECURITY=TRUE"
 
-    Private Sub limpiar()
+        Using conexion As New SqlConnection(connectionString)
+            Dim consulta As String = "INSERT INTO pedidos(Producto, precio, correo, telefono, fecha) VALUES(@Producto, @Precio, @Correo, @Telefono, GETDATE())"
+            Dim comando As New SqlCommand(consulta, conexion)
+
+            comando.Parameters.AddWithValue("@Producto", txtProducto.Text)
+            comando.Parameters.AddWithValue("@Precio", txtPrecio.Text)
+            comando.Parameters.AddWithValue("@Correo", txtCE.Text)
+            comando.Parameters.AddWithValue("@Telefono", txtTelefono.Text)
+
+            Try
+                conexion.Open()
+                Dim filasAfectadas As Integer = comando.ExecuteNonQuery()
+                If filasAfectadas > 0 Then
+                    MsgBox("Se registró correctamente.")
+                Else
+                    MsgBox("Hubo un error al registrar.")
+                End If
+            Catch ex As Exception
+                MsgBox("Error: " & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+
+    Private Sub Eliminar()
+        conexion.Open()
+        If txtId.Text = " " Then
+            MsgBox("Error 2333: no se pudo eliminar registro")
+        ElseIf MsgBox("Está seguro de eliminar permanentemente este registro?", vbOKCancel, "Confirmar") = vbOK Then
+            Dim consulta As String = "DELETE pedidos where id = '" & txtId.Text & "'"
+            Dim comando As New SqlCommand(consulta, conexion)
+            Dim lector As SqlDataReader
+            lector = comando.ExecuteReader
+            MsgBox("Se ha eliminado el registro Nro.: " + txtId.Text)
+        End If
+
+        conexion.Close()
+    End Sub
+
+    Public Sub limpiar()
         txtId.Text = ""
         txtProducto.Text = ""
         txtCE.Text = ""

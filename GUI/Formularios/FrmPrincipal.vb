@@ -5,6 +5,7 @@ Imports System.Reflection.Emit
 Imports System.Reflection.Module
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar
 
+
 Public Class FrmPrincipal
 
     Dim conexion As New SqlConnection()
@@ -327,7 +328,31 @@ Public Class FrmPrincipal
         End With
     End Sub
 
+    '----------------   GUARDAR PEDIDOS   ------------------------------'
+
+
+    Private frmModificarPedidoInstance As FrmModificarPedido
+
+    Private Sub BtnAbrirModificarPedido_Click(sender As Object, e As EventArgs)
+        ' Abre el formulario FrmModificarPedido
+        frmModificarPedidoInstance = New FrmModificarPedido()
+        frmModificarPedidoInstance.Show()
+    End Sub
+
+    '---------     EJECUTAR FUNCION DE GUARDAR PEDIDOS   ------------'
+    Private Sub EjecutarFuncionEnFormulario2()
+        Dim form2 As New FrmModificarPedido()
+        form2.GuardarPedidos()
+    End Sub
+
+
+
     Private Sub btnMoficarPedido_Click(sender As Object, e As EventArgs) Handles btnMoficarPedido.Click
         FrmModificarPedido.ShowDialog()
     End Sub
+
+    Private Sub Guardar_Pedidos_Click(sender As Object, e As EventArgs) Handles Guardar_Pedidos.Click
+        EjecutarFuncionEnFormulario2()
+    End Sub
+
 End Class

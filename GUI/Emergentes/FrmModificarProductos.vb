@@ -11,13 +11,7 @@ Public Class FrmModificarProductos
             Dim lector As SqlDataReader
             lector = comando.ExecuteReader
             MsgBox("Se ha actualizado el registro Nro.: " + txtId.Text)
-            txtId.Text = ""
-            txtProducto.Text = ""
-            txtCE.Text = ""
-            txtProveedores.Text = ""
-            txtPU.Text = ""
-            txtStock.Text = ""
-            txtTelefono.Text = ""
+            limpiar()
 
         Else
             MsgBox("Error no se pudo actualizar")
@@ -48,10 +42,7 @@ Public Class FrmModificarProductos
 
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         Modificar()
-        txtId.Text = " "
-        txtProducto.Text = " "
-        txtPU.Text = " "
-        txtProveedores.Text = " "
+        limpiar()
         Me.Hide()
     End Sub
 
@@ -69,6 +60,11 @@ Public Class FrmModificarProductos
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        limpiar()
+        Me.Hide()
+    End Sub
+
+    Private Sub limpiar()
         txtId.Text = ""
         txtProducto.Text = ""
         txtCE.Text = ""
@@ -76,8 +72,6 @@ Public Class FrmModificarProductos
         txtPU.Text = ""
         txtStock.Text = ""
         txtTelefono.Text = ""
-        Me.Hide()
     End Sub
-
 
 End Class

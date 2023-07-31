@@ -147,6 +147,7 @@ Partial Class FrmPrincipal
         TabControl4 = New TabControl()
         TabPage11 = New TabPage()
         Panel14 = New Panel()
+        Guardar_Pedidos = New Button()
         ComboBox1 = New ComboBox()
         DateTimePicker1 = New DateTimePicker()
         Label10 = New Label()
@@ -173,6 +174,8 @@ Partial Class FrmPrincipal
         Label40 = New Label()
         Label41 = New Label()
         Timer1 = New Timer(components)
+        Label42 = New Label()
+        TextBox5 = New TextBox()
         menuContenedor.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(btnMenu, ComponentModel.ISupportInitialize).BeginInit()
@@ -1518,6 +1521,9 @@ Partial Class FrmPrincipal
         ' 
         Panel14.Anchor = AnchorStyles.None
         Panel14.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
+        Panel14.Controls.Add(TextBox5)
+        Panel14.Controls.Add(Label42)
+        Panel14.Controls.Add(Guardar_Pedidos)
         Panel14.Controls.Add(ComboBox1)
         Panel14.Controls.Add(DateTimePicker1)
         Panel14.Controls.Add(Label10)
@@ -1534,10 +1540,20 @@ Partial Class FrmPrincipal
         Panel14.Controls.Add(Button5)
         Panel14.Controls.Add(Button6)
         Panel14.ForeColor = Color.White
-        Panel14.Location = New Point(264, 113)
+        Panel14.Location = New Point(218, 54)
         Panel14.Name = "Panel14"
-        Panel14.Size = New Size(409, 322)
+        Panel14.Size = New Size(405, 334)
         Panel14.TabIndex = 15
+        ' 
+        ' Guardar_Pedidos
+        ' 
+        Guardar_Pedidos.ForeColor = Color.Black
+        Guardar_Pedidos.Location = New Point(208, 282)
+        Guardar_Pedidos.Name = "Guardar_Pedidos"
+        Guardar_Pedidos.Size = New Size(75, 23)
+        Guardar_Pedidos.TabIndex = 27
+        Guardar_Pedidos.Text = "Guardar"
+        Guardar_Pedidos.UseVisualStyleBackColor = True
         ' 
         ' ComboBox1
         ' 
@@ -1815,6 +1831,27 @@ Partial Class FrmPrincipal
         ' Timer1
         ' 
         ' 
+        ' Label42
+        ' 
+        Label42.AutoSize = True
+        Label42.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label42.ForeColor = Color.White
+        Label42.Location = New Point(252, 62)
+        Label42.Name = "Label42"
+        Label42.Size = New Size(24, 18)
+        Label42.TabIndex = 28
+        Label42.Text = "ID"
+        ' 
+        ' TextBox5
+        ' 
+        TextBox5.BackColor = Color.WhiteSmoke
+        TextBox5.BorderStyle = BorderStyle.FixedSingle
+        TextBox5.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox5.Location = New Point(137, 154)
+        TextBox5.Name = "TextBox5"
+        TextBox5.Size = New Size(130, 27)
+        TextBox5.TabIndex = 29
+        ' 
         ' FrmPrincipal
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -2039,4 +2076,7 @@ Partial Class FrmPrincipal
     Friend WithEvents Label13 As Label
     Friend WithEvents Label40 As Label
     Friend WithEvents Label41 As Label
+    Friend WithEvents Guardar_Pedidos As Button
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label42 As Label
 End Class
