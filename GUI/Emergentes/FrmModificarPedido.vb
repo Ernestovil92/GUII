@@ -28,7 +28,7 @@ Public Class FrmModificarPedido
 
     ''-------------
 
-    Private Sub ModificarPedido()
+    Public Sub ModificarPedido()
         conexion.Open()
         If conexion.State = 1 Then
             Dim consulta As String = "UPDATE pedidos SET Producto = '" & txtProducto.Text & "', precio = '" & txtPrecio.Text & "', correo = '" & txtCE.Text & "', telefono = '" & txtTelefono.Text & "', fecha = getdate()"
@@ -41,21 +41,21 @@ Public Class FrmModificarPedido
         End If
 
         conexion.Close()
-        limpiar()
+        limpiarPedidos()
     End Sub
     '------------GUARDAR--------------------------'
     Public Sub GuardarPedidos()
         Dim connectionString As String = "server=DESKTOP-54PHT7T\SQLEXPRESS;DATABASE=GUI;INTEGRATED SECURITY=TRUE"
 
         Using conexion As New SqlConnection(connectionString)
-            Dim consulta As String = "INSERT INTO pedidos(Producto, precio, correo, telefono, fecha) VALUES(@Producto, @Precio, @Correo, @Telefono, GETDATE())"
+            Dim consulta As String = "INSERT INTO pedidos(id,Producto, precio, correo, telefono, fecha) VALUES(@id,@Producto, @Precio, @Correo, @Telefono, GETDATE())"
             Dim comando As New SqlCommand(consulta, conexion)
 
-            comando.Parameters.AddWithValue("@Producto", txtProducto.Text)
-            comando.Parameters.AddWithValue("@Precio", txtPrecio.Text)
-            comando.Parameters.AddWithValue("@Correo", txtCE.Text)
-            comando.Parameters.AddWithValue("@Telefono", txtTelefono.Text)
-
+            comando.Parameters.AddWithValue("@id", FrmPrincipal.txtidP.Text)
+            comando.Parameters.AddWithValue("@Producto", FrmPrincipal.txtproductoP.Text)
+            comando.Parameters.AddWithValue("@Precio", FrmPrincipal.txtPrecioP.Text)
+            comando.Parameters.AddWithValue("@Correo", FrmPrincipal.txtcorreoP.Text)
+            comando.Parameters.AddWithValue("@Telefono", FrmPrincipal.txtteleP.Text)
             Try
                 conexion.Open()
                 Dim filasAfectadas As Integer = comando.ExecuteNonQuery()
@@ -70,6 +70,7 @@ Public Class FrmModificarPedido
         End Using
     End Sub
 
+    '-----------------    ELIMINAR    ---------------------------------'
 
     Private Sub Eliminar()
         conexion.Open()
@@ -86,12 +87,11 @@ Public Class FrmModificarPedido
         conexion.Close()
     End Sub
 
-    Public Sub limpiar()
-        txtId.Text = ""
-        txtProducto.Text = ""
-        txtCE.Text = ""
-        txtPrecio.Text = ""
-        txtTelefono.Text = ""
+    Public Sub limpiarPedidos()
+        FrmPrincipal.txtproductoP.Text = ""
+        FrmPrincipal.txtPrecioP.Text = ""
+        FrmPrincipal.txtcorreoP.Text = ""
+        FrmPrincipal.txtteleP.Text = ""
 
     End Sub
 
@@ -113,7 +113,7 @@ Public Class FrmModificarPedido
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         ModificarPedido()
-        limpiar()
+        limpiarPedidos()
     End Sub
 
 

@@ -147,22 +147,24 @@ Partial Class FrmPrincipal
         TabControl4 = New TabControl()
         TabPage11 = New TabPage()
         Panel14 = New Panel()
+        txtproductoP = New TextBox()
+        Button4 = New Button()
+        Button3 = New Button()
+        datapedidos = New DataGridView()
+        txtidP = New TextBox()
+        Label42 = New Label()
         Guardar_Pedidos = New Button()
-        ComboBox1 = New ComboBox()
         DateTimePicker1 = New DateTimePicker()
         Label10 = New Label()
         btnMoficarPedido = New Button()
         Label35 = New Label()
-        txtPrecio = New TextBox()
+        txtPrecioP = New TextBox()
         Label36 = New Label()
-        TextBox3 = New TextBox()
+        txtcorreoP = New TextBox()
         Label37 = New Label()
-        TextBox4 = New TextBox()
+        txtteleP = New TextBox()
         Label38 = New Label()
         Label39 = New Label()
-        Button4 = New Button()
-        Button5 = New Button()
-        Button6 = New Button()
         TabPage5 = New TabPage()
         Label11 = New Label()
         TabPage6 = New TabPage()
@@ -174,8 +176,6 @@ Partial Class FrmPrincipal
         Label40 = New Label()
         Label41 = New Label()
         Timer1 = New Timer(components)
-        Label42 = New Label()
-        TextBox5 = New TextBox()
         menuContenedor.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(btnMenu, ComponentModel.ISupportInitialize).BeginInit()
@@ -206,6 +206,7 @@ Partial Class FrmPrincipal
         TabControl4.SuspendLayout()
         TabPage11.SuspendLayout()
         Panel14.SuspendLayout()
+        CType(datapedidos, ComponentModel.ISupportInitialize).BeginInit()
         TabPage5.SuspendLayout()
         TabPage6.SuspendLayout()
         TabPage7.SuspendLayout()
@@ -1521,53 +1522,109 @@ Partial Class FrmPrincipal
         ' 
         Panel14.Anchor = AnchorStyles.None
         Panel14.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
-        Panel14.Controls.Add(TextBox5)
+        Panel14.Controls.Add(txtproductoP)
+        Panel14.Controls.Add(Button4)
+        Panel14.Controls.Add(Button3)
+        Panel14.Controls.Add(datapedidos)
+        Panel14.Controls.Add(txtidP)
         Panel14.Controls.Add(Label42)
         Panel14.Controls.Add(Guardar_Pedidos)
-        Panel14.Controls.Add(ComboBox1)
         Panel14.Controls.Add(DateTimePicker1)
         Panel14.Controls.Add(Label10)
         Panel14.Controls.Add(btnMoficarPedido)
         Panel14.Controls.Add(Label35)
-        Panel14.Controls.Add(txtPrecio)
+        Panel14.Controls.Add(txtPrecioP)
         Panel14.Controls.Add(Label36)
-        Panel14.Controls.Add(TextBox3)
+        Panel14.Controls.Add(txtcorreoP)
         Panel14.Controls.Add(Label37)
-        Panel14.Controls.Add(TextBox4)
+        Panel14.Controls.Add(txtteleP)
         Panel14.Controls.Add(Label38)
         Panel14.Controls.Add(Label39)
-        Panel14.Controls.Add(Button4)
-        Panel14.Controls.Add(Button5)
-        Panel14.Controls.Add(Button6)
         Panel14.ForeColor = Color.White
-        Panel14.Location = New Point(218, 54)
+        Panel14.Location = New Point(48, 15)
         Panel14.Name = "Panel14"
-        Panel14.Size = New Size(405, 334)
+        Panel14.Size = New Size(664, 427)
         Panel14.TabIndex = 15
+        ' 
+        ' txtproductoP
+        ' 
+        txtproductoP.BackColor = Color.WhiteSmoke
+        txtproductoP.BorderStyle = BorderStyle.FixedSingle
+        txtproductoP.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        txtproductoP.Location = New Point(184, 83)
+        txtproductoP.Name = "txtproductoP"
+        txtproductoP.Size = New Size(211, 27)
+        txtproductoP.TabIndex = 33
+        ' 
+        ' Button4
+        ' 
+        Button4.ForeColor = Color.Black
+        Button4.Location = New Point(320, 390)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(75, 23)
+        Button4.TabIndex = 32
+        Button4.Text = "Eliminar"
+        Button4.UseVisualStyleBackColor = True
+        ' 
+        ' Button3
+        ' 
+        Button3.ForeColor = Color.Black
+        Button3.Location = New Point(212, 390)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(75, 23)
+        Button3.TabIndex = 31
+        Button3.Text = "mostrar"
+        Button3.UseVisualStyleBackColor = True
+        ' 
+        ' datapedidos
+        ' 
+        datapedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        datapedidos.BackgroundColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
+        datapedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        datapedidos.GridColor = Color.FromArgb(CByte(0), CByte(64), CByte(64))
+        datapedidos.Location = New Point(21, 179)
+        datapedidos.Name = "datapedidos"
+        datapedidos.RowTemplate.DefaultCellStyle.BackColor = Color.White
+        datapedidos.RowTemplate.DefaultCellStyle.ForeColor = Color.Black
+        datapedidos.RowTemplate.Height = 25
+        datapedidos.Size = New Size(618, 195)
+        datapedidos.TabIndex = 30
+        ' 
+        ' txtidP
+        ' 
+        txtidP.BackColor = Color.WhiteSmoke
+        txtidP.BorderStyle = BorderStyle.FixedSingle
+        txtidP.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        txtidP.Location = New Point(15, 84)
+        txtidP.Name = "txtidP"
+        txtidP.Size = New Size(133, 27)
+        txtidP.TabIndex = 29
+        ' 
+        ' Label42
+        ' 
+        Label42.AutoSize = True
+        Label42.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label42.ForeColor = Color.White
+        Label42.Location = New Point(15, 62)
+        Label42.Name = "Label42"
+        Label42.Size = New Size(24, 18)
+        Label42.TabIndex = 28
+        Label42.Text = "ID"
         ' 
         ' Guardar_Pedidos
         ' 
         Guardar_Pedidos.ForeColor = Color.Black
-        Guardar_Pedidos.Location = New Point(208, 282)
+        Guardar_Pedidos.Location = New Point(15, 390)
         Guardar_Pedidos.Name = "Guardar_Pedidos"
         Guardar_Pedidos.Size = New Size(75, 23)
         Guardar_Pedidos.TabIndex = 27
-        Guardar_Pedidos.Text = "Guardar"
+        Guardar_Pedidos.Text = "Agregar"
         Guardar_Pedidos.UseVisualStyleBackColor = True
-        ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(13, 87)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(208, 25)
-        ComboBox1.TabIndex = 26
         ' 
         ' DateTimePicker1
         ' 
         DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.Location = New Point(13, 223)
+        DateTimePicker1.Location = New Point(20, 146)
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(200, 23)
         DateTimePicker1.TabIndex = 25
@@ -1577,7 +1634,7 @@ Partial Class FrmPrincipal
         Label10.AutoSize = True
         Label10.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
         Label10.ForeColor = Color.White
-        Label10.Location = New Point(13, 198)
+        Label10.Location = New Point(20, 125)
         Label10.Name = "Label10"
         Label10.Size = New Size(137, 18)
         Label10.TabIndex = 24
@@ -1586,7 +1643,7 @@ Partial Class FrmPrincipal
         ' btnMoficarPedido
         ' 
         btnMoficarPedido.ForeColor = Color.Black
-        btnMoficarPedido.Location = New Point(304, 282)
+        btnMoficarPedido.Location = New Point(113, 390)
         btnMoficarPedido.Name = "btnMoficarPedido"
         btnMoficarPedido.Size = New Size(75, 23)
         btnMoficarPedido.TabIndex = 23
@@ -1598,63 +1655,63 @@ Partial Class FrmPrincipal
         Label35.AutoSize = True
         Label35.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
         Label35.ForeColor = Color.White
-        Label35.Location = New Point(252, 198)
+        Label35.Location = New Point(259, 125)
         Label35.Name = "Label35"
         Label35.Size = New Size(58, 18)
         Label35.TabIndex = 15
         Label35.Text = "Precio "
         ' 
-        ' txtPrecio
+        ' txtPrecioP
         ' 
-        txtPrecio.BackColor = Color.WhiteSmoke
-        txtPrecio.BorderStyle = BorderStyle.FixedSingle
-        txtPrecio.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        txtPrecio.Location = New Point(252, 219)
-        txtPrecio.Name = "txtPrecio"
-        txtPrecio.Size = New Size(127, 27)
-        txtPrecio.TabIndex = 16
+        txtPrecioP.BackColor = Color.WhiteSmoke
+        txtPrecioP.BorderStyle = BorderStyle.FixedSingle
+        txtPrecioP.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        txtPrecioP.Location = New Point(259, 146)
+        txtPrecioP.Name = "txtPrecioP"
+        txtPrecioP.Size = New Size(127, 27)
+        txtPrecioP.TabIndex = 16
         ' 
         ' Label36
         ' 
         Label36.AutoSize = True
         Label36.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
         Label36.ForeColor = Color.White
-        Label36.Location = New Point(13, 126)
+        Label36.Location = New Point(428, 62)
         Label36.Name = "Label36"
         Label36.Size = New Size(146, 18)
         Label36.TabIndex = 17
         Label36.Text = "Correo Electronico"
         ' 
-        ' TextBox3
+        ' txtcorreoP
         ' 
-        TextBox3.BackColor = Color.WhiteSmoke
-        TextBox3.BorderStyle = BorderStyle.FixedSingle
-        TextBox3.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox3.Location = New Point(13, 147)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(211, 27)
-        TextBox3.TabIndex = 18
+        txtcorreoP.BackColor = Color.WhiteSmoke
+        txtcorreoP.BorderStyle = BorderStyle.FixedSingle
+        txtcorreoP.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        txtcorreoP.Location = New Point(428, 85)
+        txtcorreoP.Name = "txtcorreoP"
+        txtcorreoP.Size = New Size(211, 27)
+        txtcorreoP.TabIndex = 18
         ' 
         ' Label37
         ' 
         Label37.AutoSize = True
         Label37.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
         Label37.ForeColor = Color.White
-        Label37.Location = New Point(252, 126)
+        Label37.Location = New Point(423, 125)
         Label37.Name = "Label37"
         Label37.Size = New Size(71, 18)
         Label37.TabIndex = 19
         Label37.Text = "Telofono"
         ' 
-        ' TextBox4
+        ' txtteleP
         ' 
-        TextBox4.BackColor = Color.WhiteSmoke
-        TextBox4.BorderStyle = BorderStyle.FixedSingle
-        TextBox4.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox4.Location = New Point(252, 147)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(130, 27)
-        TextBox4.TabIndex = 20
+        txtteleP.BackColor = Color.WhiteSmoke
+        txtteleP.BorderStyle = BorderStyle.FixedSingle
+        txtteleP.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        txtteleP.Location = New Point(423, 146)
+        txtteleP.Name = "txtteleP"
+        txtteleP.Size = New Size(130, 27)
+        txtteleP.TabIndex = 20
         ' 
         ' Label38
         ' 
@@ -1672,56 +1729,11 @@ Partial Class FrmPrincipal
         Label39.AutoSize = True
         Label39.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
         Label39.ForeColor = Color.White
-        Label39.Location = New Point(13, 57)
+        Label39.Location = New Point(187, 62)
         Label39.Name = "Label39"
         Label39.Size = New Size(75, 18)
         Label39.TabIndex = 0
         Label39.Text = "Producto"
-        ' 
-        ' Button4
-        ' 
-        Button4.FlatAppearance.BorderColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        Button4.FlatAppearance.MouseDownBackColor = Color.Chocolate
-        Button4.FlatAppearance.MouseOverBackColor = Color.Chocolate
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Button4.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
-        Button4.Location = New Point(13, 389)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(75, 36)
-        Button4.TabIndex = 11
-        Button4.Text = "Eliminar"
-        Button4.UseVisualStyleBackColor = True
-        ' 
-        ' Button5
-        ' 
-        Button5.FlatAppearance.BorderColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        Button5.FlatAppearance.MouseDownBackColor = Color.Chocolate
-        Button5.FlatAppearance.MouseOverBackColor = Color.Chocolate
-        Button5.FlatStyle = FlatStyle.Flat
-        Button5.Font = New Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Button5.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
-        Button5.Location = New Point(175, 388)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(75, 36)
-        Button5.TabIndex = 6
-        Button5.Text = "Guardar"
-        Button5.UseVisualStyleBackColor = True
-        ' 
-        ' Button6
-        ' 
-        Button6.FlatAppearance.BorderColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        Button6.FlatAppearance.MouseDownBackColor = Color.Chocolate
-        Button6.FlatAppearance.MouseOverBackColor = Color.Chocolate
-        Button6.FlatStyle = FlatStyle.Flat
-        Button6.Font = New Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Button6.ForeColor = Color.FromArgb(CByte(64), CByte(0), CByte(0))
-        Button6.Location = New Point(94, 388)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(75, 37)
-        Button6.TabIndex = 7
-        Button6.Text = "Modificar"
-        Button6.UseVisualStyleBackColor = True
         ' 
         ' TabPage5
         ' 
@@ -1831,27 +1843,6 @@ Partial Class FrmPrincipal
         ' Timer1
         ' 
         ' 
-        ' Label42
-        ' 
-        Label42.AutoSize = True
-        Label42.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label42.ForeColor = Color.White
-        Label42.Location = New Point(252, 62)
-        Label42.Name = "Label42"
-        Label42.Size = New Size(24, 18)
-        Label42.TabIndex = 28
-        Label42.Text = "ID"
-        ' 
-        ' TextBox5
-        ' 
-        TextBox5.BackColor = Color.WhiteSmoke
-        TextBox5.BorderStyle = BorderStyle.FixedSingle
-        TextBox5.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox5.Location = New Point(137, 154)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(130, 27)
-        TextBox5.TabIndex = 29
-        ' 
         ' FrmPrincipal
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1903,6 +1894,7 @@ Partial Class FrmPrincipal
         TabPage11.ResumeLayout(False)
         Panel14.ResumeLayout(False)
         Panel14.PerformLayout()
+        CType(datapedidos, ComponentModel.ISupportInitialize).EndInit()
         TabPage5.ResumeLayout(False)
         TabPage5.PerformLayout()
         TabPage6.ResumeLayout(False)
@@ -2056,27 +2048,27 @@ Partial Class FrmPrincipal
     Friend WithEvents TabControl4 As TabControl
     Friend WithEvents TabPage11 As TabPage
     Friend WithEvents Panel14 As Panel
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label10 As Label
     Friend WithEvents btnMoficarPedido As Button
     Friend WithEvents Label35 As Label
-    Friend WithEvents txtPrecio As TextBox
+    Friend WithEvents txtPrecioP As TextBox
     Friend WithEvents Label36 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtcorreoP As TextBox
     Friend WithEvents Label37 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtteleP As TextBox
     Friend WithEvents Label38 As Label
     Friend WithEvents Label39 As Label
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
     Friend WithEvents Panel15 As Panel
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label40 As Label
     Friend WithEvents Label41 As Label
     Friend WithEvents Guardar_Pedidos As Button
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtidP As TextBox
     Friend WithEvents Label42 As Label
+    Friend WithEvents datapedidos As DataGridView
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents txtproductoP As TextBox
 End Class

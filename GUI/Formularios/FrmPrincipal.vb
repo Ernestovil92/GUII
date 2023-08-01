@@ -37,6 +37,7 @@ Public Class FrmPrincipal
         cargarCombosProveedores()
         filtarProveedor()
         cargarCombosPedido()
+
     End Sub
 
 
@@ -184,7 +185,6 @@ Public Class FrmPrincipal
         TabControl1.SelectedIndex = 2S
     End Sub
 
-
     ''-----------------------------------   Formulario de producto  -----------------------------------------
     Private Sub MostrarNombreUsuarioProducto()
         conexion.Open()
@@ -195,6 +195,22 @@ Public Class FrmPrincipal
         dgProductos.DataSource = dt
         conexion.Close()
     End Sub
+    '----------------------------- LLENAR GRID DE PEDIDOS  --------------------------'
+    Public Sub LLenar_grid()
+        Try
+            conexion.Open()
+            Dim consulta As String = "SELECT id ,Producto ,precio ,correo ,telefono ,fecha FROM Pedidos"
+            Dim adapter As New SqlDataAdapter(consulta, conexion)
+            Dim dt As New DataTable
+            adapter.Fill(dt)
+            datapedidos.DataSource = dt
+        Catch ex As Exception
+            MessageBox.Show("Error al llenar el DataGridView: " & ex.Message)
+        Finally
+            conexion.Close()
+        End Try
+    End Sub
+
 
     Private Sub CargarRegistrosProducto()
         conexion.Open()
@@ -343,6 +359,7 @@ Public Class FrmPrincipal
     Private Sub EjecutarFuncionEnFormulario2()
         Dim form2 As New FrmModificarPedido()
         form2.GuardarPedidos()
+        form2.limpiarPedidos()
     End Sub
 
 
@@ -355,4 +372,23 @@ Public Class FrmPrincipal
         EjecutarFuncionEnFormulario2()
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        LLenar_grid()
+    End Sub
+
+    '------------   PEDIDOS ----------------------'
+    Private Sub datapedidos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datapedidos.CellContentClick
+        Try
+
+            Dim cells As DataGridViewCellCollection = datapedidos.CurrentRow.Cells
+            txtidP.Text = cells(0).Value.ToString()
+            txtproductoP.Text = cells(1).Value.ToString()
+            txtPrecioP.Text = cells(2).Value.ToString()
+            txtcorreoP.Text = cells(3).Value.ToString()
+            txtteleP.Text = cells(4).Value.ToString()
+
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
+    End Sub
 End Class
