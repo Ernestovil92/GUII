@@ -37,6 +37,7 @@ Public Class FrmPrincipal
         cargarCombosProveedores()
         filtarProveedor()
         cargarCombosPedido()
+        LLenar_grid()
 
     End Sub
 
@@ -196,20 +197,23 @@ Public Class FrmPrincipal
         conexion.Close()
     End Sub
     '----------------------------- LLENAR GRID DE PEDIDOS  --------------------------'
-    Public Sub LLenar_grid()
+    Public Function LLenar_grid() As DataTable
         Try
             conexion.Open()
-            Dim consulta As String = "SELECT id ,Producto ,precio ,correo ,telefono ,fecha FROM Pedidos"
+            Dim consulta As String = "SELECT id, Producto, precio, correo, telefono, fecha FROM Pedidos"
             Dim adapter As New SqlDataAdapter(consulta, conexion)
             Dim dt As New DataTable
             adapter.Fill(dt)
             datapedidos.DataSource = dt
+            Return dt ' Devuelve el DataTable llenado con los datos
         Catch ex As Exception
             MessageBox.Show("Error al llenar el DataGridView: " & ex.Message)
+            Return Nothing ' En caso de error, devuelve un DataTable vacío o Nothing
         Finally
             conexion.Close()
         End Try
-    End Sub
+    End Function
+
 
 
     Private Sub CargarRegistrosProducto()
@@ -355,26 +359,29 @@ Public Class FrmPrincipal
         frmModificarPedidoInstance.Show()
     End Sub
 
-    '---------     EJECUTAR FUNCION DE GUARDAR PEDIDOS   ------------'
-    Private Sub EjecutarFuncionEnFormulario2()
+    '---------     EJECUTAR FUNCIONES DE PEDIDOS   ------------'
+    Private Sub EjecutarFuncionGuardar()
         Dim form2 As New FrmModificarPedido()
         form2.GuardarPedidos()
+        form2.limpiarPedidos()
+    End Sub
+
+    Private Sub ejecutarfuncionactualizar()
+        Dim form2 As New FrmModificarPedido()
+        form2.ModificarPedido()
         form2.limpiarPedidos()
     End Sub
 
 
 
     Private Sub btnMoficarPedido_Click(sender As Object, e As EventArgs) Handles btnMoficarPedido.Click
-        FrmModificarPedido.ShowDialog()
+        ejecutarfuncionactualizar()
     End Sub
 
     Private Sub Guardar_Pedidos_Click(sender As Object, e As EventArgs) Handles Guardar_Pedidos.Click
-        EjecutarFuncionEnFormulario2()
+        EjecutarFuncionGuardar()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        LLenar_grid()
-    End Sub
 
     '------------   PEDIDOS ----------------------'
     Private Sub datapedidos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datapedidos.CellContentClick
