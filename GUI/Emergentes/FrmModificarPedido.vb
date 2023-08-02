@@ -89,7 +89,7 @@ Public Class FrmModificarPedido
 
     '-----------------    ELIMINAR    ---------------------------------'
 
-    Private Sub Eliminar()
+    Public Sub Eliminar()
         If String.IsNullOrWhiteSpace(FrmPrincipal.txtidP.Text) Then
             MsgBox("Error: el campo de ID está vacío.")
             Return

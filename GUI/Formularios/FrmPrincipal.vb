@@ -11,6 +11,7 @@ Public Class FrmPrincipal
     Dim conexion As New SqlConnection()
     Dim cmd As New SqlCommand()
     Dim cc As New FrmLogin
+
     Public Function SelectResult(ByVal cadConsul As String) As DataTable
 
         Dim dtTabla As New DataTable
@@ -38,7 +39,10 @@ Public Class FrmPrincipal
         filtarProveedor()
         cargarCombosPedido()
         LLenar_grid()
-
+        '------------  EVITAR DATOS INCORRECTOS EN PEDIDOS ---------
+        AddHandler txtPrecioP.KeyPress, AddressOf TextBox_KeyPress
+        AddHandler txtteleP.KeyPress, AddressOf TextBox_KeyPress
+        AddHandler txtidP.KeyPress, AddressOf TextBox_KeyPress
     End Sub
 
 
@@ -372,7 +376,13 @@ Public Class FrmPrincipal
         form2.limpiarPedidos()
     End Sub
 
+    Private Sub EjecutarFuncionEliminar()
+        Dim form2 As New FrmModificarPedido()
+        form2.Eliminar()
+        form2.limpiarPedidos()
+    End Sub
 
+    '-----------------   BOTONES DE PEDIDO ----------------------'
 
     Private Sub btnMoficarPedido_Click(sender As Object, e As EventArgs) Handles btnMoficarPedido.Click
         ejecutarfuncionactualizar()
@@ -382,8 +392,12 @@ Public Class FrmPrincipal
         EjecutarFuncionGuardar()
     End Sub
 
+    Private Sub eliminar_pedido_Click(sender As Object, e As EventArgs) Handles eliminar_pedido.Click
+        EjecutarFuncionEliminar()
+    End Sub
 
-    '------------   PEDIDOS ----------------------'
+
+    '------------  CARGAR DATAGRID DE PEDIDOS ----------------------'
     Private Sub datapedidos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datapedidos.CellContentClick
         Try
 
@@ -398,4 +412,14 @@ Public Class FrmPrincipal
             MsgBox(ex)
         End Try
     End Sub
+
+    '----------------- RESTRINGIR DATOS EN PEDIDOS -----------------------;
+    Private Sub TextBox_KeyPress(sender As Object, e As KeyPressEventArgs)
+        Dim textBox As TextBox = DirectCast(sender, TextBox)
+
+        If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
 End Class

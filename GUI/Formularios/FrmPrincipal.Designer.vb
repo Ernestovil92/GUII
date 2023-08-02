@@ -148,8 +148,7 @@ Partial Class FrmPrincipal
         TabPage11 = New TabPage()
         Panel14 = New Panel()
         txtproductoP = New TextBox()
-        Button4 = New Button()
-        Button3 = New Button()
+        eliminar_pedido = New Button()
         datapedidos = New DataGridView()
         txtidP = New TextBox()
         Label42 = New Label()
@@ -1523,8 +1522,7 @@ Partial Class FrmPrincipal
         Panel14.Anchor = AnchorStyles.None
         Panel14.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
         Panel14.Controls.Add(txtproductoP)
-        Panel14.Controls.Add(Button4)
-        Panel14.Controls.Add(Button3)
+        Panel14.Controls.Add(eliminar_pedido)
         Panel14.Controls.Add(datapedidos)
         Panel14.Controls.Add(txtidP)
         Panel14.Controls.Add(Label42)
@@ -1556,25 +1554,15 @@ Partial Class FrmPrincipal
         txtproductoP.Size = New Size(211, 27)
         txtproductoP.TabIndex = 33
         ' 
-        ' Button4
+        ' eliminar_pedido
         ' 
-        Button4.ForeColor = Color.Black
-        Button4.Location = New Point(320, 390)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(75, 23)
-        Button4.TabIndex = 32
-        Button4.Text = "Eliminar"
-        Button4.UseVisualStyleBackColor = True
-        ' 
-        ' Button3
-        ' 
-        Button3.ForeColor = Color.Black
-        Button3.Location = New Point(212, 390)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(75, 23)
-        Button3.TabIndex = 31
-        Button3.Text = "mostrar"
-        Button3.UseVisualStyleBackColor = True
+        eliminar_pedido.ForeColor = Color.Black
+        eliminar_pedido.Location = New Point(320, 390)
+        eliminar_pedido.Name = "eliminar_pedido"
+        eliminar_pedido.Size = New Size(75, 23)
+        eliminar_pedido.TabIndex = 32
+        eliminar_pedido.Text = "Eliminar"
+        eliminar_pedido.UseVisualStyleBackColor = True
         ' 
         ' datapedidos
         ' 
@@ -2068,7 +2056,6 @@ Partial Class FrmPrincipal
     Friend WithEvents txtidP As TextBox
     Friend WithEvents Label42 As Label
     Friend WithEvents datapedidos As DataGridView
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents eliminar_pedido As Button
     Friend WithEvents txtproductoP As TextBox
 End Class
