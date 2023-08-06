@@ -71,3 +71,4 @@ C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmHome.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmPrincipal.resources
 C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.ModificarCuenta.resources
+C:\Users\Giovani Villalba\source\repos\GUI\GUII\GUI\obj\Debug\net6.0-windows\GUI.FrmModificarPedido.resources

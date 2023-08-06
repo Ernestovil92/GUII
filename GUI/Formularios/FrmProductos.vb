@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Security.Cryptography.X509Certificates
+
 Public Class FrmProductos
     Dim conexion As New SqlConnection()
     Dim comando As New SqlCommand()
@@ -35,30 +37,35 @@ Public Class FrmProductos
     End Sub
 
     Private Sub CargarRegistros()
-        conexion.Open()
-        If conexion.State = 1 Then
-            Dim consulta As String = "INSERT INTO Productos(nombre_producto,codigo_barra,Proveedor,C_electronico,telefono, Precio_unitario,stock,createDate)VALUES('" & txtProducto.Text & "','" & txtCodigo.Text & "','" & txtProveedor.Text & "','" & txtCorreo.Text & "','" & txtTelefono.Text & "'," & txtP_unitario.Text & "," & txtStock.Text & ",getdate())"
-            Dim comando As New SqlCommand(consulta, conexion)
-            Dim lector As SqlDataReader
-            lector = comando.ExecuteReader
-            MsgBox("Se registro correctamente")
-        Else
+        Dim consulta As String = "INSERT INTO Productos(nombre_producto,codigo_barra,Proveedor,C_electronico,telefono,Precio_unitario,stock,createDate) VALUES(@NombreProducto, @CodigoBarra, @Proveedor, @Correo, @Telefono, @PrecioUnitario, @Stock, GETDATE())"
+        Dim connectionString As String = "server=DESKTOP-54PHT7T\SQLEXPRESS;DATABASE=GUI;INTEGRATED SECURITY=TRUE"
 
-            MsgBox("Hubo un error al registrar")
-        End If
-        conexion.Close()
+        Using conexion As New SqlConnection(connectionString)
+            Using comando As New SqlCommand(consulta, conexion)
+                comando.Parameters.AddWithValue("@NombreProducto", txtProducto.Text)
+                comando.Parameters.AddWithValue("@CodigoBarra", txtCodigo.Text)
+                comando.Parameters.AddWithValue("@Proveedor", txtProveedor.Text)
+                comando.Parameters.AddWithValue("@Correo", txtCorreo.Text)
+                comando.Parameters.AddWithValue("@Telefono", txtTelefono.Text)
+                comando.Parameters.AddWithValue("@PrecioUnitario", Convert.ToDecimal(txtP_unitario.Text))
+                comando.Parameters.AddWithValue("@Stock", Convert.ToInt32(txtStock.Text))
+
+                Try
+                    conexion.Open()
+                    comando.ExecuteNonQuery()
+                    MsgBox("Se registró correctamente")
+                Catch ex As Exception
+                    MsgBox("Hubo un error al registrar")
+                End Try
+            End Using
+        End Using
     End Sub
+
 
 
     Private Sub btnGuardar2_Click(sender As Object, e As EventArgs) Handles btnGuardar2.Click
         CargarRegistros()
-        txtProducto.Text = " "
-        txtCodigo.Text = " "
-        txtProveedor.Text = " "
-        txtP_unitario.Text = " "
-        txtTelefono.Text = " "
-        txtStock.Text = " "
-        txtCorreo.Text = " "
+        limpiar()
     End Sub
 
     Private Sub filtarArticulos()
@@ -119,5 +126,14 @@ Public Class FrmProductos
         MostrarNombreUsuario()
     End Sub
 
+    Private Sub limpiar()
+        txtProducto.Text = " "
+        txtCodigo.Text = " "
+        txtProveedor.Text = " "
+        txtP_unitario.Text = " "
+        txtTelefono.Text = " "
+        txtStock.Text = " "
+        txtCorreo.Text = " "
+    End Sub
 
 End Class
