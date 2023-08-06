@@ -1601,13 +1601,14 @@ Partial Class FrmPrincipal
         ' 
         ' Guardar_Pedidos
         ' 
-        Guardar_Pedidos.ForeColor = Color.Black
+        Guardar_Pedidos.BackColor = Color.FromArgb(CByte(0), CByte(50), CByte(55))
+        Guardar_Pedidos.ForeColor = Color.White
         Guardar_Pedidos.Location = New Point(15, 390)
         Guardar_Pedidos.Name = "Guardar_Pedidos"
         Guardar_Pedidos.Size = New Size(75, 23)
         Guardar_Pedidos.TabIndex = 27
         Guardar_Pedidos.Text = "Agregar"
-        Guardar_Pedidos.UseVisualStyleBackColor = True
+        Guardar_Pedidos.UseVisualStyleBackColor = False
         ' 
         ' DateTimePicker1
         ' 

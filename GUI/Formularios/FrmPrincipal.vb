@@ -3,7 +3,9 @@ Imports System.Runtime.InteropServices
 Imports System.Data.SqlClient
 Imports System.Reflection.Emit
 Imports System.Reflection.Module
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar
+Imports System
+
+'Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar
 
 
 Public Class FrmPrincipal
@@ -39,6 +41,8 @@ Public Class FrmPrincipal
         filtarProveedor()
         cargarCombosPedido()
         LLenar_grid()
+        ComprobarFecha()
+
         '------------  EVITAR DATOS INCORRECTOS EN PEDIDOS ---------
         AddHandler txtPrecioP.KeyPress, AddressOf TextBox_KeyPress
         AddHandler txtteleP.KeyPress, AddressOf TextBox_KeyPress
@@ -66,9 +70,9 @@ Public Class FrmPrincipal
         End If
     End Sub
 
-    ''HOME
-    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
-        Me.btnHome.BackColor = Color.Teal
+    '------------------------------ CAMBIAR COLOR DE PESTAñA   -----------------------
+    Private Sub CambiarColorYSeleccionarPestaña(ByVal boton As Button, ByVal indice As Integer)
+        Me.btnHome.BackColor = Color.DarkSlateGray
         Me.btnProductos.BackColor = Color.DarkSlateGray
         Me.btnClientes.BackColor = Color.DarkSlateGray
         Me.btnPedidos.BackColor = Color.DarkSlateGray
@@ -76,98 +80,48 @@ Public Class FrmPrincipal
         Me.btnReportes.BackColor = Color.DarkSlateGray
         Me.btnAyuda.BackColor = Color.DarkSlateGray
         Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        TabControl1.SelectedIndex = 0
+
+        boton.BackColor = Color.Teal
+        TabControl1.SelectedIndex = indice
+    End Sub
+    ''HOME
+    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+        CambiarColorYSeleccionarPestaña(btnHome, 0)
     End Sub
 
     ''PRODUCTOS
     Private Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click, btnProductos.Click
-        Me.btnHome.BackColor = Color.DarkSlateGray
-        Me.btnProductos.BackColor = Color.Teal
-        Me.btnClientes.BackColor = Color.DarkSlateGray
-        Me.btnPedidos.BackColor = Color.DarkSlateGray
-        Me.btnPendientes.BackColor = Color.DarkSlateGray
-        Me.btnReportes.BackColor = Color.DarkSlateGray
-        Me.btnAyuda.BackColor = Color.DarkSlateGray
-        Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        TabControl1.SelectedIndex = 1
+        CambiarColorYSeleccionarPestaña(btnProductos, 1)
     End Sub
 
     ''CLIENTES
     Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click, btnClientes.Click
-        Me.btnHome.BackColor = Color.DarkSlateGray
-        Me.btnProductos.BackColor = Color.DarkSlateGray
-        Me.btnClientes.BackColor = Color.Teal
-        Me.btnPedidos.BackColor = Color.DarkSlateGray
-        Me.btnPendientes.BackColor = Color.DarkSlateGray
-        Me.btnReportes.BackColor = Color.DarkSlateGray
-        Me.btnAyuda.BackColor = Color.DarkSlateGray
-        Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        TabControl1.SelectedIndex = 2
+        CambiarColorYSeleccionarPestaña(btnClientes, 2)
     End Sub
 
     ''PEDIDOS
     Private Sub btnPedidos_Click(sender As Object, e As EventArgs) Handles btnPedidos.Click
-        Me.btnHome.BackColor = Color.DarkSlateGray
-        Me.btnProductos.BackColor = Color.DarkSlateGray
-        Me.btnClientes.BackColor = Color.DarkSlateGray
-        Me.btnPedidos.BackColor = Color.Teal
-        Me.btnPendientes.BackColor = Color.DarkSlateGray
-        Me.btnReportes.BackColor = Color.DarkSlateGray
-        Me.btnAyuda.BackColor = Color.DarkSlateGray
-        Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        TabControl1.SelectedIndex = 3
+        CambiarColorYSeleccionarPestaña(btnPedidos, 3)
     End Sub
 
     ''PENDIENTES
     Private Sub btnPendientes_Click(sender As Object, e As EventArgs) Handles btnPendientes.Click
-        Me.btnHome.BackColor = Color.DarkSlateGray
-        Me.btnProductos.BackColor = Color.DarkSlateGray
-        Me.btnClientes.BackColor = Color.DarkSlateGray
-        Me.btnPedidos.BackColor = Color.DarkSlateGray
-        Me.btnPendientes.BackColor = Color.Teal
-        Me.btnReportes.BackColor = Color.DarkSlateGray
-        Me.btnAyuda.BackColor = Color.DarkSlateGray
-        Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        TabControl1.SelectedIndex = 4
+        CambiarColorYSeleccionarPestaña(btnPendientes, 4)
     End Sub
 
     ''REPORTES
     Private Sub btnReportes_Click(sender As Object, e As EventArgs) Handles btnReportes.Click
-        Me.btnHome.BackColor = Color.DarkSlateGray
-        Me.btnProductos.BackColor = Color.DarkSlateGray
-        Me.btnClientes.BackColor = Color.DarkSlateGray
-        Me.btnPedidos.BackColor = Color.DarkSlateGray
-        Me.btnPendientes.BackColor = Color.DarkSlateGray
-        Me.btnReportes.BackColor = Color.Teal
-        Me.btnAyuda.BackColor = Color.DarkSlateGray
-        Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-        TabControl1.SelectedIndex = 5
+        CambiarColorYSeleccionarPestaña(btnReportes, 5)
     End Sub
 
     ''AYUDA
     Private Sub btnAyuda_Click(sender As Object, e As EventArgs) Handles btnAyuda.Click
-        Me.btnHome.BackColor = Color.DarkSlateGray
-        Me.btnProductos.BackColor = Color.DarkSlateGray
-        Me.btnClientes.BackColor = Color.DarkSlateGray
-        Me.btnPedidos.BackColor = Color.DarkSlateGray
-        Me.btnPendientes.BackColor = Color.DarkSlateGray
-        Me.btnReportes.BackColor = Color.DarkSlateGray
-        Me.btnAyuda.BackColor = Color.Teal
-        Me.btnCerrarSesion.BackColor = Color.DarkSlateGray
-
-        TabControl1.SelectedIndex = 6
+        CambiarColorYSeleccionarPestaña(btnAyuda, 6)
     End Sub
 
     ''CERRAR SESION
     Private Sub btnCerrarSesion_Click(sender As Object, e As EventArgs) Handles btnCerrarSesion.Click
-        Me.btnHome.BackColor = Color.DarkSlateGray
-        Me.btnProductos.BackColor = Color.DarkSlateGray
-        Me.btnClientes.BackColor = Color.DarkSlateGray
-        Me.btnPedidos.BackColor = Color.DarkSlateGray
-        Me.btnPendientes.BackColor = Color.DarkSlateGray
-        Me.btnReportes.BackColor = Color.DarkSlateGray
-        Me.btnAyuda.BackColor = Color.DarkSlateGray
-        Me.btnCerrarSesion.BackColor = Color.Teal
+        CambiarColorYSeleccionarPestaña(btnCerrarSesion, 7)
         Close()
     End Sub
 
@@ -175,10 +129,6 @@ Public Class FrmPrincipal
     Private Sub PanelContenedor_MouseHover(sender As Object, e As EventArgs) Handles PanelContenedor.MouseHover
         ''   PAdmin.Hide()
     End Sub
-
-
-
-
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblHora.Text = DateTime.Now.ToString("hh:mm:ss")
@@ -209,10 +159,10 @@ Public Class FrmPrincipal
             Dim dt As New DataTable
             adapter.Fill(dt)
             datapedidos.DataSource = dt
-            Return dt ' Devuelve el DataTable llenado con los datos
+            Return dt ' Devuelve el DataTable lleno con los datos
         Catch ex As Exception
             MessageBox.Show("Error al llenar el DataGridView: " & ex.Message)
-            Return Nothing ' En caso de error, devuelve un DataTable vacío o Nothing
+            Return Nothing ' En caso de error, devuelve un DataTable vacío 
         Finally
             conexion.Close()
         End Try
@@ -323,20 +273,28 @@ Public Class FrmPrincipal
 
 
     Private Sub CargarRegistrosCliente()
-        conexion.Open()
-        If conexion.State = 1 Then
+        Dim consulta As String = "INSERT INTO Clientes(Codigo_cliente, Cliente, Ruc, Correo_Electronico, Telefono) VALUES (@Codigo, @Cliente, @Ruc, @Correo, @Telefono)"
+        Dim connectionString As String = "server=DESKTOP-54PHT7T\SQLEXPRESS;DATABASE=GUI;INTEGRATED SECURITY=TRUE"
 
-            Dim consulta As String = "INSERT INTO Clientes(Codigo_cliente,Cliente,Ruc,Correo_Electronico,Telefono)VALUES('" & txtId.Text & "','" & txtClienteNuevo.Text & "','" & txtRuc.Text & "','" & txtCorreo.Text & "','" & txtTelefono.Text & "')"
-            Dim comando As New SqlCommand(consulta, conexion)
-            Dim lector As SqlDataReader
-            lector = comando.ExecuteReader
-            MsgBox("Se registro correctamente")
-        Else
+        Using conexion As New SqlConnection(connectionString)
+            Using comando As New SqlCommand(consulta, conexion)
+                comando.Parameters.AddWithValue("@Codigo", txtId.Text)
+                comando.Parameters.AddWithValue("@Cliente", txtClienteNuevo.Text)
+                comando.Parameters.AddWithValue("@Ruc", txtRuc.Text)
+                comando.Parameters.AddWithValue("@Correo", txtCorreo.Text)
+                comando.Parameters.AddWithValue("@Telefono", txtTelefono.Text)
 
-            MsgBox("Hubo un error al registrar")
-        End If
-        conexion.Close()
+                Try
+                    conexion.Open()
+                    comando.ExecuteNonQuery()
+                    MsgBox("Se registró correctamente")
+                Catch ex As Exception
+                    MsgBox("Hubo un error al registrar")
+                End Try
+            End Using
+        End Using
     End Sub
+
 
     Private Sub BtnGuardarCliente_Click(sender As Object, e As EventArgs) Handles BtnGuardarCliente.Click
         CargarRegistrosCliente()
@@ -419,6 +377,32 @@ Public Class FrmPrincipal
 
         If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
             e.Handled = True
+        End If
+    End Sub
+
+    '-------------------- COMPROBAR FECHA -----------------------
+    Public Function ComprobarFechaCercana(fechaDada As DateTime) As Boolean
+        ' Obtenemos la fecha actual
+        Dim fechaActual As DateTime = DateTime.Now
+
+        ' Calculamos la diferencia en días entre la fecha dada y la fecha actual
+        Dim diferenciaDias As Integer = (fechaDada - fechaActual).Days
+
+        ' Verificamos si la diferencia es menor o igual a 3 días
+        If diferenciaDias <= 3 Then
+            '  agregar el código para enviar el mensaje
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Sub ComprobarFecha()
+        Dim fechaDada As DateTime = New DateTime(2023, 8, 4)
+
+        If ComprobarFechaCercana(fechaDada) Then
+            'codigo en necesario
+            MessageBox.Show("La fecha está a menos de tres días de la fecha actual.")
         End If
     End Sub
 
