@@ -398,11 +398,11 @@ Public Class FrmPrincipal
     End Function
 
     Public Sub ComprobarFechas()
-        ' Obtener las fechas de la tabla Pedidos
+        ' Obtener los productos y fechas de la tabla Pedidos
         Dim connectionString As String = "server=DESKTOP-54PHT7T\SQLEXPRESS;DATABASE=GUI;INTEGRATED SECURITY=TRUE"
-        Dim consulta As String = "SELECT fecha FROM Pedidos"
+        Dim consulta As String = "SELECT Producto, fecha FROM Pedidos"
 
-        Dim fechasCercanas As New List(Of DateTime)()
+        Dim fechasCercanas As New List(Of (String, DateTime))()
 
         Using conexion As New SqlConnection(connectionString)
             Dim comando As New SqlCommand(consulta, conexion)
@@ -412,29 +412,31 @@ Public Class FrmPrincipal
             Dim lector As SqlDataReader = comando.ExecuteReader()
 
             While lector.Read()
-                Dim fechaPedido As DateTime = lector.GetDateTime(0) ' La fecha de la consulta está en la primera columna (columna 0)
+                Dim producto As String = lector.GetString(0) ' El producto está en la primera columna (columna 0)
+                Dim fechaPedido As DateTime = lector.GetDateTime(1) ' La fecha del pedido está en la segunda columna (columna 1)
 
                 ' Verificar si la fecha del pedido está a menos de tres días de la fecha actual
                 If ComprobarFechaCercana(fechaPedido) Then
-                    fechasCercanas.Add(fechaPedido)
+                    fechasCercanas.Add((producto, fechaPedido))
                 End If
             End While
 
             lector.Close()
         End Using
 
-        ' Procesar las fechas encontradas
+        ' Procesar las fechas y productos encontrados
         If fechasCercanas.Count > 0 Then
-            Dim mensaje As String = "Las siguientes fechas están a menos de tres días de la fecha actual:" & vbCrLf
+            Dim mensaje As String = "Los siguientes productos están a menos de tres días de la fecha actual:" & vbCrLf
 
-            For Each fechaCercana As DateTime In fechasCercanas
-                mensaje += fechaCercana.ToString("dd/MM/yyyy") & vbCrLf
+            For Each item As (String, DateTime) In fechasCercanas
+                mensaje += item.Item1 & " - " & item.Item2.ToString("dd/MM/yyyy") & vbCrLf
             Next
 
             MessageBox.Show(mensaje)
         Else
-            MessageBox.Show("No se encontraron fechas a menos de tres días de la fecha actual.")
+            MessageBox.Show("No se encontraron productos a menos de tres días de la fecha actual.")
         End If
     End Sub
+
 
 End Class
