@@ -41,7 +41,7 @@ Public Class FrmPrincipal
         filtarProveedor()
         cargarCombosPedido()
         LLenar_grid()
-        ComprobarFecha()
+        ComprobarFechas()
 
         '------------  EVITAR DATOS INCORRECTOS EN PEDIDOS ---------
         AddHandler txtPrecioP.KeyPress, AddressOf TextBox_KeyPress
@@ -381,6 +381,7 @@ Public Class FrmPrincipal
     End Sub
 
     '-------------------- COMPROBAR FECHA -----------------------
+
     Public Function ComprobarFechaCercana(fechaDada As DateTime) As Boolean
         ' Obtenemos la fecha actual
         Dim fechaActual As DateTime = DateTime.Now
@@ -390,19 +391,49 @@ Public Class FrmPrincipal
 
         ' Verificamos si la diferencia es menor o igual a 3 días
         If diferenciaDias <= 3 Then
-            '  agregar el código para enviar el mensaje
             Return True
         Else
             Return False
         End If
     End Function
 
-    Sub ComprobarFecha()
-        Dim fechaDada As DateTime = New DateTime(2023, 8, 4)
+    Public Sub ComprobarFechas()
+        ' Obtener las fechas de la tabla Pedidos
+        Dim connectionString As String = "server=DESKTOP-54PHT7T\SQLEXPRESS;DATABASE=GUI;INTEGRATED SECURITY=TRUE"
+        Dim consulta As String = "SELECT fecha FROM Pedidos"
 
-        If ComprobarFechaCercana(fechaDada) Then
-            'codigo en necesario
-            MessageBox.Show("La fecha está a menos de tres días de la fecha actual.")
+        Dim fechasCercanas As New List(Of DateTime)()
+
+        Using conexion As New SqlConnection(connectionString)
+            Dim comando As New SqlCommand(consulta, conexion)
+
+            conexion.Open()
+
+            Dim lector As SqlDataReader = comando.ExecuteReader()
+
+            While lector.Read()
+                Dim fechaPedido As DateTime = lector.GetDateTime(0) ' La fecha de la consulta está en la primera columna (columna 0)
+
+                ' Verificar si la fecha del pedido está a menos de tres días de la fecha actual
+                If ComprobarFechaCercana(fechaPedido) Then
+                    fechasCercanas.Add(fechaPedido)
+                End If
+            End While
+
+            lector.Close()
+        End Using
+
+        ' Procesar las fechas encontradas
+        If fechasCercanas.Count > 0 Then
+            Dim mensaje As String = "Las siguientes fechas están a menos de tres días de la fecha actual:" & vbCrLf
+
+            For Each fechaCercana As DateTime In fechasCercanas
+                mensaje += fechaCercana.ToString("dd/MM/yyyy") & vbCrLf
+            Next
+
+            MessageBox.Show(mensaje)
+        Else
+            MessageBox.Show("No se encontraron fechas a menos de tres días de la fecha actual.")
         End If
     End Sub
 
