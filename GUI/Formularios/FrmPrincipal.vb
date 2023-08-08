@@ -426,7 +426,8 @@ Public Class FrmPrincipal
 
         ' Procesar las fechas y productos encontrados
         If fechasCercanas.Count > 0 Then
-            Dim mensaje As String = "Los siguientes productos están a menos de tres días de la fecha actual:" & vbCrLf
+
+            Dim mensaje As String = "Los siguientes productos están a menos de tres días de vencer:" & vbCrLf
 
             For Each item As (String, DateTime) In fechasCercanas
                 mensaje += item.Item1 & " - " & item.Item2.ToString("dd/MM/yyyy") & vbCrLf
